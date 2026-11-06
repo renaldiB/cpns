@@ -1,9 +1,12 @@
 import { sqliteDb } from "./index";
 
-export function runMigrations() {
-  console.log("Running SQLite database schema migrations...");
+export function runMigrations(customDb?: any) {
+  const targetDb = customDb || sqliteDb;
+  if (!targetDb) {
+    throw new Error("runMigrations: SQLite database instance is not available.");
+  }
 
-  sqliteDb.exec(`
+  targetDb.exec(`
     CREATE TABLE IF NOT EXISTS exam_profiles (
       id TEXT PRIMARY KEY,
       name TEXT NOT NULL,
@@ -139,22 +142,22 @@ export function runMigrations() {
 
   // Safe ALTER TABLE migrations for existing tables
   try {
-    const questionCols = sqliteDb.pragma("table_info(questions)") as Array<{ name: string }>;
+    const questionCols = targetDb.pragma("table_info(questions)") as Array<{ name: string }>;
     const colNames = questionCols.map((c) => c.name);
 
     if (!colNames.includes("batch_id")) {
-      sqliteDb.exec("ALTER TABLE questions ADD COLUMN batch_id TEXT DEFAULT 'batch-1';");
+      targetDb.exec("ALTER TABLE questions ADD COLUMN batch_id TEXT DEFAULT 'batch-1';");
     }
     if (!colNames.includes("batch_number")) {
-      sqliteDb.exec("ALTER TABLE questions ADD COLUMN batch_number INTEGER NOT NULL DEFAULT 1;");
-      sqliteDb.exec("CREATE INDEX IF NOT EXISTS idx_questions_batch ON questions(batch_number);");
+      targetDb.exec("ALTER TABLE questions ADD COLUMN batch_number INTEGER NOT NULL DEFAULT 1;");
+      targetDb.exec("CREATE INDEX IF NOT EXISTS idx_questions_batch ON questions(batch_number);");
     }
 
-    const attemptCols = sqliteDb.pragma("table_info(attempts)") as Array<{ name: string }>;
+    const attemptCols = targetDb.pragma("table_info(attempts)") as Array<{ name: string }>;
     const attemptColNames = attemptCols.map((c) => c.name);
 
     if (!attemptColNames.includes("batch_filter")) {
-      sqliteDb.exec("ALTER TABLE attempts ADD COLUMN batch_filter INTEGER;");
+      targetDb.exec("ALTER TABLE attempts ADD COLUMN batch_filter INTEGER;");
     }
   } catch (err) {
     console.warn("Notice during column inspection/upgrade:", err);

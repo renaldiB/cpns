@@ -7,17 +7,28 @@ import { BASELINE_EXAM_PROFILE, PRESET_EXAM_PROFILES } from "@/config/exam-profi
 import { eq } from "drizzle-orm";
 import bundledSeedData from "../data/seed-questions.json";
 
-export function seedDatabase() {
+export function seedDatabase(optionsConfig?: {
+  customSqlite?: any;
+  customDrizzle?: any;
+  cleanAttempts?: boolean;
+}) {
   console.log("Memulai proses seeding database...");
 
+  const targetSqlite = optionsConfig?.customSqlite || sqliteDb;
+  const targetDb = optionsConfig?.customDrizzle || db;
+
+  if (!targetSqlite || !targetDb) {
+    throw new Error("seedDatabase: Database instance is not available.");
+  }
+
   // 1. Ensure migrations are applied safely first
-  runMigrations();
+  runMigrations(targetSqlite);
 
   const nowIso = new Date().toISOString();
 
   // 2. Seed All Preset Exam Profiles
   for (const prof of PRESET_EXAM_PROFILES) {
-    const existingProfile = db
+    const existingProfile = targetDb
       .select()
       .from(examProfiles)
       .where(eq(examProfiles.id, prof.id))
@@ -25,7 +36,8 @@ export function seedDatabase() {
 
     if (!existingProfile) {
       console.log(`Menyimpan profil ujian: ${prof.name}...`);
-      db.insert(examProfiles)
+      targetDb
+        .insert(examProfiles)
         .values({
           id: prof.id,
           name: prof.name,
@@ -116,10 +128,11 @@ export function seedDatabase() {
   ];
 
   for (const b of defaultBatches) {
-    const existing = db.select().from(questionBatches).where(eq(questionBatches.id, b.id)).get();
+    const existing = targetDb.select().from(questionBatches).where(eq(questionBatches.id, b.id)).get();
     if (!existing) {
       console.log(`Menambahkan paket ${b.name}...`);
-      db.insert(questionBatches)
+      targetDb
+        .insert(questionBatches)
         .values({
           id: b.id,
           batchNumber: b.batchNumber,
@@ -134,16 +147,19 @@ export function seedDatabase() {
     }
   }
 
-  // Clear any leftover dummy attempt data so the app starts 100% fresh
-  sqliteDb.exec(`
-    DELETE FROM attempt_questions;
-    DELETE FROM attempts;
-  `);
+  // Clear dummy attempt data only if explicitly requested
+  if (optionsConfig?.cleanAttempts) {
+    targetSqlite.exec(`
+      DELETE FROM attempt_questions;
+      DELETE FROM attempts;
+    `);
+  }
 
   // 4. Seed Default Settings
-  const existingTheme = db.select().from(settings).where(eq(settings.key, "theme")).get();
+  const existingTheme = targetDb.select().from(settings).where(eq(settings.key, "theme")).get();
   if (!existingTheme) {
-    db.insert(settings)
+    targetDb
+      .insert(settings)
       .values({
         key: "theme",
         valueJson: JSON.stringify({ theme: "system" }),
@@ -168,17 +184,18 @@ export function seedDatabase() {
 
   console.log(`Memeriksa ${rawQuestions.length} soal untuk seeding idempotent...`);
 
-  const existingQuestions = db.select({ externalId: questions.externalId }).from(questions).all();
-  const existingSet = new Set(existingQuestions.map((q) => q.externalId).filter(Boolean));
+  const existingQuestions = targetDb.select({ externalId: questions.externalId }).from(questions).all();
+  const existingSet = new Set(existingQuestions.map((q: any) => q.externalId).filter(Boolean));
 
   let insertedCount = 0;
   let skippedCount = 0;
 
-  const seedTransaction = sqliteDb.transaction(() => {
+  const seedTransaction = targetSqlite.transaction(() => {
     for (const q of rawQuestions) {
       if (q.externalId && existingSet.has(q.externalId)) {
         // Synchronize batch assignment and subtopics for existing questions
-        db.update(questions)
+        targetDb
+          .update(questions)
           .set({
             batchId: q.batchId || "batch-1",
             batchNumber: q.batchNumber || 1,
@@ -193,7 +210,8 @@ export function seedDatabase() {
 
       const qId = `q_${q.externalId || Math.random().toString(36).substring(2, 9)}`;
 
-      db.insert(questions)
+      targetDb
+        .insert(questions)
         .values({
           id: qId,
           externalId: q.externalId || null,
@@ -216,7 +234,8 @@ export function seedDatabase() {
 
       for (let oIdx = 0; oIdx < q.options.length; oIdx++) {
         const opt = q.options[oIdx];
-        db.insert(options)
+        targetDb
+          .insert(options)
           .values({
             id: `opt_${qId}_${opt.label}`,
             questionId: qId,
@@ -235,9 +254,11 @@ export function seedDatabase() {
 
   seedTransaction();
 
-  console.log(`Seeding selesai! Soal baru ditambahkan: ${insertedCount}, Soal lama dipertahankan (skipped): ${skippedCount}`);
+  console.log(
+    `Seeding selesai! Soal baru ditambahkan: ${insertedCount}, Soal lama dipertahankan (skipped): ${skippedCount}`
+  );
 }
 
 if (require.main === module || process.argv[1]?.endsWith("seed.ts")) {
-  seedDatabase();
+  seedDatabase({ cleanAttempts: true });
 }

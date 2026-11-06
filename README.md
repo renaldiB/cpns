@@ -46,7 +46,7 @@ Aplikasi web simulasi ujian Seleksi Kompetensi Dasar (SKD) Calon Pegawai Negeri 
 
 ## 🔒 Privasi dan Local-First Architecture
 
-- **Loopback Bound:** Aplikasi berjalan eksklusif di `http://127.0.0.1:3000`.
+- **Local-First Isolated:** Aplikasi berjalan secara mandiri dan aman pada mesin pengguna tanpa ketergantungan server publik eksternal.
 - **Zero Remote Calls:** Tidak ada Google Fonts, CDN eksternal, telemetry, analitik pihak ketiga, maupun dependensi API eksternal saat runtime.
 - **Sistem Font Bawaan:** Menggunakan system font stack bawaan OS (San Francisco, Segoe UI, Roboto, Helvetica Neue).
 - **Database Lokal:** SQLite tersimpan lokal di `data/app.db` dengan mode *Write-Ahead Logging* (WAL).
@@ -73,7 +73,7 @@ Aplikasi web simulasi ujian Seleksi Kompetensi Dasar (SKD) Calon Pegawai Negeri 
    npm install
    ```
 
-3. **Inisialisasi Database & Seeding Bank Soal (330 Soal Original):**
+3. **Inisialisasi Database & Seeding Bank Soal (840 Soal / 8 Paket Batch):**
    ```bash
    npm run db:seed
    ```
@@ -93,7 +93,7 @@ Aplikasi web simulasi ujian Seleksi Kompetensi Dasar (SKD) Calon Pegawai Negeri 
 npm run build
 npm run start
 ```
-Buka peramban di: **`http://127.0.0.1:3000`**
+Buka peramban pada alamat lokal yang ditampilkan pada terminal.
 
 ### Mode Pengembangan (Development)
 ```bash
@@ -112,7 +112,7 @@ Aplikasi dilengkapi dengan rangkaian pengujian berlapis untuk menjamin reliabili
 | `npm run typecheck` | Validasi tipe data TypeScript ketat (`tsc --noEmit`) | **PASSED (0 errors)** |
 | `npm test` | Uji unit Vitest (scoring, passing grade, Zod schema) & integrasi siklus ujian | **PASSED (22 tests)** |
 | `npm run test:e2e` | Uji end-to-end Playwright (alur CAT penuh 14 tahap + responsivitas 5 viewport) | **PASSED (17 tests)** |
-| `npm run questions:verify` | Verifikasi integritas 330 soal, validasi opsi A–E, bobot TKP 1–5, dan deteksi duplikat Jaccard | **PASSED (330 valid)** |
+| `npm run questions:verify` | Verifikasi integritas 840 soal (8 Batch), validasi opsi A–E, bobot TKP 1–5, dan deteksi duplikat Jaccard | **PASSED (840 valid)** |
 | `npm run build` | Kompilasi Next.js App Router (20 rute static & dynamic) | **PASSED** |
 
 ---

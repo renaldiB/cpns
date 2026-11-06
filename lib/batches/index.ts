@@ -18,7 +18,15 @@ export interface BatchSummary {
 }
 
 export function getAllBatches(): BatchSummary[] {
-  const batches = db.select().from(questionBatches).orderBy(questionBatches.batchNumber).all();
+  let batches = db.select().from(questionBatches).orderBy(questionBatches.batchNumber).all();
+
+  if (batches.length === 0) {
+    try {
+      const { seedDatabase } = require("@/db/seed");
+      seedDatabase({ customSqlite: sqliteDb, customDrizzle: db, cleanAttempts: false });
+      batches = db.select().from(questionBatches).orderBy(questionBatches.batchNumber).all();
+    } catch (_) {}
+  }
 
   // Aggregate questions per batch
   const counts = sqliteDb

@@ -3,11 +3,20 @@ import { drizzle } from "drizzle-orm/better-sqlite3";
 import * as schema from "./schema";
 import path from "path";
 import fs from "fs";
+import { runMigrations } from "./migrate";
+import { seedDatabase } from "./seed";
 
-const isServerless = !!(process.env.NETLIFY || process.env.AWS_LAMBDA_FUNCTION_NAME);
+// Determine if running in serverless Lambda runtime
+const isLambdaRuntime = !!(
+  process.env.AWS_LAMBDA_FUNCTION_NAME ||
+  process.env.LAMBDA_TASK_ROOT ||
+  (process.env.NETLIFY && process.env.NEXT_RUNTIME === "nodejs")
+);
+
+// Database location: Lambda runtime must write to /tmp/app.db, while build & local uses data/app.db
 const dbPath =
   process.env.DATABASE_URL ||
-  (isServerless ? path.join("/tmp", "app.db") : path.join(process.cwd(), "data", "app.db"));
+  (isLambdaRuntime ? path.join("/tmp", "app.db") : path.join(process.cwd(), "data", "app.db"));
 
 // Ensure directory exists
 const dbDir = path.dirname(dbPath);
@@ -15,8 +24,8 @@ if (!fs.existsSync(dbDir)) {
   fs.mkdirSync(dbDir, { recursive: true });
 }
 
-// In serverless, if /tmp/app.db doesn't exist but data/app.db exists in bundle, copy it
-if (isServerless && !fs.existsSync(dbPath)) {
+// In serverless Lambda, copy bundled data/app.db to /tmp/app.db if available
+if (isLambdaRuntime && !fs.existsSync(dbPath)) {
   const localDb = path.join(process.cwd(), "data", "app.db");
   if (fs.existsSync(localDb)) {
     try {
@@ -25,31 +34,32 @@ if (isServerless && !fs.existsSync(dbPath)) {
   }
 }
 
-// Single connection instance
-const sqlite = new Database(dbPath);
+// Single connection instance exported immediately
+export const sqliteDb = new Database(dbPath);
 
-// Configuration pragmas: DELETE mode is safest on ephemeral /tmp serverless mount
+// Pragmas
 try {
-  sqlite.pragma(isServerless ? "journal_mode = DELETE" : "journal_mode = WAL");
-  sqlite.pragma("foreign_keys = ON");
-  sqlite.pragma("busy_timeout = 5000");
+  sqliteDb.pragma(isLambdaRuntime ? "journal_mode = DELETE" : "journal_mode = WAL");
+  sqliteDb.pragma("foreign_keys = ON");
+  sqliteDb.pragma("busy_timeout = 5000");
 } catch (_) {}
 
-// Self-healing schema & seed check (guarantees tables exist on serverless cold starts)
+export const db = drizzle(sqliteDb, { schema });
+
+// Self-healing schema & seed check (guarantees all tables and 840 questions exist)
 try {
-  const tableCheck = sqlite
-    .prepare("SELECT count(*) as count FROM sqlite_master WHERE type='table' AND name='questions'")
+  // 1. Ensure migrations are applied
+  runMigrations(sqliteDb);
+
+  // 2. Check if questions are fully seeded (all 840 questions)
+  const qCount = sqliteDb
+    .prepare("SELECT count(*) as count FROM questions WHERE deleted_at IS NULL")
     .get() as { count: number } | undefined;
 
-  if (!tableCheck || tableCheck.count === 0) {
-    const { runMigrations } = require("./migrate");
-    const { seedDatabase } = require("./seed");
-    runMigrations();
-    seedDatabase();
+  if (!qCount || qCount.count < 840) {
+    console.log(`Self-healing: Found ${qCount?.count ?? 0}/840 questions. Running seed...`);
+    seedDatabase({ customSqlite: sqliteDb, customDrizzle: db, cleanAttempts: false });
   }
 } catch (err) {
   console.error("Database self-healing initialization error:", err);
 }
-
-export const db = drizzle(sqlite, { schema });
-export const sqliteDb = sqlite;

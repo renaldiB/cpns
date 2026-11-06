@@ -108,7 +108,16 @@ export function startNewAttempt(opts: StartAttemptOptions) {
       }
     }
 
-    chosenQuestions = selectQuestionsForFullSimulation(candidatePool, usageMap, randomSeed);
+    const poolForFull =
+      opts.batchFilter && opts.batchFilter > 0
+        ? candidatePool.filter((q) => q.batchNumber === opts.batchFilter)
+        : candidatePool;
+
+    chosenQuestions = selectQuestionsForFullSimulation(
+      poolForFull.length >= 100 ? poolForFull : candidatePool,
+      usageMap,
+      randomSeed
+    );
   } else {
     // Practice mode
     if (!opts.categoryFilter) {

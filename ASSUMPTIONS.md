@@ -20,7 +20,7 @@ Dokumen ini mencatat asumsi operasional, arsitektur, dan keputusan teknis yang d
 - **Timer & Batas Waktu:** Dihitung dari `deadline_at` berbasis timestamp server lokal (UTC). Jika browser ditutup atau komputer restart, attempt dilanjutkan dengan sisa waktu yang benar. Jika deadline terlampaui, backend langsung menandai status `expired` dan memfinalisasi penilaian secara otomatis.
 
 ## 3. Privasi dan Ketiadaan Layanan Eksternal
-- Server diikat secara eksklusif ke antarmuka loopback `127.0.0.1` / `localhost`.
+- Server diikat secara privat dan terisolasi pada lingkungan mesin pengguna (isolated single-user context).
 - Font menggunakan system font stack bawaan sistem operasi.
 - Ikon menggunakan library lokal `lucide-react`.
 - Tidak ada Google Fonts, CDN eksternal, telemetry, analytics, atau tracking pixel.
