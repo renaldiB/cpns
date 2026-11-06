@@ -219,7 +219,7 @@ export default async function HasilPage({
           <div className="lg:col-span-4 rounded-3xl border border-border-light bg-gradient-to-b from-white to-slate-50 p-6 sm:p-8 dark:border-border-dark dark:from-surface-elevated-dark dark:to-surface-dark shadow-sm flex flex-col justify-between text-center relative overflow-hidden">
             <div className="flex items-center justify-between">
               <span className="font-mono text-xs font-bold text-slate-400 uppercase tracking-wider">
-                AKUMULASI SKOR SKD
+                Total Skor SKD
               </span>
               <span className="font-mono text-xs px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 dark:bg-surface-dark dark:text-slate-300 border border-border-light dark:border-border-dark">
                 MAX {isFullSimulation ? 550 : summary?.maxTotal ?? "-"}
@@ -406,7 +406,7 @@ export default async function HasilPage({
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <h3 className="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
                 <BarChart2 className="h-5 w-5 text-cobalt-light dark:text-cobalt-dark" />
-                Statistik Distribusi Bobot Non-Biner TKP
+                Statistik Distribusi Pilihan TKP (Bobot Non-Biner)
               </h3>
               <span className="font-mono text-xs text-slate-500 dark:text-slate-400">
                 Rata-rata: <strong>{tkpStats.tkpDistribution.averagePoints}</strong> / 5.00 poin

@@ -5,6 +5,11 @@ import { Navbar } from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "Simulasi CAT SKD CPNS — Aplikasi Web Pribadi",
   description: "Web simulasi tes SKD CPNS mandiri CAT BKN local-first dan offline-capable",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <head>
+      <body
+        className="min-h-screen bg-slate-50 text-slate-900 transition-colors dark:bg-canvas-dark dark:text-slate-100 flex flex-col"
+        suppressHydrationWarning
+      >
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -29,8 +37,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="min-h-screen bg-slate-50 text-slate-900 transition-colors dark:bg-canvas-dark dark:text-slate-100 flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
         <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500 dark:border-border-dark dark:bg-surface-elevated-dark dark:text-slate-400">

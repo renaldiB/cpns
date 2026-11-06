@@ -23,12 +23,14 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [moreMenuOpen, setMoreMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [activeAttempt, setActiveAttempt] = useState<{ id: string } | null>(null);
   const moreMenuRef = useRef<HTMLDivElement>(null);
 
   // Initialize theme
   useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem("cpns_theme");
     if (savedTheme === "light" || savedTheme === "dark") {
       setTheme(savedTheme);
@@ -193,18 +195,25 @@ export function Navbar() {
           <button
             onClick={toggleTheme}
             type="button"
-            title={`Beralih ke mode ${theme === "dark" ? "terang" : "gelap"}`}
+            title={mounted ? `Beralih ke mode ${theme === "dark" ? "terang" : "gelap"}` : "Ganti Tema"}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border-light bg-slate-100 hover:bg-slate-200 text-slate-800 dark:border-border-dark dark:bg-surface-dark dark:text-slate-200 dark:hover:bg-surface-container-high transition-all text-xs font-bold shadow-sm active:scale-95 cursor-pointer"
           >
-            {theme === "dark" ? (
-              <>
-                <Sun className="h-3.5 w-3.5 text-amber-400" />
-                <span className="hidden sm:inline">Mode Terang</span>
-              </>
+            {mounted ? (
+              theme === "dark" ? (
+                <>
+                  <Sun className="h-3.5 w-3.5 text-amber-400" />
+                  <span className="hidden sm:inline">Mode Terang</span>
+                </>
+              ) : (
+                <>
+                  <Moon className="h-3.5 w-3.5 text-cobalt-light" />
+                  <span className="hidden sm:inline">Mode Gelap</span>
+                </>
+              )
             ) : (
               <>
-                <Moon className="h-3.5 w-3.5 text-cobalt-light" />
-                <span className="hidden sm:inline">Mode Gelap</span>
+                <Sun className="h-3.5 w-3.5 text-amber-400 opacity-60" />
+                <span className="hidden sm:inline">Tema</span>
               </>
             )}
           </button>

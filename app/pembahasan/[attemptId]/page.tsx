@@ -105,7 +105,7 @@ export default function PembahasanPage({
               Kembali ke Ringkasan Hasil
             </Link>
             <h1 className="mt-2 text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
-              Pembahasan & Review Lembar Jawaban
+              Pembahasan & Review Soal
             </h1>
             <p className="text-xs font-mono text-slate-500 dark:text-slate-400 mt-0.5">
               {attempt.mode === "full" ? "Simulasi Penuh SKD CAT BKN" : "Latihan Kategori"} &bull; Skor:{" "}
@@ -329,7 +329,7 @@ export default function PembahasanPage({
                 <div className="rounded-2xl border border-cobalt-light/30 bg-cobalt-light/5 p-5 dark:border-cobalt-dark/30 dark:bg-cobalt-dark/10 space-y-2.5">
                   <div className="flex items-center gap-2 font-bold text-xs text-cobalt-light dark:text-cobalt-dark">
                     <BookOpen className="h-4 w-4" />
-                    <span>Pembahasan & Penjelasan Materi</span>
+                    <span>Pembahasan Detail</span>
                   </div>
                   <p className="text-xs sm:text-sm leading-relaxed text-slate-800 dark:text-slate-200 whitespace-pre-line font-normal">
                     {activeQuestion.explanation}

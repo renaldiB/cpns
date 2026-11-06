@@ -173,9 +173,10 @@ export default function UjianPage({
     setQuestions((prev) =>
       prev.map((q, idx) => (idx === currentIndex ? { ...q, flagged: nextFlag } : q))
     );
+    setSaveStatus("saving");
 
     try {
-      await fetch(`/api/attempts/${attemptId}/flag`, {
+      const res = await fetch(`/api/attempts/${attemptId}/flag`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -183,7 +184,13 @@ export default function UjianPage({
           flagged: nextFlag,
         }),
       });
-    } catch {}
+      const data = await res.json();
+      if (data.success) {
+        setSaveStatus("saved");
+      }
+    } catch {
+      setSaveStatus("error");
+    }
   };
 
   // 5. Finalize Exam Action
@@ -301,7 +308,7 @@ export default function UjianPage({
               </span>
             </div>
             <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
-              Soal {currentIndex + 1} / {totalCount}
+              Soal {currentIndex + 1} dari {totalCount}
             </span>
           </div>
         </div>
@@ -663,7 +670,7 @@ export default function UjianPage({
                   Konfirmasi Pengakhiran Ujian
                 </span>
                 <h3 className="text-xl font-black text-slate-900 dark:text-white">
-                  Apakah Anda yakin ingin menyelesaikan ujian?
+                  Konfirmasi Akhiri Ujian
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                   Setelah diakhiri, jawaban Anda akan langsung dinilai sesuai standar KepmenPANRB No. 321/2024.
