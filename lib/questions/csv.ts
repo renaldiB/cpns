@@ -73,6 +73,7 @@ export function escapeCsvField(field: unknown): string {
 export function exportQuestionsToCsv(questions: QuestionInput[]): string {
   const headers = [
     "external_id",
+    "batch_number",
     "category",
     "subtopic",
     "stem",
@@ -106,6 +107,7 @@ export function exportQuestionsToCsv(questions: QuestionInput[]): string {
 
     const row = [
       escapeCsvField(q.externalId || ""),
+      escapeCsvField(q.batchNumber || 1),
       escapeCsvField(q.category),
       escapeCsvField(q.subtopic),
       escapeCsvField(q.stem),

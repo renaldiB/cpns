@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CATEGORIES, SUBTOPICS, CategoryId, getSubtopicsByCategory } from "@/config/subtopics";
-import { BookOpen, Play, ArrowLeft, Check, Sliders, Timer, Lightbulb } from "lucide-react";
+import { BookOpen, Play, ArrowLeft, Check, Sliders, Timer, Lightbulb, Layers } from "lucide-react";
 import Link from "next/link";
 
 function LatihanForm() {
@@ -15,18 +15,34 @@ function LatihanForm() {
   const [questionCount, setQuestionCount] = useState<number>(10);
   const [difficulty, setDifficulty] = useState<number>(0); // 0 = all
   const [enableTimer, setEnableTimer] = useState<boolean>(true);
+  const [batches, setBatches] = useState<Array<{ batchNumber: number; name: string; totalQuestions: number }>>([]);
+  const [selectedBatch, setSelectedBatch] = useState<number | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    fetch("/api/batches")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setBatches(data.batches);
+        }
+      })
+      .catch(() => {});
+
     const catParam = searchParams.get("category") as CategoryId | null;
     const subParam = searchParams.get("subtopic");
+    const batchParam = searchParams.get("batch");
 
     if (catParam && ["TWK", "TIU", "TKP"].includes(catParam)) {
       setSelectedCategory(catParam);
       if (subParam) {
         setSelectedSubtopics([subParam]);
       }
+    }
+
+    if (batchParam) {
+      setSelectedBatch(parseInt(batchParam));
     }
   }, [searchParams]);
 
@@ -58,6 +74,7 @@ function LatihanForm() {
         body: JSON.stringify({
           mode: "practice",
           categoryFilter: selectedCategory,
+          batchFilter: selectedBatch,
           subtopicsFilter: selectedSubtopics.length > 0 ? selectedSubtopics : undefined,
           difficulty: difficulty > 0 ? difficulty : undefined,
           questionCount,
@@ -85,22 +102,22 @@ function LatihanForm() {
         Kembali ke Beranda
       </Link>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900 space-y-6">
+      <div className="rounded-3xl border border-border-light bg-white p-6 sm:p-8 shadow-sm dark:border-border-dark dark:bg-surface-elevated-dark space-y-6">
         <div>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
-            Mode Latihan
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 px-3 py-1 text-xs font-bold font-mono">
+            DRILL ADAPTIF MANDIRI
           </span>
-          <h1 className="mt-3 text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+          <h1 className="mt-3 text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
             Konfigurasi Latihan Kategori
           </h1>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+          <p className="mt-1 text-xs sm:text-sm text-slate-500 dark:text-on-surface-variant leading-relaxed">
             Pilih materi dan atur sesi latihan mandiri sesuai kebutuhan belajar Anda.
           </p>
         </div>
 
         {/* Step 1: Category Picker */}
         <div className="space-y-3">
-          <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
+          <label className="text-xs font-bold font-mono uppercase tracking-wider text-slate-500 dark:text-outline">
             1. Pilih Kategori Utama
           </label>
           <div className="grid grid-cols-3 gap-3">
@@ -114,14 +131,14 @@ function LatihanForm() {
                     setSelectedCategory(cat);
                     setSelectedSubtopics([]);
                   }}
-                  className={`rounded-xl border p-4 text-center transition ${
+                  className={`rounded-2xl border p-4 text-center transition ${
                     isSelected
-                      ? "border-blue-600 bg-blue-50/70 text-blue-900 shadow-sm ring-2 ring-blue-600/20 dark:bg-blue-950/60 dark:text-blue-100 dark:border-blue-500"
-                      : "border-slate-200 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-300 dark:hover:bg-slate-800/60"
+                      ? "border-cobalt-light bg-blue-50/70 text-blue-900 shadow-sm ring-2 ring-cobalt-light/20 dark:bg-cobalt-dark/20 dark:text-white dark:border-cobalt-dark"
+                      : "border-border-light text-slate-700 hover:bg-slate-50 dark:border-border-dark dark:text-slate-300 dark:hover:bg-surface-container"
                   }`}
                 >
-                  <span className="block text-lg font-black">{cat}</span>
-                  <span className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">
+                  <span className="block text-lg font-black font-mono">{cat}</span>
+                  <span className="text-[11px] text-slate-500 dark:text-on-surface-variant line-clamp-1 mt-0.5">
                     {CATEGORIES[cat].name}
                   </span>
                 </button>
@@ -130,16 +147,36 @@ function LatihanForm() {
           </div>
         </div>
 
-        {/* Step 2: Subtopic Picker */}
+        {/* Step 2: Batch Selection */}
+        <div className="space-y-2">
+          <label className="text-xs font-bold font-mono uppercase tracking-wider text-slate-500 dark:text-outline flex items-center gap-1.5">
+            <Layers className="h-4 w-4 text-cobalt-light dark:text-primary" />
+            <span>2. Sumber Paket / Batch Soal</span>
+          </label>
+          <select
+            value={selectedBatch ?? ""}
+            onChange={(e) => setSelectedBatch(e.target.value ? parseInt(e.target.value) : undefined)}
+            className="w-full rounded-xl border border-slate-300 dark:border-border-dark bg-slate-50 dark:bg-surface-container px-3.5 py-2.5 text-xs font-semibold text-slate-800 dark:text-on-surface"
+          >
+            <option value="">Semua Paket Batch (Gabungan Seluruh Soal)</option>
+            {batches.map((b) => (
+              <option key={b.batchNumber} value={b.batchNumber}>
+                Batch #{b.batchNumber}: {b.name} ({b.totalQuestions} Soal)
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Step 3: Subtopic Picker */}
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              2. Pilih Sub-materi (Opsional / Multi-select)
+            <label className="text-xs font-bold font-mono uppercase tracking-wider text-slate-500 dark:text-outline">
+              3. Pilih Sub-Materi (Multi-Select)
             </label>
             <button
               type="button"
               onClick={selectAllSubtopics}
-              className="text-xs font-semibold text-blue-600 hover:underline dark:text-blue-400"
+              className="text-xs font-bold text-cobalt-light hover:underline dark:text-primary"
             >
               {selectedSubtopics.length === availableSubtopics.length ? "Batal Pilih Semua" : "Pilih Semua Sub-materi"}
             </button>
@@ -152,10 +189,10 @@ function LatihanForm() {
                   key={sub.id}
                   type="button"
                   onClick={() => toggleSubtopic(sub.id)}
-                  className={`flex items-center gap-3 rounded-lg border px-3 py-2 text-left text-xs transition ${
+                  className={`flex items-center gap-3 rounded-xl border px-3 py-2 text-left text-xs transition ${
                     isChecked
-                      ? "border-emerald-600 bg-emerald-50 text-emerald-950 dark:bg-emerald-950/50 dark:text-emerald-200 dark:border-emerald-500"
-                      : "border-slate-200 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-300 dark:hover:bg-slate-800/40"
+                      ? "border-emerald-600 bg-emerald-50 text-emerald-950 dark:bg-emerald-950/40 dark:text-emerald-200 dark:border-emerald-600"
+                      : "border-border-light text-slate-700 hover:bg-slate-50 dark:border-border-dark dark:text-slate-300 dark:hover:bg-surface-container"
                   }`}
                 >
                   <div
@@ -172,18 +209,18 @@ function LatihanForm() {
               );
             })}
           </div>
-          <p className="text-[11px] text-slate-400">
+          <p className="text-[11px] text-slate-400 font-mono">
             {selectedSubtopics.length === 0
-              ? "Semua sub-materi dalam kategori akan diuji secara acak."
+              ? "Semua sub-materi dalam kategori akan diacak."
               : `${selectedSubtopics.length} sub-materi dipilih.`}
           </p>
         </div>
 
-        {/* Step 3: Question Count & Difficulty */}
+        {/* Step 4: Question Count & Difficulty */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              3. Jumlah Soal
+            <label className="text-xs font-bold font-mono uppercase tracking-wider text-slate-500 dark:text-outline">
+              4. Jumlah Soal
             </label>
             <div className="flex items-center gap-2">
               {[5, 10, 15, 20, 30].map((num) => (
@@ -191,10 +228,10 @@ function LatihanForm() {
                   key={num}
                   type="button"
                   onClick={() => setQuestionCount(num)}
-                  className={`flex-1 rounded-lg border py-2 text-xs font-bold transition ${
+                  className={`flex-1 rounded-xl border py-2 text-xs font-bold font-mono transition ${
                     questionCount === num
-                      ? "border-blue-600 bg-blue-600 text-white"
-                      : "border-slate-200 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-300 dark:hover:bg-slate-800"
+                      ? "border-cobalt-light bg-cobalt-light dark:bg-cobalt-dark text-white"
+                      : "border-border-light text-slate-700 hover:bg-slate-50 dark:border-border-dark dark:text-slate-300 dark:hover:bg-surface-container"
                   }`}
                 >
                   {num}
@@ -204,30 +241,43 @@ function LatihanForm() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              4. Tingkat Kesulitan
+            <label className="text-xs font-bold font-mono uppercase tracking-wider text-slate-500 dark:text-outline">
+              5. Tingkat Kesulitan
             </label>
-            <select
-              value={difficulty}
-              onChange={(e) => setDifficulty(parseInt(e.target.value))}
-              className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-white"
-            >
-              <option value={0}>Semua Kesulitan (Campuran)</option>
-              <option value={1}>Tingkat 1 (Mudah)</option>
-              <option value={2}>Tingkat 2 (Sedang)</option>
-              <option value={3}>Tingkat 3 (Sulit / HOTS)</option>
-            </select>
+            <div className="flex items-center gap-2">
+              {[
+                { val: 0, label: "Semua" },
+                { val: 1, label: "Mudah" },
+                { val: 2, label: "Sedang" },
+                { val: 3, label: "Sulit" },
+              ].map((diff) => (
+                <button
+                  key={diff.val}
+                  type="button"
+                  onClick={() => setDifficulty(diff.val)}
+                  className={`flex-1 rounded-xl border py-2 text-xs font-bold transition ${
+                    difficulty === diff.val
+                      ? "border-cobalt-light bg-cobalt-light dark:bg-cobalt-dark text-white"
+                      : "border-border-light text-slate-700 hover:bg-slate-50 dark:border-border-dark dark:text-slate-300 dark:hover:bg-surface-container"
+                  }`}
+                >
+                  {diff.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Step 4: Timer Toggle */}
-        <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-4 dark:border-slate-800 dark:bg-slate-800/30 flex items-center justify-between">
+        {/* Step 5: Timer Toggle */}
+        <div className="flex items-center justify-between rounded-2xl border border-border-light bg-slate-50 p-4 dark:border-border-dark dark:bg-surface-container">
           <div className="flex items-center gap-3">
-            <Timer className="h-5 w-5 text-slate-500" />
+            <Timer className="h-5 w-5 text-slate-600 dark:text-on-surface-variant" />
             <div>
-              <p className="text-xs font-bold text-slate-900 dark:text-white">Batas Waktu Timer</p>
-              <p className="text-[11px] text-slate-500">
-                {enableTimer ? `Aktif (${questionCount} menit: 60 detik per soal)` : "Nonaktif (Latihan santai tanpa batas waktu)"}
+              <p className="text-xs font-bold text-slate-900 dark:text-white">Gunakan Batas Waktu (Timer)</p>
+              <p className="text-[11px] text-slate-500 dark:text-outline">
+                {enableTimer
+                  ? `Alokasi waktu: ${questionCount} menit (1 menit per soal)`
+                  : "Mode santai tanpa batas waktu"}
               </p>
             </div>
           </div>
@@ -235,7 +285,7 @@ function LatihanForm() {
             type="button"
             onClick={() => setEnableTimer(!enableTimer)}
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-              enableTimer ? "bg-blue-600" : "bg-slate-300 dark:bg-slate-700"
+              enableTimer ? "bg-cobalt-light dark:bg-cobalt-dark" : "bg-slate-300 dark:bg-slate-700"
             }`}
           >
             <span
@@ -247,25 +297,28 @@ function LatihanForm() {
         </div>
 
         {error && (
-          <div className="rounded-xl border border-rose-300 bg-rose-50 p-3 text-xs font-semibold text-rose-700 dark:border-rose-800 dark:bg-rose-950/50 dark:text-rose-300">
+          <div className="rounded-2xl border border-rose-300 bg-rose-50 p-3 text-xs font-semibold text-rose-700 dark:border-rose-900 dark:bg-rose-950/50 dark:text-rose-300">
             {error}
           </div>
         )}
 
-        <button
-          onClick={handleStartPractice}
-          disabled={isLoading}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 py-3.5 text-sm font-bold text-white shadow-md hover:bg-emerald-700 transition disabled:opacity-50"
-        >
-          {isLoading ? (
-            <span>Membuat Sesi Latihan...</span>
-          ) : (
-            <>
-              <Play className="h-4 w-4 fill-white" />
-              Mulai Sesi Latihan ({questionCount} Soal)
-            </>
-          )}
-        </button>
+        {/* Start Button */}
+        <div className="pt-2">
+          <button
+            onClick={handleStartPractice}
+            disabled={isLoading}
+            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-emerald-600 py-4 text-base font-bold text-white shadow-lg hover:bg-emerald-700 active:scale-95 transition disabled:opacity-50"
+          >
+            {isLoading ? (
+              <span>Menyiapkan Latihan...</span>
+            ) : (
+              <>
+                <Play className="h-5 w-5 fill-white" />
+                Mulai Latihan {selectedCategory} ({questionCount} Soal)
+              </>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -273,7 +326,7 @@ function LatihanForm() {
 
 export default function LatihanPage() {
   return (
-    <Suspense fallback={<div className="p-8 text-center text-xs text-slate-500">Memuat form latihan...</div>}>
+    <Suspense fallback={<div className="p-8 text-center text-sm font-semibold text-slate-400">Memuat konfigurasi latihan...</div>}>
       <LatihanForm />
     </Suspense>
   );

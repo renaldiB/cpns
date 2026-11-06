@@ -22,9 +22,24 @@ export function runMigrations() {
       updated_at TEXT NOT NULL
     );
 
+    CREATE TABLE IF NOT EXISTS question_batches (
+      id TEXT PRIMARY KEY,
+      batch_number INTEGER NOT NULL UNIQUE,
+      name TEXT NOT NULL,
+      description TEXT,
+      target_year INTEGER DEFAULT 2024,
+      is_active INTEGER NOT NULL DEFAULT 1,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    );
+
+    CREATE UNIQUE INDEX IF NOT EXISTS idx_question_batches_num ON question_batches(batch_number);
+
     CREATE TABLE IF NOT EXISTS questions (
       id TEXT PRIMARY KEY,
       external_id TEXT UNIQUE,
+      batch_id TEXT DEFAULT 'batch-1',
+      batch_number INTEGER NOT NULL DEFAULT 1,
       category TEXT NOT NULL,
       subtopic TEXT NOT NULL,
       stem TEXT NOT NULL,
@@ -62,6 +77,7 @@ export function runMigrations() {
       mode TEXT NOT NULL,
       exam_profile_id TEXT NOT NULL REFERENCES exam_profiles(id),
       exam_profile_snapshot_json TEXT NOT NULL,
+      batch_filter INTEGER,
       category_filter TEXT,
       subtopic_filter_json TEXT,
       started_at TEXT NOT NULL,
@@ -120,6 +136,29 @@ export function runMigrations() {
       created_at TEXT NOT NULL
     );
   `);
+
+  // Safe ALTER TABLE migrations for existing tables
+  try {
+    const questionCols = sqliteDb.pragma("table_info(questions)") as Array<{ name: string }>;
+    const colNames = questionCols.map((c) => c.name);
+
+    if (!colNames.includes("batch_id")) {
+      sqliteDb.exec("ALTER TABLE questions ADD COLUMN batch_id TEXT DEFAULT 'batch-1';");
+    }
+    if (!colNames.includes("batch_number")) {
+      sqliteDb.exec("ALTER TABLE questions ADD COLUMN batch_number INTEGER NOT NULL DEFAULT 1;");
+      sqliteDb.exec("CREATE INDEX IF NOT EXISTS idx_questions_batch ON questions(batch_number);");
+    }
+
+    const attemptCols = sqliteDb.pragma("table_info(attempts)") as Array<{ name: string }>;
+    const attemptColNames = attemptCols.map((c) => c.name);
+
+    if (!attemptColNames.includes("batch_filter")) {
+      sqliteDb.exec("ALTER TABLE attempts ADD COLUMN batch_filter INTEGER;");
+    }
+  } catch (err) {
+    console.warn("Notice during column inspection/upgrade:", err);
+  }
 
   console.log("Migrations applied successfully.");
 }

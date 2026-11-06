@@ -7,6 +7,7 @@ import {
   FileText,
   Clock,
   BookOpen,
+  Layers,
   BarChart3,
   Database,
   Settings,
@@ -16,6 +17,8 @@ import {
   Sun,
   Moon,
   Laptop,
+  CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 
 export function Navbar() {
@@ -74,8 +77,9 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Beranda", icon: FileText },
-    { href: "/simulasi", label: "Simulasi Penuh", icon: Clock },
-    { href: "/latihan", label: "Latihan Kategori", icon: BookOpen },
+    { href: "/simulasi", label: "Simulasi CAT", icon: Clock },
+    { href: "/latihan", label: "Latihan Drill", icon: BookOpen },
+    { href: "/batch-soal", label: "Batch Soal", icon: Layers },
     { href: "/riwayat", label: "Riwayat", icon: Clock },
     { href: "/analisis", label: "Analisis", icon: BarChart3 },
     { href: "/bank-soal", label: "Bank Soal", icon: Database },
@@ -84,22 +88,28 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-2.5 font-bold tracking-tight text-slate-900 dark:text-white">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-700 text-white shadow-sm">
-            <span className="text-xs font-black tracking-wider">CAT</span>
+    <header className="sticky top-2 z-50 w-full px-3 sm:px-6 flex justify-center pointer-events-none mb-3">
+      <div className="pointer-events-auto w-full max-w-[1536px] bg-white/90 dark:bg-surface-elevated-dark/90 backdrop-blur-md border border-border-light dark:border-border-dark rounded-full px-3.5 sm:px-5 py-2 shadow-lg shadow-black/5 dark:shadow-black/40 flex items-center justify-between gap-3 transition-colors">
+        {/* Brand Mark */}
+        <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-cobalt-light dark:bg-cobalt-dark text-white font-mono font-black text-xs shadow-sm group-hover:scale-105 transition-transform">
+            CAT
           </div>
           <div className="flex flex-col">
-            <span className="text-base font-extrabold leading-none text-blue-900 dark:text-blue-400">
-              SIMULASI SKD CPNS
+            <span className="text-sm font-extrabold leading-none tracking-tight text-slate-900 dark:text-white">
+              CAT BKN
             </span>
-            <span className="text-[10px] text-slate-500 dark:text-slate-400">Local-First CAT BKN Engine</span>
+            <span className="text-[9px] font-mono tracking-widest text-slate-400 dark:text-outline uppercase leading-tight mt-0.5">
+              Official Simulator
+            </span>
           </div>
+          <span className="hidden 2xl:inline-flex items-center px-2 py-0.5 rounded-full bg-slate-100 dark:bg-surface-container-high border border-border-light dark:border-border-dark text-[10px] font-mono text-cobalt-light dark:text-primary font-semibold tracking-wider ml-1">
+            SKD 2024/2026
+          </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-1 xl:flex">
+        {/* Center Pill Nav Links */}
+        <nav className="hidden xl:flex items-center bg-slate-100/80 dark:bg-surface-dark border border-slate-200/80 dark:border-border-dark p-1 rounded-full gap-0.5 shrink-0">
           {navLinks.map((link) => {
             const Icon = link.icon;
             const isActive = pathname === link.href;
@@ -107,21 +117,29 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-semibold transition-colors ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                   isActive
-                    ? "bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300"
-                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
+                    ? "bg-cobalt-light dark:bg-cobalt-dark text-white shadow-sm"
+                    : "text-slate-600 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-on-surface hover:bg-white/60 dark:hover:bg-surface-container-high"
                 }`}
               >
-                <Icon className="h-4 w-4" />
-                {link.label}
+                <Icon className="h-3.5 w-3.5" />
+                <span>{link.label}</span>
               </Link>
             );
           })}
         </nav>
 
-        {/* Right buttons: Active session pill + Theme toggle + Mobile Menu Button */}
-        <div className="flex items-center gap-2">
+        {/* Right Section: Online Status + Active Session + Theme Toggle + Mobile Menu */}
+        <div className="flex items-center gap-2 shrink-0">
+          {/* Realtime Live Engine Status */}
+          <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-surface-dark border border-slate-200 dark:border-border-dark">
+            <span className="w-2 h-2 rounded-full bg-emerald-light dark:bg-emerald-dark animate-pulse" />
+            <span className="text-[11px] font-mono text-emerald-700 dark:text-secondary-fixed-dim font-medium whitespace-nowrap">
+              Lokal Online
+            </span>
+          </div>
+
           {activeAttempt && (
             <Link
               href={`/ujian/${activeAttempt.id}`}
@@ -132,28 +150,30 @@ export function Navbar() {
             </Link>
           )}
 
+          {/* Theme Toggle Button */}
           <button
             onClick={cycleTheme}
-            title={`Tema: ${theme}`}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+            title={`Ganti Tema (Saat ini: ${theme})`}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:bg-slate-100 dark:border-border-dark dark:text-slate-300 dark:hover:bg-surface-container-high transition-colors"
           >
-            {theme === "light" && <Sun className="h-4 w-4" />}
-            {theme === "dark" && <Moon className="h-4 w-4" />}
+            {theme === "light" && <Sun className="h-4 w-4 text-amber-500" />}
+            {theme === "dark" && <Moon className="h-4 w-4 text-cobalt-dark" />}
             {theme === "system" && <Laptop className="h-4 w-4" />}
           </button>
 
+          {/* Mobile Hamburger Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-700 xl:hidden dark:border-slate-700 dark:text-slate-200"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-700 xl:hidden dark:border-border-dark dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors"
           >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Floating Mobile Drawer */}
       {isOpen && (
-        <div className="border-b border-slate-200 bg-white px-4 py-3 xl:hidden dark:border-slate-800 dark:bg-slate-900">
+        <div className="pointer-events-auto absolute top-16 left-3 right-3 sm:left-6 sm:right-6 max-w-[1536px] mx-auto rounded-2xl border border-border-light dark:border-border-dark bg-white/95 dark:bg-surface-elevated-dark/95 backdrop-blur-md p-3 shadow-2xl xl:hidden z-50">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => {
               const Icon = link.icon;
@@ -163,14 +183,14 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium ${
+                  className={`flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-xs font-semibold transition-all ${
                     isActive
-                      ? "bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300"
-                      : "text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                      ? "bg-cobalt-light dark:bg-cobalt-dark text-white"
+                      : "text-slate-700 dark:text-on-surface-variant hover:bg-slate-100 dark:hover:bg-surface-container-high"
                   }`}
                 >
                   <Icon className="h-4 w-4" />
-                  {link.label}
+                  <span>{link.label}</span>
                 </Link>
               );
             })}

@@ -9,11 +9,17 @@ export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
     const format = url.searchParams.get("format") || "json";
+    const batch = url.searchParams.get("batch");
+
+    const conditions = [sql`${questions.deletedAt} IS NULL`];
+    if (batch) {
+      conditions.push(sql`${questions.batchNumber} = ${parseInt(batch)}`);
+    }
 
     const allQ = db
       .select()
       .from(questions)
-      .where(sql`${questions.deletedAt} IS NULL`)
+      .where(sql.join(conditions, sql` AND `))
       .all();
 
     const allOpt = db.select().from(options).all();
@@ -29,6 +35,8 @@ export async function GET(req: Request) {
       return {
         id: q.id,
         externalId: q.externalId || null,
+        batchNumber: q.batchNumber,
+        batchId: q.batchId || undefined,
         category: q.category as any,
         subtopic: q.subtopic,
         stem: q.stem,

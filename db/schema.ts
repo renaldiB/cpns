@@ -18,11 +18,30 @@ export const examProfiles = sqliteTable("exam_profiles", {
   updatedAt: text("updated_at").notNull(),
 });
 
+export const questionBatches = sqliteTable(
+  "question_batches",
+  {
+    id: text("id").primaryKey(), // e.g. "batch-1", "batch-2"
+    batchNumber: integer("batch_number").notNull().unique(), // 1, 2, ...
+    name: text("name").notNull(), // e.g. "Batch 1: Standar BKN 2024"
+    description: text("description"),
+    targetYear: integer("target_year").default(2024),
+    isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
+    createdAt: text("created_at").notNull(),
+    updatedAt: text("updated_at").notNull(),
+  },
+  (table) => [
+    uniqueIndex("idx_question_batches_num").on(table.batchNumber),
+  ]
+);
+
 export const questions = sqliteTable(
   "questions",
   {
     id: text("id").primaryKey(),
     externalId: text("external_id").unique(),
+    batchId: text("batch_id").default("batch-1"),
+    batchNumber: integer("batch_number").notNull().default(1),
     category: text("category").notNull(), // TWK, TIU, TKP
     subtopic: text("subtopic").notNull(),
     stem: text("stem").notNull(),
@@ -41,6 +60,7 @@ export const questions = sqliteTable(
     index("idx_questions_cat_sub").on(table.category, table.subtopic),
     index("idx_questions_difficulty").on(table.difficulty),
     index("idx_questions_review_status").on(table.reviewStatus),
+    index("idx_questions_batch").on(table.batchNumber),
     index("idx_questions_deleted_at").on(table.deletedAt),
   ]
 );
@@ -72,6 +92,7 @@ export const attempts = sqliteTable(
       .notNull()
       .references(() => examProfiles.id),
     examProfileSnapshotJson: text("exam_profile_snapshot_json").notNull(),
+    batchFilter: integer("batch_filter"), // Optional: if attempt targets specific batch (e.g. 1, 2)
     categoryFilter: text("category_filter"), // For practice mode (e.g. TWK)
     subtopicFilterJson: text("subtopic_filter_json"), // JSON array of subtopics
     startedAt: text("started_at").notNull(),

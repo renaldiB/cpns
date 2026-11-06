@@ -8,6 +8,7 @@ import { z } from "zod";
 const StartAttemptRequestSchema = z.object({
   mode: z.enum(["full", "practice"]),
   examProfileId: z.string().optional(),
+  batchFilter: z.number().int().min(1).optional(),
   categoryFilter: z.enum(["TWK", "TIU", "TKP"]).optional(),
   subtopicsFilter: z.array(z.string()).optional(),
   difficulty: z.number().int().min(1).max(3).optional(),

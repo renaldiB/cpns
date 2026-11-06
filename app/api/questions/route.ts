@@ -12,6 +12,7 @@ export async function GET(req: Request) {
     const subtopic = url.searchParams.get("subtopic");
     const difficulty = url.searchParams.get("difficulty");
     const reviewStatus = url.searchParams.get("reviewStatus");
+    const batch = url.searchParams.get("batch");
     const page = Math.max(1, parseInt(url.searchParams.get("page") || "1"));
     const limit = Math.max(1, Math.min(100, parseInt(url.searchParams.get("limit") || "20")));
     const offset = (page - 1) * limit;
@@ -32,6 +33,9 @@ export async function GET(req: Request) {
     }
     if (reviewStatus) {
       conditions.push(eq(questions.reviewStatus, reviewStatus));
+    }
+    if (batch) {
+      conditions.push(eq(questions.batchNumber, parseInt(batch)));
     }
 
     const whereClause = and(...conditions);
@@ -94,10 +98,15 @@ export async function POST(req: Request) {
     const qId = `q_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
     const nowIso = new Date().toISOString();
 
+    const bNum = validated.batchNumber || 1;
+    const bId = validated.batchId || `batch-${bNum}`;
+
     db.insert(questions)
       .values({
         id: qId,
         externalId: validated.externalId || null,
+        batchId: bId,
+        batchNumber: bNum,
         category: validated.category,
         subtopic: validated.subtopic,
         stem: validated.stem,

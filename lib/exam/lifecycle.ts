@@ -16,6 +16,7 @@ import { isDeadlineExpired } from "./timer";
 export interface StartAttemptOptions {
   mode: "full" | "practice";
   examProfileId?: string;
+  batchFilter?: number;
   categoryFilter?: CategoryId;
   subtopicsFilter?: string[];
   difficulty?: number;
@@ -61,6 +62,7 @@ export function startNewAttempt(opts: StartAttemptOptions) {
 
   const candidatePool: CandidateQuestion[] = rawQuestions.map((q) => ({
     id: q.id,
+    batchNumber: q.batchNumber,
     category: q.category as CategoryId,
     subtopic: q.subtopic,
     difficulty: q.difficulty,
@@ -118,6 +120,7 @@ export function startNewAttempt(opts: StartAttemptOptions) {
         category: opts.categoryFilter,
         subtopics: opts.subtopicsFilter,
         difficulty: opts.difficulty,
+        batchNumber: opts.batchFilter,
         count: opts.questionCount || 10,
       },
       randomSeed
@@ -147,6 +150,7 @@ export function startNewAttempt(opts: StartAttemptOptions) {
         mode: opts.mode,
         examProfileId: profile.id,
         examProfileSnapshotJson: JSON.stringify(profile),
+        batchFilter: opts.batchFilter || null,
         categoryFilter: opts.categoryFilter || null,
         subtopicFilterJson: opts.subtopicsFilter ? JSON.stringify(opts.subtopicsFilter) : null,
         startedAt,

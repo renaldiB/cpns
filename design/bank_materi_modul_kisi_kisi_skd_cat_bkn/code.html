@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"amber-dark":"#F59E0B","on-tertiary-container":"#461f00","error-container":"#93000a","background":"#121315","surface-container":"#1f2021","surface-container-highest":"#343536","secondary-fixed-dim":"#4edea3","error":"#ffb4ab","canvas-dark":"#08090A","surface":"#121315","primary-container":"#4d8eff","primary-fixed":"#d8e2ff","on-primary-fixed-variant":"#004395","emerald-dark":"#10B981","surface-bright":"#38393a","inverse-primary":"#005ac2","tertiary-container":"#df7412","surface-elevated-dark":"#181B20","emerald-light":"#059669","secondary-container":"#00a572","tertiary-fixed":"#ffdcc6","on-tertiary-fixed-variant":"#723600","tertiary":"#ffb786","canvas-light":"#F8FAFC","rose-dark":"#F43F5E","surface-variant":"#343536","on-error":"#690005","secondary-fixed":"#6ffbbe","rose-light":"#E11D48","on-surface":"#e3e2e3","on-error-container":"#ffdad6","surface-dark":"#101216","on-tertiary":"#502400","on-secondary":"#003824","on-primary-container":"#00285d","surface-container-low":"#1b1c1d","inverse-on-surface":"#303032","on-tertiary-fixed":"#311400","cobalt-dark":"#3B82F6","cobalt-light":"#1D4ED8","on-surface-variant":"#c2c6d6","primary-fixed-dim":"#adc6ff","surface-dim":"#121315","on-primary":"#002e6a","on-primary-fixed":"#001a42","tertiary-fixed-dim":"#ffb786","border-dark":"#23272F","outline":"#8c909f","inverse-surface":"#e3e2e3","on-background":"#e3e2e3","outline-variant":"#424754","primary":"#adc6ff","border-light":"#E2E8F0","on-secondary-container":"#00311f","surface-container-high":"#292a2b","surface-container-lowest":"#0d0e0f","on-secondary-fixed-variant":"#005236","surface-tint":"#adc6ff","secondary":"#4edea3","on-secondary-fixed":"#002113","amber-light":"#D97706"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","gutter-mobile":"0.75rem","space-xl":"2rem","space-sm":"0.5rem","margin":"2rem","gutter":"1.25rem","space-2xl":"3rem","space-lg":"1.5rem","margin-mobile":"1rem","space-xs":"0.25rem"},fontFamily:{"label-timer-mobile":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"label-kbd":["JetBrains Mono"],"label-sm":["Inter"],"headline-xl":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Inter"],"label-timer":["JetBrains Mono"],"headline-lg":["Inter"],"label-metric":["JetBrains Mono"]},fontSize:{"label-timer-mobile":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"label-kbd":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["17px",{"lineHeight":"28px","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-timer":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-metric":["14px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}};</script></head><body class="bg-canvas-dark text-on-surface font-body-md text-body-md antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 h-20 px-space-md py-space-sm flex items-center justify-center"><div class="w-full max-w-[1536px] h-14 bg-surface-elevated-dark/85 backdrop-blur-md border border-border-dark rounded-full px-space-md shadow-2xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><img alt="CAT BKN Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-rZ6VOD-7ilHGgqbE-8L-j8-Wf7vvPHmBaPiaqx0G3VWqNGvFut7Ka6gPQIkQQfL_wWbHo5csCrMPd2QW85tInS6JvkRBSSSfZcrVwcO-ykUbJcQ_irRc4CwBwY3_ZkjoA3TDjHxR9chK3xJ-IwYwQKXr00Yw5p3ZIQC2iP3SDkI8OeSI3pk6vD6_SVoeHoLNd18KJGG_MNTNoFReE-PH3vlCbfjkQQigmLnYvdbK"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-semibold text-on-surface tracking-tight leading-none">CAT BKN</span><span class="text-[9px] font-mono tracking-widest text-outline uppercase leading-tight mt-0.5">Official Simulator Engine</span></div><span class="hidden xl:inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high border border-border-dark font-label-kbd text-label-kbd text-primary ml-space-xs font-semibold tracking-wider">SIMULATOR SKD 2024/2025</span></div><nav class="hidden lg:flex items-center bg-surface-dark border border-border-dark p-1 rounded-full gap-1 shrink-0" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="beranda" href="#">Beranda</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="ruang-ujian-cat" href="#">Ruang Ujian CAT</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="hasil-evaluasi" href="#">Hasil &amp; Evaluasi</a><a aria-current="page" class="px-space-md py-1.5 rounded-full transition-all bg-primary text-on-primary font-semibold shadow-sm" data-path="materi-skd" href="#">Materi SKD</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="pembahasan-soal" href="#">Pembahasan Soal</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-sm pl-space-sm"><div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-dark border border-border-dark rounded-full"><span class="w-2 h-2 rounded-full bg-emerald-dark animate-pulse"></span><span class="font-label-metric text-label-kbd text-secondary-fixed-dim whitespace-nowrap">Sistem Online - 18ms</span></div><div class="hidden 2xl:flex items-center px-space-sm py-1 bg-surface-dark border border-border-dark rounded-md"><span class="font-label-kbd text-label-kbd text-outline tracking-wider">BKN-SRV-04</span></div></div><div class="h-6 w-[1px] bg-border-dark hidden sm:block"></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex flex-col text-right leading-tight"><span class="font-body-sm text-body-sm font-semibold text-on-surface">Ahmad Fauzi</span><span class="font-label-kbd text-label-kbd text-outline tracking-tight">24301182901</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-dark ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkxDxQxV3byNNN0acR-WORKrIHtemsVC7zAMxErZWkonsNkE1t2exuQr_QeJ6kUXebpOtwjv47abFT-94lfWKWGhoSguKWubz2kPEa7ra26MNO-Hve5jOmTo5snSSOaGHHtrrnszHTtTbZ6JKWnxsHq2zsUKF6RRks8r8rRWkmyOnsdMCtraOtCwwADWwwvHmPOsMdmBQvVOV3YJShHBqtCdKKyonbcCe6reRj8_Qn"/></div></div></div></header><main class="w-full pt-20 bg-canvas-dark min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1536px] mx-auto px-gutter-mobile md:px-margin space-y-space-xl pb-space-2xl">
+<!-- Top Breadcrumb & Status Tracker -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md text-on-surface-variant">
+<div class="flex items-center gap-2 font-label-kbd text-label-kbd tracking-wider uppercase">
+<span class="text-primary font-semibold">SKD CPNS 2024/2025</span>
+<span class="text-outline">/</span>
+<span class="text-outline">Regulasi Resmi</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface font-semibold">PermenPAN-RB No. 321/2024</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-emerald-dark font-label-kbd text-label-kbd">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-dark animate-pulse"></span>
+          Sinkronisasi Kurikulum BKN v4.2
+        </span>
+<span class="text-outline font-label-kbd text-label-kbd">Pembaruan: Oktober 2024</span>
+</div>
+</div>
+<!-- Header Section -->
+<section class="relative rounded-2xl bg-surface-container-low p-space-lg md:p-space-xl overflow-hidden shadow-xl">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-cobalt-dark/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-space-md">
+<div class="max-w-3xl space-y-space-xs">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-cobalt-dark/15 text-primary font-label-kbd text-label-kbd uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Silabus Terverifikasi Kedinasan &amp; CPNS
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+              Bank Materi &amp; Modul Kisi-Kisi Resmi SKD
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+              Kurikulum standar kompetensi dasar BKN 2024/2025 dengan rangkuman inti, rumus cepat, hafalan pasal UUD 1945, dan trik penalaran logis.
+            </p>
+</div>
+<!-- Download Action -->
+<div class="flex items-center gap-space-sm shrink-0 self-start lg:self-auto">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-xl bg-cobalt-dark text-on-surface font-body-sm text-body-sm font-semibold shadow-md hover:bg-cobalt-light transition-all">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Unduh Cheatsheet PDF</span>
+<span class="px-1.5 py-0.5 rounded bg-black/30 font-label-kbd text-[10px]">18.4 MB</span>
+</button>
+</div>
+</div>
+<!-- Search Bar & Filters -->
+<div class="space-y-space-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[22px]">search</span>
+<input class="w-full bg-surface-dark text-on-surface placeholder:text-outline pl-12 pr-28 py-3.5 rounded-xl font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-cobalt-dark shadow-inner" placeholder="Cari materi, pasal, rumus numerik, atau studi kasus TKP (Tekan '/' untuk fokus)..." type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 font-label-kbd text-label-kbd text-outline bg-surface-container px-2 py-1 rounded">
+<span>CTRL</span>
+<span>+</span>
+<span>K</span>
+</div>
+</div>
+<!-- Segmented Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+<button class="px-4 py-2 rounded-lg bg-cobalt-dark text-on-surface font-body-sm text-body-sm font-semibold whitespace-nowrap shadow-sm">
+              Semua Materi (48 Modul)
+            </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition font-body-sm text-body-sm whitespace-nowrap flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-rose-dark"></span>
+              TWK (14 Modul)
+            </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition font-body-sm text-body-sm whitespace-nowrap flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-cobalt-dark"></span>
+              TIU (18 Modul)
+            </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition font-body-sm text-body-sm whitespace-nowrap flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-dark"></span>
+              TKP (16 Modul)
+            </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-amber-dark hover:bg-surface-container-high transition font-body-sm text-body-sm whitespace-nowrap flex items-center gap-1.5 font-medium">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+              Rumus Cepat (Cheatsheet)
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pilar Overview Cards (3 Cards Grid) -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Card 1: TWK -->
+<div class="relative bg-surface-container rounded-2xl p-space-lg flex flex-col justify-between overflow-hidden shadow-lg group hover:bg-surface-container-high transition duration-300">
+<div class="absolute top-0 left-0 right-0 h-1 bg-rose-dark"></div>
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-kbd text-label-kbd text-rose-light uppercase font-semibold">Komponen I</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Tes Wawasan Kebangsaan (TWK)</h2>
+</div>
+<span class="p-2 rounded-xl bg-rose-dark/15 text-rose-light material-symbols-outlined text-[24px]">flag</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-dark/70 rounded-xl p-space-sm font-label-metric text-label-metric">
+<div class="flex flex-col">
+<span class="text-outline text-[11px] uppercase tracking-wider">Passing Grade</span>
+<span class="text-on-surface font-semibold">65 Poin (30 Soal)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px] uppercase tracking-wider">Skema Skor</span>
+<span class="text-secondary-fixed-dim font-semibold">B: 5 | S: 0</span>
+</div>
+</div>
+<!-- Progress Widget -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Kemajuan Belajar</span>
+<span class="font-label-metric text-emerald-dark font-semibold">82% (12/14 Modul)</span>
+</div>
+<div class="w-full h-2 bg-surface-dark rounded-full overflow-hidden">
+<div class="h-full bg-emerald-dark rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<div class="space-y-1.5 pt-2">
+<span class="text-[12px] font-label-kbd uppercase tracking-wider text-outline">Subtopik Utama:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Nasionalisme</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Integritas</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Bela Negara</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Pilar Negara (UUD 1945)</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Bahasa Indonesia</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline font-label-kbd">Target: 110+ Poin</span>
+<span class="text-primary group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 font-semibold">
+            Buka Topik <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 2: TIU -->
+<div class="relative bg-surface-container rounded-2xl p-space-lg flex flex-col justify-between overflow-hidden shadow-lg group hover:bg-surface-container-high transition duration-300">
+<div class="absolute top-0 left-0 right-0 h-1 bg-cobalt-dark"></div>
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-kbd text-label-kbd text-primary font-semibold uppercase">Komponen II</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Tes Inteligensia Umum (TIU)</h2>
+</div>
+<span class="p-2 rounded-xl bg-cobalt-dark/15 text-primary material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-dark/70 rounded-xl p-space-sm font-label-metric text-label-metric">
+<div class="flex flex-col">
+<span class="text-outline text-[11px] uppercase tracking-wider">Passing Grade</span>
+<span class="text-on-surface font-semibold">80 Poin (35 Soal)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px] uppercase tracking-wider">Skema Skor</span>
+<span class="text-secondary-fixed-dim font-semibold">B: 5 | S: 0</span>
+</div>
+</div>
+<!-- Progress Widget -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Kemajuan Belajar</span>
+<span class="font-label-metric text-amber-dark font-semibold">68% (12/18 Modul)</span>
+</div>
+<div class="w-full h-2 bg-surface-dark rounded-full overflow-hidden">
+<div class="h-full bg-amber-dark rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<div class="space-y-1.5 pt-2">
+<span class="text-[12px] font-label-kbd uppercase tracking-wider text-outline">Subtopik Utama:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Silogisme Logis</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Analogi Verbal</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Deret Angka &amp; Huruf</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Aljabar Cepat</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Figural 3D &amp; Ketidaksamaan</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline font-label-kbd">Target: 140+ Poin</span>
+<span class="text-primary group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 font-semibold">
+            Buka Topik <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 3: TKP -->
+<div class="relative bg-surface-container rounded-2xl p-space-lg flex flex-col justify-between overflow-hidden shadow-lg group hover:bg-surface-container-high transition duration-300">
+<div class="absolute top-0 left-0 right-0 h-1 bg-emerald-dark"></div>
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-kbd text-label-kbd text-secondary-fixed-dim font-semibold uppercase">Komponen III</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Tes Karakteristik Pribadi (TKP)</h2>
+</div>
+<span class="p-2 rounded-xl bg-emerald-dark/15 text-secondary-fixed-dim material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-dark/70 rounded-xl p-space-sm font-label-metric text-label-metric">
+<div class="flex flex-col">
+<span class="text-outline text-[11px] uppercase tracking-wider">Passing Grade</span>
+<span class="text-on-surface font-semibold">166 Poin (45 Soal)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px] uppercase tracking-wider">Skema Skor</span>
+<span class="text-secondary-fixed-dim font-semibold">Gradasi 1 - 5 Poin</span>
+</div>
+</div>
+<!-- Progress Widget -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Kemajuan Belajar</span>
+<span class="font-label-metric text-secondary-fixed-dim font-semibold">90% (14/16 Modul)</span>
+</div>
+<div class="w-full h-2 bg-surface-dark rounded-full overflow-hidden">
+<div class="h-full bg-emerald-dark rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div class="space-y-1.5 pt-2">
+<span class="text-[12px] font-label-kbd uppercase tracking-wider text-outline">Subtopik Utama:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Pelayanan Publik</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Jejaring Kerja</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Sosial Budaya</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">TIK Digital</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-on-surface-variant font-body-sm text-[12px]">Anti Radikalisme</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline font-label-kbd">Target: 200+ Poin</span>
+<span class="text-primary group-hover:translate-x-1 transition-transform inline-flex items-center gap-1 font-semibold">
+            Buka Topik <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</section>
+<!-- Interactive Topic Explorer & Reading Pane -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Left Sidebar: Sequential Module List (4 cols) -->
+<aside class="lg:col-span-4 bg-surface-container rounded-2xl p-space-md space-y-space-md shadow-lg sticky top-24">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface">Silabus Modul TWK</h3>
+</div>
+<span class="font-label-kbd text-label-kbd text-outline">14 Modul</span>
+</div>
+<div class="flex gap-1.5 p-1 bg-surface-dark rounded-xl text-body-sm font-body-sm">
+<button class="flex-1 py-1 rounded-lg bg-surface-container-high text-on-surface text-center font-medium">Bab Aktif</button>
+<button class="flex-1 py-1 rounded-lg text-outline hover:text-on-surface text-center transition">Catatan Saya</button>
+<button class="flex-1 py-1 rounded-lg text-outline hover:text-on-surface text-center transition">Bookmark (4)</button>
+</div>
+<div class="space-y-2 max-h-[720px] overflow-y-auto pr-1">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-xl bg-surface-dark hover:bg-surface-container-high transition cursor-pointer flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-kbd text-[11px] text-outline">MODUL 01 - NASIONALISME</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-kbd text-emerald-dark font-medium bg-emerald-dark/10 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Selesai Dipelajari
+              </span>
+</div>
+<h4 class="font-body-md text-body-md font-semibold text-on-surface">Sejarah Pergerakan Nasional &amp; Sumpah Pemuda 1928</h4>
+<div class="flex items-center justify-between text-outline text-[12px] font-label-metric">
+<span>Waktu baca: 14 mnt</span>
+<span class="text-secondary-fixed-dim">Kuis: 100/100</span>
+</div>
+</div>
+<!-- Item 2 (ACTIVE) -->
+<div class="p-space-sm rounded-xl bg-cobalt-dark/15 border-l-4 border-cobalt-dark transition cursor-pointer flex flex-col gap-1.5 shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-kbd text-[11px] text-primary font-semibold">MODUL 02 - PILAR NEGARA</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-kbd text-cobalt-light font-medium bg-cobalt-dark/20 text-primary px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">play_circle</span> Sedang Dibaca
+              </span>
+</div>
+<h4 class="font-body-md text-body-md font-semibold text-on-surface">Amandemen UUD 1945 (1999-2002) &amp; Lembaga Negara</h4>
+<div class="flex items-center justify-between text-on-surface-variant text-[12px] font-label-metric">
+<span>Estimasi: 22 mnt</span>
+<span class="text-primary font-medium">Halaman 4 dari 9</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-sm rounded-xl bg-surface-dark hover:bg-surface-container-high transition cursor-pointer flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-kbd text-[11px] text-outline">MODUL 03 - PILAR NEGARA</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-kbd text-amber-dark font-medium bg-amber-dark/10 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">replay</span> Perlu Diulang
+              </span>
+</div>
+<h4 class="font-body-md text-body-md font-semibold text-on-surface">Hierarki Peraturan Perundang-undangan (UU No. 12/2011)</h4>
+<div class="flex items-center justify-between text-outline text-[12px] font-label-metric">
+<span>Waktu baca: 18 mnt</span>
+<span class="text-amber-dark">Skor Uji: 55%</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-space-sm rounded-xl bg-surface-dark hover:bg-surface-container-high transition cursor-pointer flex flex-col gap-1.5 opacity-90">
+<div class="flex items-center justify-between">
+<span class="font-label-kbd text-[11px] text-outline">MODUL 04 - INTEGRITAS</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-kbd text-outline font-medium bg-surface-container px-2 py-0.5 rounded">
+                Belum Dibaca
+              </span>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-on-surface-variant">Nilai Antikorupsi KPK &amp; Core Values ASN BerAKHLAK</h4>
+<div class="flex items-center justify-between text-outline text-[12px] font-label-metric">
+<span>Waktu baca: 25 mnt</span>
+<span>18 Studi Kasus</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="p-space-sm rounded-xl bg-surface-dark hover:bg-surface-container-high transition cursor-pointer flex flex-col gap-1.5 opacity-90">
+<div class="flex items-center justify-between">
+<span class="font-label-kbd text-[11px] text-outline">MODUL 05 - BELA NEGARA</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-label-kbd text-outline font-medium bg-surface-container px-2 py-0.5 rounded">
+                Belum Dibaca
+              </span>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-on-surface-variant">Bentuk Ancaman Militer, Non-Militer &amp; Hibrida Modern</h4>
+<div class="flex items-center justify-between text-outline text-[12px] font-label-metric">
+<span>Waktu baca: 16 mnt</span>
+<span>UU No. 23/2019</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-dark text-on-surface-variant flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">psychology_alt</span>
+<span>Mode Audio Podcast</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface text-[12px] font-medium hover:bg-cobalt-dark transition">Putar 42m</button>
+</div>
+</aside>
+<!-- Right Main Reading Canvas (8 cols) -->
+<main class="lg:col-span-8 bg-surface-container rounded-2xl p-space-lg md:p-space-xl space-y-space-xl shadow-lg">
+<!-- Module Header Details -->
+<div class="space-y-space-sm border-b border-border-dark/60 pb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-rose-dark/20 text-rose-light font-label-kbd text-label-kbd font-semibold">TWK - PILAR NEGARA</span>
+<span class="px-2 py-0.5 rounded bg-surface-dark text-outline font-label-kbd text-label-kbd">Pasal 1 - 37 UUD 1945</span>
+</div>
+<div class="flex items-center gap-3 text-outline text-label-kbd font-label-kbd">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">visibility</span> 12.840 Dibaca</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 22 Menit Pelajari</span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Ringkasan Cepat: Amandemen UUD 1945 (Tahun 1999 – 2002) &amp; Pasal-Pasal Krusial
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Perubahan Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 dilakukan secara bertahap dalam 4 kali Sidang MPR. Memahami kronologi tahun penetapan, jumlah pasal yang diubah, serta substansi kelembagaan baru (MK, DPD, KY) merupakan kunci mendapatkan poin sempurna (5/5) pada soal-soal TWK BKN.
+          </p>
+</div>
+<!-- Comparative Matrix Table (Amandemen 1-4) -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">table_chart</span>
+<h3 class="font-headline-md text-body-lg font-semibold text-on-surface">Tabel Komparasi 4 Tahap Perubahan UUD 1945</h3>
+</div>
+<span class="font-label-kbd text-label-kbd text-outline">Sumber: Sekretariat Jenderal MPR RI</span>
+</div>
+<div class="w-full overflow-x-auto rounded-xl bg-surface-dark shadow-inner">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-metric text-[12px] uppercase tracking-wider">
+<th class="p-3.5 pl-4">Tahap</th>
+<th class="p-3.5">Sidang &amp; Tahun</th>
+<th class="p-3.5">Pasal Diubah</th>
+<th class="p-3.5">Fokus Materi Perubahan Utama</th>
+<th class="p-3.5 pr-4 text-right">Frekuensi Soal</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-dark/40 text-on-surface-variant">
+<tr class="hover:bg-surface-container/40 transition">
+<td class="p-3.5 pl-4 font-label-kbd font-semibold text-primary">Ke-1</td>
+<td class="p-3.5 text-on-surface font-medium">Sidang Umum MPR<br/><span class="text-outline text-[12px]">14–21 Okt 1999</span></td>
+<td class="p-3.5 font-label-metric">9 Pasal (13 Ayat)</td>
+<td class="p-3.5 leading-snug">Pembatasan kekuasaan eksekutif Presiden (Pasal 7: masa jabatan maks 2 periode) &amp; penguatan peran legislatif DPR (Pasal 20).</td>
+<td class="p-3.5 pr-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-rose-dark/15 text-rose-light text-[11px] font-label-kbd font-medium">Sangat Sering</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/40 transition">
+<td class="p-3.5 pl-4 font-label-kbd font-semibold text-primary">Ke-2</td>
+<td class="p-3.5 text-on-surface font-medium">Sidang Tahunan MPR<br/><span class="text-outline text-[12px]">7–18 Ags 2000</span></td>
+<td class="p-3.5 font-label-metric">25 Pasal (59 Ayat)</td>
+<td class="p-3.5 leading-snug">Otonomi Daerah (Pasal 18), Hak Asasi Manusia (Bab XA Pasal 28A-28J), Pertahanan Keamanan (Sishankamrata Pasal 30), Lambang &amp; Lagu Kebangsaan.</td>
+<td class="p-3.5 pr-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-amber-dark/15 text-amber-dark text-[11px] font-label-kbd font-medium">Sering</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/40 transition">
+<td class="p-3.5 pl-4 font-label-kbd font-semibold text-primary">Ke-3</td>
+<td class="p-3.5 text-on-surface font-medium">Sidang Tahunan MPR<br/><span class="text-outline text-[12px]">1–9 Nov 2001</span></td>
+<td class="p-3.5 font-label-metric">23 Pasal (68 Ayat)</td>
+<td class="p-3.5 leading-snug">Kedaulatan Rakyat (Pasal 1 ayat 2), Pembentukan Mahkamah Konstitusi (MK), Komisi Yudisial (KY), DPD RI, BPK mandiri, serta Pemilu Langsung.</td>
+<td class="p-3.5 pr-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-rose-dark/15 text-rose-light text-[11px] font-label-kbd font-medium">Sangat Sering</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/40 transition">
+<td class="p-3.5 pl-4 font-label-kbd font-semibold text-primary">Ke-4</td>
+<td class="p-3.5 text-on-surface font-medium">Sidang Tahunan MPR<br/><span class="text-outline text-[12px]">1–11 Ags 2002</span></td>
+<td class="p-3.5 font-label-metric">13 Pasal (3 Ket. Peralihan)</td>
+<td class="p-3.5 leading-snug">Komposisi MPR (DPR + DPD), Pilpres putaran kedua, Bank Sentral independen, Anggaran Pendidikan min 20% (Pasal 31), Penghapusan DPA.</td>
+<td class="p-3.5 pr-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-emerald-dark/15 text-emerald-dark text-[11px] font-label-kbd font-medium">Sedang</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Callout Box: Trik Hafalan BKN -->
+<div class="relative rounded-xl bg-surface-dark p-space-lg overflow-hidden space-y-space-md shadow-md">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-amber-dark"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-dark text-[24px]">lightbulb</span>
+<h4 class="font-headline-md text-body-lg font-semibold text-amber-light">Trik Hafalan BKN: Jembatan Keledai Lembaga Peradilan &amp; Prerogatif</h4>
+</div>
+<span class="px-2 py-0.5 rounded bg-amber-dark/20 text-amber-light font-label-kbd text-label-kbd font-semibold">Trik Cepat Lolos</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md text-body-sm font-body-sm">
+<!-- Box 1 -->
+<div class="p-space-md rounded-xl bg-surface-container space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-cobalt-dark"></span> Wewenang MK vs KY vs MA
+                </span>
+<span class="font-label-kbd text-[11px] text-outline">Pasal 24A-24C</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">
+<span class="font-semibold text-primary">MK (4 Wajib + 1 Impeachment):</span> Menguji UU terhadap UUD, Sengketa kewenangan lembaga negara, Pembubaran partai politik, Memutus perselisihan hasil pemilu. <br/>
+<em class="text-on-surface font-medium">Mnemonik:</em> <strong class="text-amber-light">"UJI - SENGKETA - BUBAR - PEMILU"</strong>.
+              </p>
+<p class="text-on-surface-variant text-[12px]">
+<span class="font-semibold text-secondary-fixed-dim">KY:</span> Mengusulkan Hakim Agung dan menjaga integritas/kehormatan hakim (bukan mengadili perkara!).
+              </p>
+</div>
+<!-- Box 2 -->
+<div class="p-space-md rounded-xl bg-surface-container space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-dark"></span> Hak Prerogatif Presiden &amp; Pertimbangan
+                </span>
+<span class="font-label-kbd text-[11px] text-outline">Pasal 14</span>
+</div>
+<div class="space-y-1.5 text-on-surface-variant leading-relaxed">
+<div class="p-2 rounded bg-surface-dark flex items-start justify-between">
+<div>
+<strong class="text-on-surface">Grasi &amp; Rehabilitasi</strong>
+<div class="text-[12px] text-outline">Memperhatikan pertimbangan Mahkamah Agung (MA)</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-primary font-label-kbd text-[11px]">MA</span>
+</div>
+<div class="p-2 rounded bg-surface-dark flex items-start justify-between">
+<div>
+<strong class="text-on-surface">Amnesti &amp; Abolisi</strong>
+<div class="text-[12px] text-outline">Memperhatikan pertimbangan DPR RI</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-rose-light font-label-kbd text-[11px]">DPR</span>
+</div>
+<p class="text-[12px] text-amber-dark">
+                  *Tips: Ingat alfabet! <strong>G</strong>rasi - <strong>M</strong>A (Hukum murni). <strong>A</strong>mnesti - <strong>D</strong>PR (Politik nasional).
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Text Content / Key Points -->
+<div class="space-y-space-sm text-body-md text-on-surface-variant leading-relaxed">
+<h4 class="font-headline-md text-body-lg font-semibold text-on-surface">Ketentuan yang Tidak Dapat Diubah (Pasal 37 Ayat 5)</h4>
+<p>
+            Khusus mengenai bentuk <span class="text-on-surface font-semibold">Negara Kesatuan Republik Indonesia (NKRI)</span> tidak dapat dilakukan perubahan. Syarat pengajuan amandemen: diajukan sekurang-kurangnya 1/3 dari jumlah anggota MPR, sidang dihadiri minimal 2/3 anggota MPR, dan putusan disetujui minimal 50% + 1 seluruh anggota MPR.
+          </p>
+</div>
+<!-- Action Buttons Bottom Toolbar -->
+<div class="pt-space-md border-t border-border-dark/60 flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-space-md py-3 rounded-xl bg-cobalt-dark text-on-surface font-body-sm text-body-sm font-semibold hover:bg-cobalt-light transition shadow-md">
+<span class="material-symbols-outlined text-[20px]">quiz</span>
+<span>Mulai Latihan 15 Soal Terkait Modul Ini</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 px-space-md py-3 rounded-xl bg-surface-dark text-secondary-fixed-dim border border-emerald-dark/30 font-body-sm text-body-sm font-medium hover:bg-surface-container-high transition">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span class="hidden md:inline">Tandai Selesai Dibaca</span>
+</button>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+<button class="flex items-center gap-1.5 px-space-sm py-2.5 rounded-lg bg-surface-dark text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+<span>Simpan</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-2.5 rounded-lg bg-surface-dark text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Unduh Modul PDF</span>
+</button>
+</div>
+</div>
+</main>
+</section>
+<!-- Formula / Cheatsheet Showcase Strip -->
+<section class="rounded-2xl bg-surface-container p-space-lg space-y-space-md shadow-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-kbd text-label-kbd text-amber-dark uppercase font-semibold">Trik Cepat TIU Numerik</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Formula &amp; Pola Deret Kilat Sering Keluar</h3>
+</div>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-primary hover:underline" href="#">
+          Buka 28 Rumus Cepat TIU Lengkap <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- TIU formula 1 -->
+<div class="p-space-md rounded-xl bg-surface-dark space-y-2">
+<div class="flex justify-between items-center text-label-kbd font-label-kbd">
+<span class="text-primary">KECEPATAN BERPAPASAN</span>
+<span class="text-outline">Waktu Tempuh (t)</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low text-center font-label-metric text-[15px] text-secondary-fixed-dim">
+            t = Jarak Total / (V₁ + V₂)
+          </div>
+<p class="text-[12px] text-on-surface-variant leading-normal">
+            Jika berpapasan berlawanan arah. Gunakan selisih (V₁ - V₂) jika menyusul ke arah yang sama.
+          </p>
+</div>
+<!-- TIU formula 2 -->
+<div class="p-space-md rounded-xl bg-surface-dark space-y-2">
+<div class="flex justify-between items-center text-label-kbd font-label-kbd">
+<span class="text-primary">PERBANDINGAN PEKERJA</span>
+<span class="text-outline">Pekerja Tambahan (ΔP)</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low text-center font-label-metric text-[15px] text-secondary-fixed-dim">
+            ΔP = (P × Hari Terhenti) / Sisa Hari
+          </div>
+<p class="text-[12px] text-on-surface-variant leading-normal">
+            Rumus kilat tanpa menghitung total beban kerja satuan. Hemat 45 detik pengerjaan per soal.
+          </p>
+</div>
+<!-- TIU formula 3 -->
+<div class="p-space-md rounded-xl bg-surface-dark space-y-2">
+<div class="flex justify-between items-center text-label-kbd font-label-kbd">
+<span class="text-primary">ALJABAR ISTIMEWA</span>
+<span class="text-outline">Selisih Kuadrat</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low text-center font-label-metric text-[15px] text-secondary-fixed-dim">
+            a² - b² = (a + b)(a - b)
+          </div>
+<p class="text-[12px] text-on-surface-variant leading-normal">
+            Sangat lazim untuk soal hitung cepat desimal seperti (347² - 346²) tanpa perlu perkalian manual.
+          </p>
+</div>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-dark border-t border-border-dark py-space-lg mt-space-2xl"><div class="max-w-7xl mx-auto px-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><div>© 2024–2025 Badan Kepegawaian Negara Republik Indonesia. Seluruh hak cipta dilindungi.</div><div class="flex items-center gap-space-lg font-label-kbd text-label-kbd text-outline"><span>ISO/IEC 27001 Terakreditasi</span><span>Versi Sistem 4.2.1-prod</span></div></div></footer></body></html>

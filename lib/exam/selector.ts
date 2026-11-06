@@ -4,6 +4,7 @@ import { shuffleArray } from "./snapshot";
 
 export interface CandidateQuestion {
   id: string;
+  batchNumber?: number;
   category: CategoryId;
   subtopic: string;
   difficulty: number;
@@ -125,11 +126,16 @@ export function selectQuestionsForPractice(
     category: CategoryId;
     subtopics?: string[];
     difficulty?: number;
+    batchNumber?: number;
     count: number;
   },
   randomSeed = Math.random()
 ): CandidateQuestion[] {
   let pool = allQuestions.filter((q) => q.category === options.category);
+
+  if (options.batchNumber && options.batchNumber > 0) {
+    pool = pool.filter((q) => q.batchNumber === options.batchNumber);
+  }
 
   if (options.subtopics && options.subtopics.length > 0) {
     pool = pool.filter((q) => options.subtopics!.includes(q.subtopic));

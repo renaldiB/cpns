@@ -14,6 +14,8 @@ export const QuestionInputSchema = z
   .object({
     id: z.string().optional(),
     externalId: z.string().trim().max(100).optional().nullable(),
+    batchNumber: z.number().int().min(1).default(1),
+    batchId: z.string().trim().optional(),
     category: z.enum(["TWK", "TIU", "TKP"]),
     subtopic: z.string().trim().min(1, "Sub-materi wajib diisi"),
     stem: z.string().trim().min(3, "Teks soal minimal 3 karakter").max(10000, "Teks soal terlalu panjang"),

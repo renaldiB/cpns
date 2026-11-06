@@ -16,6 +16,8 @@ import {
   RefreshCw,
   LogOut,
   HelpCircle,
+  Check,
+  Grid,
 } from "lucide-react";
 
 export default function UjianPage({
@@ -46,7 +48,6 @@ export default function UjianPage({
           throw new Error(data.error || "Gagal memuat sesi ujian.");
         }
         if (data.isCompleted) {
-          // Already finished, redirect to results
           router.replace(`/hasil/${attemptId}`);
           return;
         }
@@ -102,7 +103,6 @@ export default function UjianPage({
     const activeQ = questions[currentIndex];
     if (!activeQ) return;
 
-    // Optimistic UI update
     setQuestions((prev) =>
       prev.map((q, idx) =>
         idx === currentIndex ? { ...q, selectedOptionSnapshotId: snapshotOptionId } : q
@@ -129,6 +129,37 @@ export default function UjianPage({
       }
       setSaveStatus("saved");
     } catch (err) {
+      setSaveStatus("error");
+    }
+  };
+
+  // Clear answer
+  const handleClearOption = async () => {
+    const activeQ = questions[currentIndex];
+    if (!activeQ || !activeQ.selectedOptionSnapshotId) return;
+
+    setQuestions((prev) =>
+      prev.map((q, idx) =>
+        idx === currentIndex ? { ...q, selectedOptionSnapshotId: null } : q
+      )
+    );
+    setSaveStatus("saving");
+
+    try {
+      const res = await fetch(`/api/attempts/${attemptId}/answer`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          position: activeQ.position,
+          selectedOptionSnapshotId: null,
+        }),
+      });
+      const data = await res.json();
+      if (!data.success) {
+        throw new Error(data.error || "Gagal menghapus jawaban");
+      }
+      setSaveStatus("saved");
+    } catch {
       setSaveStatus("error");
     }
   };
@@ -175,7 +206,6 @@ export default function UjianPage({
   // 6. Keyboard Shortcuts Navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Don't trigger if typing in an input
       if (["INPUT", "TEXTAREA", "SELECT"].includes((e.target as HTMLElement).tagName)) {
         return;
       }
@@ -210,10 +240,10 @@ export default function UjianPage({
   // Loading and Error States
   if (isLoading) {
     return (
-      <div className="flex h-screen items-center justify-center bg-slate-900 text-white">
+      <div className="flex h-screen items-center justify-center bg-canvas-light text-slate-800 dark:bg-canvas-dark dark:text-white">
         <div className="flex flex-col items-center gap-3">
-          <RefreshCw className="h-8 w-8 animate-spin text-blue-400" />
-          <p className="text-sm font-semibold tracking-wide">Memuat Lembar Ujian CAT BKN...</p>
+          <RefreshCw className="h-8 w-8 animate-spin text-cobalt-light dark:text-cobalt-dark" />
+          <p className="text-sm font-semibold tracking-wide font-mono">Memuat Lembar Ujian CAT BKN...</p>
         </div>
       </div>
     );
@@ -221,14 +251,14 @@ export default function UjianPage({
 
   if (errorMessage || !attempt) {
     return (
-      <div className="flex h-screen items-center justify-center p-4">
-        <div className="max-w-md rounded-2xl border border-rose-300 bg-rose-50 p-6 text-center text-rose-800 dark:border-rose-900 dark:bg-rose-950/40 dark:text-rose-200 space-y-3">
-          <AlertTriangle className="mx-auto h-8 w-8 text-rose-600" />
+      <div className="flex h-screen items-center justify-center p-4 bg-canvas-light dark:bg-canvas-dark">
+        <div className="max-w-md rounded-3xl border border-rose-200 bg-rose-50/90 p-6 text-center text-rose-800 dark:border-rose-900/60 dark:bg-rose-950/40 dark:text-rose-200 space-y-3 shadow-xl">
+          <AlertTriangle className="mx-auto h-8 w-8 text-rose-600 dark:text-rose-400" />
           <h2 className="text-lg font-bold">Terjadi Kesalahan</h2>
           <p className="text-xs">{errorMessage || "Sesi ujian tidak valid."}</p>
           <button
             onClick={() => router.push("/")}
-            className="rounded-lg bg-rose-700 px-4 py-2 text-xs font-bold text-white hover:bg-rose-800 transition"
+            className="rounded-xl bg-rose-600 px-4 py-2 text-xs font-bold text-white hover:bg-rose-700 transition"
           >
             Kembali ke Beranda
           </button>
@@ -247,64 +277,74 @@ export default function UjianPage({
   const isTimerWarning = remainingSeconds <= 600 && remainingSeconds > 300;
   const isTimerCritical = remainingSeconds <= 300 && remainingSeconds > 0;
 
+  // Sub-pillar index ranges
+  const isTWK = activeQuestion.category === "TWK";
+  const isTIU = activeQuestion.category === "TIU";
+  const isTKP = activeQuestion.category === "TKP";
+
   return (
-    <div className="flex h-screen flex-col overflow-hidden bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 select-none">
-      {/* CAT Exam Header */}
-      <header className="sticky top-0 z-30 flex h-14 sm:h-16 flex-shrink-0 items-center justify-between border-b border-slate-200 bg-white px-3 sm:px-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-blue-700 text-white font-black text-xs">
+    <div className="flex h-screen flex-col overflow-hidden bg-canvas-light text-slate-900 dark:bg-canvas-dark dark:text-slate-100 select-none">
+      {/* Top Floating Exam HUD */}
+      <header className="sticky top-0 z-30 flex h-16 sm:h-20 flex-shrink-0 items-center justify-between border-b border-border-light bg-white/90 px-4 sm:px-8 backdrop-blur-md dark:border-border-dark dark:bg-surface-elevated-dark/95 shadow-md">
+        {/* Left: Metadata */}
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cobalt-light text-white font-black text-xs shadow-sm">
             CAT
           </div>
           <div className="flex flex-col">
-            <span className="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white truncate max-w-[130px] sm:max-w-xs">
-              {attempt.mode === "full" ? "SIMULASI PENUH SKD" : "LATIHAN KATEGORI"}
-            </span>
-            <span className="text-[10px] text-slate-500 dark:text-slate-400">
-              Soal {currentIndex + 1} dari {totalCount}
+            <div className="flex items-center gap-2">
+              <span className="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white truncate max-w-[130px] sm:max-w-xs">
+                {attempt.mode === "full" ? "SIMULASI PENUH SKD" : "LATIHAN KATEGORI"}
+              </span>
+              <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-slate-100 text-slate-600 dark:bg-surface-dark dark:text-slate-300 border border-border-light dark:border-border-dark">
+                {activeQuestion.category}
+              </span>
+            </div>
+            <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
+              Soal {currentIndex + 1} / {totalCount}
             </span>
           </div>
         </div>
 
-        {/* Center: Realtime Timer */}
+        {/* Center: Digital Timer */}
         {attempt.deadlineAt ? (
           <div
-            className={`flex items-center gap-1.5 rounded-lg px-3 py-1 font-mono text-sm sm:text-base font-black tracking-wider transition ${
+            className={`flex items-center gap-2 rounded-2xl px-4 py-2 font-mono text-sm sm:text-base font-black tracking-wider transition-all shadow-sm ${
               isTimerCritical
-                ? "animate-pulse bg-rose-600 text-white shadow-md shadow-rose-500/20"
+                ? "animate-pulse bg-rose-600 text-white shadow-rose-500/30"
                 : isTimerWarning
                 ? "bg-amber-500 text-slate-950 font-extrabold"
-                : "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-white"
+                : "bg-slate-100 text-slate-800 dark:bg-surface-dark dark:text-white border border-border-light dark:border-border-dark"
             }`}
           >
             <Clock className="h-4 w-4" />
-            <span>{formatSeconds(remainingSeconds)}</span>
+            <span className="tabular-nums">{formatSeconds(remainingSeconds)}</span>
           </div>
         ) : (
-          <div className="rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500 dark:bg-slate-800">
+          <div className="rounded-xl bg-slate-100 px-3.5 py-1.5 text-xs font-semibold text-slate-500 dark:bg-surface-dark dark:text-slate-400 border border-border-light dark:border-border-dark">
             Tanpa Batas Waktu
           </div>
         )}
 
         {/* Right: Autosave status & Finish button */}
-        <div className="flex items-center gap-2">
-          {/* Status Indicator */}
-          <div className="hidden sm:flex items-center gap-1 text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+        <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-1.5 text-xs font-mono text-slate-500 dark:text-slate-400">
             {saveStatus === "saving" && (
-              <span className="flex items-center gap-1 text-blue-600 dark:text-blue-400">
+              <span className="flex items-center gap-1 text-cobalt-light dark:text-cobalt-dark">
                 <RefreshCw className="h-3 w-3 animate-spin" />
-                Menyimpan...
+                Simpan...
               </span>
             )}
             {saveStatus === "saved" && (
               <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
-                <CheckCircle2 className="h-3 w-3" />
+                <CheckCircle2 className="h-3.5 w-3.5" />
                 Tersimpan
               </span>
             )}
             {saveStatus === "error" && (
               <span className="flex items-center gap-1 text-rose-600 dark:text-rose-400">
-                <AlertTriangle className="h-3 w-3" />
-                Gagal simpan
+                <AlertTriangle className="h-3.5 w-3.5" />
+                Gagal Simpan
               </span>
             )}
           </div>
@@ -313,64 +353,79 @@ export default function UjianPage({
           <button
             onClick={() => setShowFinishModal(true)}
             data-testid="finish-exam-btn"
-            className="flex items-center gap-1.5 rounded-lg bg-rose-600 px-3 sm:px-4 py-1.5 text-xs font-bold text-white shadow-sm hover:bg-rose-700 transition"
+            className="flex items-center gap-2 rounded-xl bg-rose-600 px-3.5 sm:px-4 py-2 text-xs font-bold text-white shadow hover:bg-rose-700 transition active:scale-95"
           >
             <LogOut className="h-3.5 w-3.5" />
-            <span>Selesai</span>
+            <span>Akhiri Ujian</span>
           </button>
 
           {/* Mobile Drawer Toggle */}
           <button
             onClick={() => setShowDrawer(true)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-700 md:hidden dark:border-slate-800 dark:text-slate-300"
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-border-light text-slate-700 md:hidden dark:border-border-dark dark:text-slate-300 bg-white dark:bg-surface-elevated-dark"
           >
             <Menu className="h-5 w-5" />
           </button>
         </div>
       </header>
 
-      {/* Main Container: Question Body + Right Panel */}
+      {/* Main Container: Question Canvas + Right Tactical Dock */}
       <div className="flex flex-1 overflow-hidden">
         {/* Left/Center: Question Canvas */}
-        <div className="flex flex-1 flex-col overflow-y-auto p-4 sm:p-8">
+        <div className="flex flex-1 flex-col overflow-y-auto p-4 sm:p-6 lg:p-8">
           <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col justify-between space-y-6">
-            {/* Question Details */}
             <div className="space-y-5">
-              {/* Category & Subtopic Badges */}
-              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-3 dark:border-slate-800">
+              {/* Category & Scoring Indicator */}
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border-light pb-3 dark:border-border-dark">
                 <div className="flex items-center gap-2">
-                  <span className="rounded-md bg-blue-100 px-2.5 py-1 text-xs font-black uppercase text-blue-800 dark:bg-blue-950 dark:text-blue-300">
-                    {activeQuestion.category}
-                  </span>
-                  <span className="rounded-md bg-slate-200/80 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300">
-                    {activeQuestion.subtopic}
+                  <span
+                    className={`rounded-lg px-2.5 py-1 text-xs font-extrabold uppercase tracking-wide ${
+                      isTWK
+                        ? "bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300"
+                        : isTIU
+                        ? "bg-cobalt-light/15 text-cobalt-light dark:bg-cobalt-dark/20 dark:text-cobalt-dark"
+                        : "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300"
+                    }`}
+                  >
+                    {activeQuestion.category} • {activeQuestion.subtopic}
                   </span>
                 </div>
-                <div className="text-xs font-semibold text-slate-500">
-                  Nomor {activeQuestion.position}
+                <div className="flex items-center gap-2 font-mono text-xs text-slate-500 dark:text-slate-400">
+                  {isTKP ? (
+                    <span className="text-emerald-600 dark:text-emerald-400">Skala Bobot 1–5 Poin</span>
+                  ) : (
+                    <>
+                      <span className="text-emerald-600 dark:text-emerald-400">Benar: +5</span>
+                      <span>|</span>
+                      <span>Salah: 0</span>
+                    </>
+                  )}
                 </div>
               </div>
 
-              {/* Question Stem Text */}
-              <div className="rounded-xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                <p className="text-sm sm:text-base leading-relaxed font-medium text-slate-900 dark:text-slate-100 whitespace-pre-line">
+              {/* Question Presentation Surface */}
+              <div className="rounded-3xl border border-border-light bg-white p-6 sm:p-8 shadow-sm dark:border-border-dark dark:bg-surface-elevated-dark">
+                <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+                  Petunjuk Soal No. {activeQuestion.position}
+                </div>
+                <p className="text-base sm:text-lg leading-relaxed font-medium text-slate-900 dark:text-slate-100 whitespace-pre-line">
                   {activeQuestion.stem}
                 </p>
 
                 {/* Question Image (if any) */}
                 {activeQuestion.imagePath && (
-                  <div className="mt-4 overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700 max-w-md">
+                  <div className="mt-5 overflow-hidden rounded-2xl border border-border-light dark:border-border-dark max-w-lg bg-slate-50 dark:bg-surface-dark p-2">
                     <img
                       src={`/${activeQuestion.imagePath}`}
                       alt="Gambar Soal"
-                      className="max-h-72 w-auto object-contain"
+                      className="max-h-80 w-auto object-contain mx-auto rounded-lg"
                     />
                   </div>
                 )}
               </div>
 
-              {/* Options A-E Interactive Cards */}
-              <div className="space-y-2.5">
+              {/* Tactile Options A-E */}
+              <div className="space-y-3">
                 {activeQuestion.options.map((opt: ClientSanitizedOption) => {
                   const isSelected = activeQuestion.selectedOptionSnapshotId === opt.snapshotOptionId;
                   return (
@@ -379,38 +434,57 @@ export default function UjianPage({
                       type="button"
                       data-testid={`option-${opt.visualLabel}`}
                       onClick={() => handleSelectOption(opt.snapshotOptionId)}
-                      className={`group flex w-full items-start gap-3.5 rounded-xl border p-4 text-left transition-all ${
+                      className={`group flex w-full items-start gap-4 rounded-2xl border p-4 sm:p-5 text-left transition-all ${
                         isSelected
-                          ? "border-blue-600 bg-blue-50/80 shadow-sm ring-2 ring-blue-600/30 dark:border-blue-500 dark:bg-blue-950/50"
-                          : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700 dark:hover:bg-slate-800/40"
+                          ? "border-cobalt-light bg-cobalt-light/10 shadow-sm ring-2 ring-cobalt-light/30 dark:border-cobalt-dark dark:bg-cobalt-dark/15 dark:ring-cobalt-dark/40"
+                          : "border-border-light bg-white hover:border-slate-300 hover:bg-slate-50/70 dark:border-border-dark dark:bg-surface-elevated-dark dark:hover:border-slate-700 dark:hover:bg-surface-dark/80"
                       }`}
                     >
                       <div
-                        className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg text-xs font-black transition-colors ${
+                        className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-xl font-mono text-xs font-bold transition-colors ${
                           isSelected
-                            ? "bg-blue-600 text-white shadow-sm"
-                            : "bg-slate-100 text-slate-700 group-hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300"
+                            ? "bg-cobalt-light text-white shadow-sm dark:bg-cobalt-dark"
+                            : "bg-slate-100 text-slate-700 group-hover:bg-slate-200 dark:bg-surface-dark dark:text-slate-300"
                         }`}
                       >
                         {opt.visualLabel}
                       </div>
-                      <span className="flex-1 text-xs sm:text-sm leading-normal text-slate-800 dark:text-slate-200 pt-0.5">
+                      <span className="flex-1 text-sm sm:text-base leading-relaxed text-slate-800 dark:text-slate-200 pt-0.5">
                         {opt.text}
                       </span>
+                      {isSelected && (
+                        <div className="text-cobalt-light dark:text-cobalt-dark pt-1 self-center">
+                          <CheckCircle2 className="h-5 w-5" />
+                        </div>
+                      )}
                     </button>
                   );
                 })}
               </div>
+
+              {/* Option Utility Footnote */}
+              <div className="flex items-center justify-between text-xs text-slate-400 dark:text-slate-500 font-mono pt-1">
+                <span>Pilih via klik atau tekan tombol keyboard [A] - [E]</span>
+                {activeQuestion.selectedOptionSnapshotId && (
+                  <button
+                    type="button"
+                    onClick={handleClearOption}
+                    className="hover:text-rose-600 dark:hover:text-rose-400 underline transition-colors"
+                  >
+                    Kosongkan Pilihan
+                  </button>
+                )}
+              </div>
             </div>
 
-            {/* Bottom Navigation Buttons */}
-            <div className="flex items-center justify-between gap-3 border-t border-slate-200 pt-4 dark:border-slate-800">
+            {/* Sticky Bottom Action Bar */}
+            <div className="sticky bottom-4 z-20 flex items-center justify-between gap-3 rounded-2xl border border-border-light bg-white/95 p-3 sm:p-4 backdrop-blur-md shadow-lg dark:border-border-dark dark:bg-surface-elevated-dark/95">
               <button
                 type="button"
                 aria-label="Sebelumnya"
                 onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
                 disabled={currentIndex === 0}
-                className="flex items-center gap-1.5 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm hover:bg-slate-50 disabled:opacity-40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 transition"
+                className="flex items-center gap-2 rounded-xl border border-border-light bg-white px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm hover:bg-slate-50 disabled:opacity-40 dark:border-border-dark dark:bg-surface-dark dark:text-slate-200 transition"
               >
                 <ArrowLeft className="h-4 w-4" />
                 <span className="hidden sm:inline">Sebelumnya</span>
@@ -423,7 +497,7 @@ export default function UjianPage({
                 className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-bold shadow-sm transition ${
                   activeQuestion.flagged
                     ? "bg-amber-500 text-slate-950 font-black ring-2 ring-amber-400"
-                    : "border border-amber-400 bg-amber-50/60 text-amber-900 hover:bg-amber-100 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300"
+                    : "border border-amber-300/80 bg-amber-50/70 text-amber-900 hover:bg-amber-100 dark:border-amber-800/80 dark:bg-amber-950/40 dark:text-amber-300"
                 }`}
               >
                 <Flag className={`h-4 w-4 ${activeQuestion.flagged ? "fill-slate-950" : ""}`} />
@@ -435,7 +509,7 @@ export default function UjianPage({
                 aria-label="Berikutnya"
                 onClick={() => setCurrentIndex((prev) => Math.min(totalCount - 1, prev + 1))}
                 disabled={currentIndex === totalCount - 1}
-                className="flex items-center gap-1.5 rounded-xl bg-blue-700 px-4 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-blue-800 disabled:opacity-40 transition"
+                className="flex items-center gap-2 rounded-xl bg-cobalt-light dark:bg-cobalt-dark px-5 py-2.5 text-xs font-bold text-white shadow hover:opacity-90 disabled:opacity-40 transition"
               >
                 <span className="hidden sm:inline">Berikutnya</span>
                 <ArrowRight className="h-4 w-4" />
@@ -445,15 +519,30 @@ export default function UjianPage({
         </div>
 
         {/* Right Desktop Question Navigator Panel */}
-        <aside className="hidden md:flex w-80 flex-shrink-0 flex-col border-l border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
-          <div className="border-b border-slate-200 p-4 dark:border-slate-800">
-            <h3 className="font-extrabold text-xs uppercase tracking-wider text-slate-500">
-              Navigasi Soal
-            </h3>
-            <div className="mt-2.5 flex items-center justify-between text-xs text-slate-600 dark:text-slate-300">
-              <span>Terjawab: <strong className="text-emerald-600">{answeredCount}</strong></span>
-              <span>Kosong: <strong>{unansweredCount}</strong></span>
-              <span>Ragu: <strong className="text-amber-500">{flaggedCount}</strong></span>
+        <aside className="hidden lg:flex w-84 flex-shrink-0 flex-col border-l border-border-light bg-white dark:border-border-dark dark:bg-surface-elevated-dark">
+          <div className="border-b border-border-light p-4 dark:border-border-dark">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="font-extrabold text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                <Grid className="h-4 w-4" />
+                Navigasi Soal
+              </h3>
+              <span className="font-mono text-xs text-slate-400">Total {totalCount}</span>
+            </div>
+
+            {/* Quick Stats Pill */}
+            <div className="grid grid-cols-3 gap-2 text-center text-xs">
+              <div className="rounded-xl bg-emerald-50 p-2 dark:bg-emerald-950/40 border border-emerald-200/60 dark:border-emerald-900/60">
+                <span className="text-[10px] uppercase font-bold text-emerald-800 dark:text-emerald-300">Terjawab</span>
+                <p className="font-mono text-sm font-black text-emerald-600 dark:text-emerald-400">{answeredCount}</p>
+              </div>
+              <div className="rounded-xl bg-slate-50 p-2 dark:bg-surface-dark border border-border-light dark:border-border-dark">
+                <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400">Kosong</span>
+                <p className="font-mono text-sm font-black text-slate-700 dark:text-slate-300">{unansweredCount}</p>
+              </div>
+              <div className="rounded-xl bg-amber-50 p-2 dark:bg-amber-950/40 border border-amber-200/60 dark:border-amber-900/60">
+                <span className="text-[10px] uppercase font-bold text-amber-800 dark:text-amber-300">Ragu</span>
+                <p className="font-mono text-sm font-black text-amber-500">{flaggedCount}</p>
+              </div>
             </div>
           </div>
 
@@ -465,9 +554,9 @@ export default function UjianPage({
                 const isAnswered = q.selectedOptionSnapshotId !== null;
                 const isFlagged = q.flagged;
 
-                let btnStyle = "border-slate-200 text-slate-700 bg-white hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-800/80 dark:text-slate-300";
+                let btnStyle = "border-border-light text-slate-700 bg-white hover:bg-slate-50 dark:border-border-dark dark:bg-surface-dark dark:text-slate-300";
                 if (isAnswered && !isFlagged) {
-                  btnStyle = "bg-emerald-600 text-white border-emerald-600 font-bold";
+                  btnStyle = "bg-emerald-600 text-white border-emerald-600 font-bold dark:bg-emerald-600";
                 } else if (isFlagged) {
                   btnStyle = "bg-amber-500 text-slate-950 border-amber-500 font-black";
                 }
@@ -477,13 +566,15 @@ export default function UjianPage({
                     key={q.position}
                     type="button"
                     onClick={() => setCurrentIndex(idx)}
-                    className={`relative flex h-10 w-full items-center justify-center rounded-lg border text-xs font-semibold transition ${btnStyle} ${
-                      isCurrent ? "ring-2 ring-blue-600 ring-offset-2 dark:ring-offset-slate-900" : ""
+                    className={`relative flex h-10 w-full items-center justify-center rounded-xl border font-mono text-xs font-semibold transition ${btnStyle} ${
+                      isCurrent
+                        ? "ring-2 ring-cobalt-light dark:ring-cobalt-dark ring-offset-2 dark:ring-offset-surface-elevated-dark"
+                        : ""
                     }`}
                   >
                     <span>{q.position}</span>
                     {isFlagged && (
-                      <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-amber-400 ring-1 ring-white" />
+                      <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-amber-400 ring-1 ring-white dark:ring-surface-dark" />
                     )}
                   </button>
                 );
@@ -492,17 +583,17 @@ export default function UjianPage({
           </div>
 
           {/* Legend */}
-          <div className="border-t border-slate-200 p-3 text-[11px] text-slate-500 dark:border-slate-800 dark:text-slate-400 space-y-1">
+          <div className="border-t border-border-light p-3.5 text-xs text-slate-500 dark:border-border-dark dark:text-slate-400 space-y-1.5 font-mono">
             <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded bg-emerald-600" />
+              <span className="h-3 w-3 rounded-md bg-emerald-600" />
               <span>Sudah dijawab</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded bg-amber-500" />
+              <span className="h-3 w-3 rounded-md bg-amber-500" />
               <span>Ragu-ragu</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded border border-slate-300 bg-white dark:border-slate-700 dark:bg-slate-800" />
+              <span className="h-3 w-3 rounded-md border border-border-light bg-white dark:border-border-dark dark:bg-surface-dark" />
               <span>Belum dijawab</span>
             </div>
           </div>
@@ -511,15 +602,15 @@ export default function UjianPage({
 
       {/* Mobile Slide-Over Drawer */}
       {showDrawer && (
-        <div className="fixed inset-0 z-50 flex md:hidden">
+        <div className="fixed inset-0 z-50 flex lg:hidden">
           <div
             className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm"
             onClick={() => setShowDrawer(false)}
           />
-          <div className="relative ml-auto flex h-full w-4/5 max-w-xs flex-col bg-white shadow-xl dark:bg-slate-900">
-            <div className="flex items-center justify-between border-b border-slate-200 p-4 dark:border-slate-800">
+          <div className="relative ml-auto flex h-full w-4/5 max-w-xs flex-col bg-white shadow-2xl dark:bg-surface-elevated-dark">
+            <div className="flex items-center justify-between border-b border-border-light p-4 dark:border-border-dark">
               <h3 className="font-bold text-sm">Daftar Nomor Soal</h3>
-              <button onClick={() => setShowDrawer(false)} className="p-1">
+              <button onClick={() => setShowDrawer(false)} className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-surface-dark">
                 <X className="h-5 w-5" />
               </button>
             </div>
@@ -530,7 +621,7 @@ export default function UjianPage({
                   const isAnswered = q.selectedOptionSnapshotId !== null;
                   const isFlagged = q.flagged;
 
-                  let btnStyle = "border-slate-200 text-slate-700 bg-white dark:border-slate-800 dark:bg-slate-800 dark:text-slate-300";
+                  let btnStyle = "border-border-light text-slate-700 bg-white dark:border-border-dark dark:bg-surface-dark dark:text-slate-300";
                   if (isAnswered && !isFlagged) {
                     btnStyle = "bg-emerald-600 text-white border-emerald-600";
                   } else if (isFlagged) {
@@ -544,8 +635,8 @@ export default function UjianPage({
                         setCurrentIndex(idx);
                         setShowDrawer(false);
                       }}
-                      className={`flex h-11 w-full items-center justify-center rounded-lg border text-xs font-bold transition ${btnStyle} ${
-                        isCurrent ? "ring-2 ring-blue-600 ring-offset-1" : ""
+                      className={`flex h-11 w-full items-center justify-center rounded-xl border font-mono text-xs font-bold transition ${btnStyle} ${
+                        isCurrent ? "ring-2 ring-cobalt-light dark:ring-cobalt-dark ring-offset-1" : ""
                       }`}
                     >
                       {q.position}
@@ -558,50 +649,70 @@ export default function UjianPage({
         </div>
       )}
 
-      {/* Selesai / Finish Confirmation Dialog */}
+      {/* Finish Confirmation Modal (Nordic Precision Bento) */}
       {showFinishModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm">
-          <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl dark:border-slate-800 dark:bg-slate-900 space-y-5">
-            <div className="flex items-start gap-3">
-              <div className="rounded-full bg-rose-100 p-2 text-rose-600 dark:bg-rose-950/60 dark:text-rose-400">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md">
+          <div className="w-full max-w-lg rounded-3xl border border-border-light bg-white p-6 sm:p-8 shadow-2xl dark:border-border-dark dark:bg-surface-elevated-dark space-y-6 animate-in fade-in zoom-in-95 duration-150">
+            {/* Top Accent Warning Glow */}
+            <div className="flex items-start gap-4">
+              <div className="rounded-2xl bg-amber-500/15 p-3 text-amber-500 dark:bg-amber-500/20 shrink-0">
                 <AlertTriangle className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-lg font-black text-slate-900 dark:text-white">
-                  Konfirmasi Akhiri Ujian
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono text-[10px] font-bold uppercase tracking-wider mb-1">
+                  Konfirmasi Pengakhiran Ujian
+                </span>
+                <h3 className="text-xl font-black text-slate-900 dark:text-white">
+                  Apakah Anda yakin ingin menyelesaikan ujian?
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  Setelah mengakhiri ujian, Anda tidak dapat mengubah jawaban lagi.
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Setelah diakhiri, jawaban Anda akan langsung dinilai sesuai standar KepmenPANRB No. 321/2024.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 rounded-xl bg-slate-50 p-3 text-center dark:bg-slate-800/60">
-              <div>
-                <span className="text-[10px] uppercase text-slate-500">Terjawab</span>
-                <p className="text-lg font-black text-emerald-600">{answeredCount}</p>
+            {/* Audit Summary 3-Column Bento Grid */}
+            <div className="grid grid-cols-3 gap-3">
+              <div className="rounded-2xl border border-emerald-200/60 bg-emerald-50/70 p-3.5 text-center dark:border-emerald-900/60 dark:bg-emerald-950/40">
+                <span className="font-mono text-[10px] uppercase font-bold text-emerald-800 dark:text-emerald-300">
+                  Terisi Pasti
+                </span>
+                <p className="font-mono text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
+                  {answeredCount}
+                </p>
+                <span className="text-[10px] text-slate-400">/ {totalCount} Soal</span>
               </div>
-              <div>
-                <span className="text-[10px] uppercase text-slate-500">Kosong</span>
-                <p className="text-lg font-black text-rose-600">{unansweredCount}</p>
+              <div className="rounded-2xl border border-amber-200/60 bg-amber-50/70 p-3.5 text-center dark:border-amber-900/60 dark:bg-amber-950/40">
+                <span className="font-mono text-[10px] uppercase font-bold text-amber-800 dark:text-amber-300">
+                  Ragu-Ragu
+                </span>
+                <p className="font-mono text-2xl font-black text-amber-500 mt-0.5">
+                  {flaggedCount}
+                </p>
+                <span className="text-[10px] text-slate-400">Soal Ditandai</span>
               </div>
-              <div>
-                <span className="text-[10px] uppercase text-slate-500">Ragu-ragu</span>
-                <p className="text-lg font-black text-amber-500">{flaggedCount}</p>
+              <div className="rounded-2xl border border-rose-200/60 bg-rose-50/70 p-3.5 text-center dark:border-rose-900/60 dark:bg-rose-950/40">
+                <span className="font-mono text-[10px] uppercase font-bold text-rose-800 dark:text-rose-300">
+                  Belum Dijawab
+                </span>
+                <p className="font-mono text-2xl font-black text-rose-600 dark:text-rose-400 mt-0.5">
+                  {unansweredCount}
+                </p>
+                <span className="text-[10px] text-slate-400">Soal Kosong</span>
               </div>
             </div>
 
             {unansweredCount > 0 && (
-              <p className="text-xs font-semibold text-rose-600 dark:text-rose-400">
-                Perhatian: Masih ada {unansweredCount} soal yang belum Anda jawab!
-              </p>
+              <div className="rounded-2xl bg-rose-50 p-3.5 border border-rose-200 text-xs text-rose-800 dark:bg-rose-950/40 dark:border-rose-900/60 dark:text-rose-300">
+                <strong>Perhatian:</strong> Masih terdapat <strong>{unansweredCount} butir soal</strong> yang belum dijawab. Pada CAT BKN SKD tidak ada pengurangan nilai untuk jawaban salah.
+              </div>
             )}
 
             <div className="flex gap-3 pt-2">
               <button
                 type="button"
                 onClick={() => setShowFinishModal(false)}
-                className="flex-1 rounded-xl border border-slate-300 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800 transition"
+                className="flex-1 rounded-2xl border border-border-light py-3 text-xs font-bold text-slate-700 hover:bg-slate-100 dark:border-border-dark dark:text-slate-300 dark:hover:bg-surface-dark transition"
               >
                 Kembali Mengerjakan
               </button>
@@ -609,7 +720,7 @@ export default function UjianPage({
                 type="button"
                 onClick={handleManualFinalize}
                 disabled={isFinalizing}
-                className="flex-1 rounded-xl bg-rose-600 py-2.5 text-xs font-bold text-white shadow-md hover:bg-rose-700 disabled:opacity-50 transition"
+                className="flex-1 rounded-2xl bg-rose-600 py-3 text-xs font-bold text-white shadow-md hover:bg-rose-700 disabled:opacity-50 transition active:scale-95"
               >
                 {isFinalizing ? "Memproses Nilai..." : "Ya, Akhiri Ujian"}
               </button>

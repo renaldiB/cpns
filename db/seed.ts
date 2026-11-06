@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { runMigrations } from "./migrate";
 import { db, sqliteDb } from "./index";
-import { examProfiles, questions, options, settings } from "./schema";
+import { examProfiles, questionBatches, questions, options, settings } from "./schema";
 import { BASELINE_EXAM_PROFILE } from "@/config/exam-profiles";
 import { eq } from "drizzle-orm";
 
@@ -46,7 +46,51 @@ export function seedDatabase() {
     console.log(`Profil ujian baseline '${BASELINE_EXAM_PROFILE.id}' sudah ada.`);
   }
 
-  // 3. Seed Default Settings
+  // 3. Seed Default Question Batches (Batch 1 & Batch 2)
+  const defaultBatches = [
+    {
+      id: "batch-1",
+      batchNumber: 1,
+      name: "Batch 1: Standar BKN 2024",
+      description: "Paket soal resmi 330 butir standar KepmenPANRB No. 321/2024 (90 TWK, 105 TIU, 135 TKP).",
+      targetYear: 2024,
+      isActive: true,
+    },
+    {
+      id: "batch-2",
+      batchNumber: 2,
+      name: "Batch 2: Pengayaan Latihan 2026",
+      description: "Paket latihan soal baru penalaran analitis, integritas, dan studi kasus pelayanan publik.",
+      targetYear: 2026,
+      isActive: true,
+    },
+  ];
+
+  for (const b of defaultBatches) {
+    const existing = db.select().from(questionBatches).where(eq(questionBatches.id, b.id)).get();
+    if (!existing) {
+      console.log(`Menambahkan paket ${b.name}...`);
+      db.insert(questionBatches)
+        .values({
+          id: b.id,
+          batchNumber: b.batchNumber,
+          name: b.name,
+          description: b.description,
+          targetYear: b.targetYear,
+          isActive: b.isActive,
+          createdAt: nowIso,
+          updatedAt: nowIso,
+        })
+        .run();
+    }
+  }
+
+  // Ensure any existing questions have batch assigned
+  sqliteDb.exec(`
+    UPDATE questions SET batch_id = 'batch-1', batch_number = 1 WHERE batch_id IS NULL OR batch_number IS NULL;
+  `);
+
+  // 4. Seed Default Settings
   const existingTheme = db.select().from(settings).where(eq(settings.key, "theme")).get();
   if (!existingTheme) {
     db.insert(settings)
@@ -58,7 +102,7 @@ export function seedDatabase() {
       .run();
   }
 
-  // 4. Seed Questions from seed-questions.json (Idempotent)
+  // 5. Seed Questions from seed-questions.json (Idempotent)
   const seedFile = path.join(process.cwd(), "data", "seed-questions.json");
   if (!fs.existsSync(seedFile)) {
     throw new Error("File data/seed-questions.json tidak ditemukan.");
@@ -89,6 +133,8 @@ export function seedDatabase() {
         .values({
           id: qId,
           externalId: q.externalId || null,
+          batchId: q.batchId || "batch-1",
+          batchNumber: q.batchNumber || 1,
           category: q.category,
           subtopic: q.subtopic,
           stem: q.stem,

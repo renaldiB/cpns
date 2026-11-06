@@ -12,12 +12,14 @@ export async function POST(req: Request) {
     let rawText = "";
     let mode: "preview" | "commit" = "preview";
     let isAtomic = true;
+    let targetBatchNumber = 1;
 
     if (contentType.includes("application/json")) {
       const body = await req.json();
       rawText = typeof body.content === "string" ? body.content : JSON.stringify(body.content);
       mode = body.mode === "commit" ? "commit" : "preview";
       isAtomic = body.isAtomic !== false;
+      targetBatchNumber = body.targetBatchNumber ? Number(body.targetBatchNumber) : 1;
     } else {
       rawText = await req.text();
     }
@@ -54,6 +56,7 @@ export async function POST(req: Request) {
 
         candidateList.push({
           externalId: rowObj["external_id"] || null,
+          batchNumber: parseInt(rowObj["batch_number"] || String(targetBatchNumber)),
           category: rowObj["category"],
           subtopic: rowObj["subtopic"],
           stem: rowObj["stem"],
@@ -145,10 +148,15 @@ export async function POST(req: Request) {
     const commitTx = sqliteDb.transaction(() => {
       for (const q of validItems) {
         const qId = `q_${q.externalId || Math.random().toString(36).substring(2, 9)}`;
+        const bNum = q.batchNumber || targetBatchNumber;
+        const bId = q.batchId || `batch-${bNum}`;
+
         db.insert(questions)
           .values({
             id: qId,
             externalId: q.externalId || null,
+            batchId: bId,
+            batchNumber: bNum,
             category: q.category,
             subtopic: q.subtopic,
             stem: q.stem,
