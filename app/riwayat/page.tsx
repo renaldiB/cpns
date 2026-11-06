@@ -11,6 +11,7 @@ import {
   Award,
   ArrowRight,
   TrendingUp,
+  Trash2,
 } from "lucide-react";
 import {
   LineChart,
@@ -28,7 +29,8 @@ export default function RiwayatPage() {
   const [modeFilter, setModeFilter] = useState<string>("all");
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  useEffect(() => {
+  const fetchAttempts = () => {
+    setIsLoading(true);
     fetch(`/api/history?mode=${modeFilter === "all" ? "" : modeFilter}`)
       .then((res) => res.json())
       .then((data) => {
@@ -38,7 +40,33 @@ export default function RiwayatPage() {
         setIsLoading(false);
       })
       .catch(() => setIsLoading(false));
+  };
+
+  useEffect(() => {
+    fetchAttempts();
   }, [modeFilter]);
+
+  const handleClearHistory = async () => {
+    if (
+      !confirm(
+        "Apakah Anda yakin ingin mengosongkan seluruh riwayat ujian dan sesi aktif? Data riwayat akan kembali segar dari 0."
+      )
+    ) {
+      return;
+    }
+    try {
+      const res = await fetch("/api/history", { method: "DELETE" });
+      const data = await res.json();
+      if (data.success) {
+        setAttempts([]);
+        alert("Riwayat ujian berhasil dikosongkan ke 0.");
+      } else {
+        alert("Gagal mengosongkan: " + data.error);
+      }
+    } catch (e: any) {
+      alert("Terjadi kesalahan: " + e.message);
+    }
+  };
 
   // Chart data: chronological completed attempts
   const chartData = attempts
@@ -85,6 +113,16 @@ export default function RiwayatPage() {
               <Download className="h-3.5 w-3.5" />
               Ekspor JSON
             </a>
+            {attempts.length > 0 && (
+              <button
+                type="button"
+                onClick={handleClearHistory}
+                className="flex items-center gap-1.5 rounded-xl border border-rose-200 bg-rose-50 px-3.5 py-2 text-xs font-bold text-rose-700 shadow-sm hover:bg-rose-100 dark:border-rose-900/50 dark:bg-rose-950/40 dark:text-rose-300 dark:hover:bg-rose-950/70 transition"
+              >
+                <Trash2 className="h-3.5 w-3.5" />
+                Kosongkan Riwayat
+              </button>
+            )}
           </div>
         </div>
 

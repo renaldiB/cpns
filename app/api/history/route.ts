@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { db } from "@/db";
+import { db, sqliteDb } from "@/db";
 import { attempts } from "@/db/schema";
 import { desc, eq, and, sql } from "drizzle-orm";
 
@@ -85,6 +85,21 @@ export async function GET(req: Request) {
     }
 
     return NextResponse.json({ success: true, attempts: formatted });
+  } catch (err: any) {
+    return NextResponse.json({ success: false, error: err.message }, { status: 500 });
+  }
+}
+
+export async function DELETE() {
+  try {
+    sqliteDb.exec(`
+      DELETE FROM attempt_questions;
+      DELETE FROM attempts;
+    `);
+    return NextResponse.json({
+      success: true,
+      message: "Seluruh riwayat sesi ujian dan data progres berhasil dikosongkan.",
+    });
   } catch (err: any) {
     return NextResponse.json({ success: false, error: err.message }, { status: 500 });
   }
