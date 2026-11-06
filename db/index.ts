@@ -28,10 +28,28 @@ if (isServerless && !fs.existsSync(dbPath)) {
 // Single connection instance
 const sqlite = new Database(dbPath);
 
-// Enable WAL, foreign keys, and busy timeout for high reliability
-sqlite.pragma("journal_mode = WAL");
-sqlite.pragma("foreign_keys = ON");
-sqlite.pragma("busy_timeout = 5000");
+// Configuration pragmas: DELETE mode is safest on ephemeral /tmp serverless mount
+try {
+  sqlite.pragma(isServerless ? "journal_mode = DELETE" : "journal_mode = WAL");
+  sqlite.pragma("foreign_keys = ON");
+  sqlite.pragma("busy_timeout = 5000");
+} catch (_) {}
+
+// Self-healing schema & seed check (guarantees tables exist on serverless cold starts)
+try {
+  const tableCheck = sqlite
+    .prepare("SELECT count(*) as count FROM sqlite_master WHERE type='table' AND name='questions'")
+    .get() as { count: number } | undefined;
+
+  if (!tableCheck || tableCheck.count === 0) {
+    const { runMigrations } = require("./migrate");
+    const { seedDatabase } = require("./seed");
+    runMigrations();
+    seedDatabase();
+  }
+} catch (err) {
+  console.error("Database self-healing initialization error:", err);
+}
 
 export const db = drizzle(sqlite, { schema });
 export const sqliteDb = sqlite;

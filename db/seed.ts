@@ -5,6 +5,7 @@ import { db, sqliteDb } from "./index";
 import { examProfiles, questionBatches, questions, options, settings } from "./schema";
 import { BASELINE_EXAM_PROFILE, PRESET_EXAM_PROFILES } from "@/config/exam-profiles";
 import { eq } from "drizzle-orm";
+import bundledSeedData from "../data/seed-questions.json";
 
 export function seedDatabase() {
   console.log("Memulai proses seeding database...");
@@ -52,7 +53,7 @@ export function seedDatabase() {
       id: "batch-1",
       batchNumber: 1,
       name: "Batch 1: Standar BKN 2024",
-      description: "Paket soal resmi 330 butir standar KepmenPANRB No. 321/2024 (90 TWK, 105 TIU, 135 TKP).",
+      description: "Paket soal resmi 110 butir standar KepmenPANRB No. 321/2024 (30 TWK, 35 TIU, 45 TKP).",
       targetYear: 2024,
       isActive: true,
     },
@@ -151,15 +152,19 @@ export function seedDatabase() {
       .run();
   }
 
-  // 5. Seed Questions from seed-questions.json (Idempotent)
-  const seedFile = path.join(process.cwd(), "data", "seed-questions.json");
-  if (!fs.existsSync(seedFile)) {
-    throw new Error("File data/seed-questions.json tidak ditemukan.");
+  // 5. Seed Questions from seed-questions.json (Safely loaded from disk or embedded module)
+  let rawQuestions: any[] = [];
+  try {
+    const seedFile = path.join(process.cwd(), "data", "seed-questions.json");
+    if (fs.existsSync(seedFile)) {
+      const rawJson = fs.readFileSync(seedFile, "utf8");
+      rawQuestions = JSON.parse(rawJson).questions || [];
+    } else {
+      rawQuestions = (bundledSeedData as any).questions || [];
+    }
+  } catch (_) {
+    rawQuestions = (bundledSeedData as any).questions || [];
   }
-
-  const rawJson = fs.readFileSync(seedFile, "utf8");
-  const seedData = JSON.parse(rawJson);
-  const rawQuestions: any[] = seedData.questions || [];
 
   console.log(`Memeriksa ${rawQuestions.length} soal untuk seeding idempotent...`);
 

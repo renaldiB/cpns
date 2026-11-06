@@ -27,51 +27,65 @@ import {
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  // 1. Fetch active attempt
-  const activeAttempt = db
-    .select()
-    .from(attempts)
-    .where(eq(attempts.status, "in_progress"))
-    .orderBy(desc(attempts.startedAt))
-    .get();
+  let activeAttempt: any = null;
+  let lastAttempt: any = null;
+  let scoreTrends: any[] = [];
+  let subtopicStats: any[] = [];
+  let topWeaknesses: any[] = [];
+  let totalQuestionsCount = 0;
+  let batches: any[] = [];
+  let completedAttemptsCount = 0;
+  let passedAttemptsCount = 0;
 
-  // 2. Fetch last completed attempt
-  const lastAttempt = db
-    .select()
-    .from(attempts)
-    .where(eq(attempts.status, "finished"))
-    .orderBy(desc(attempts.finishedAt))
-    .get();
+  try {
+    // 1. Fetch active attempt
+    activeAttempt = db
+      .select()
+      .from(attempts)
+      .where(eq(attempts.status, "in_progress"))
+      .orderBy(desc(attempts.startedAt))
+      .get();
 
-  // 3. Fetch analytics & trends
-  const scoreTrends = getScoreTrend(10);
-  const subtopicStats = getSubtopicAnalytics();
-  const topWeaknesses = subtopicStats.filter((s) => s.hasEnoughData).slice(0, 4);
-
-  // 4. Fetch total bank questions & batches
-  const totalQuestionsCount =
-    db
-      .select({ count: sql<number>`count(*)` })
-      .from(questions)
-      .where(sql`${questions.deletedAt} IS NULL`)
-      .get()?.count || 0;
-
-  const batches = getAllBatches();
-
-  // Calculate quick metrics
-  const completedAttemptsCount =
-    db
-      .select({ count: sql<number>`count(*)` })
+    // 2. Fetch last completed attempt
+    lastAttempt = db
+      .select()
       .from(attempts)
       .where(eq(attempts.status, "finished"))
-      .get()?.count || 0;
+      .orderBy(desc(attempts.finishedAt))
+      .get();
 
-  const passedAttemptsCount =
-    db
-      .select({ count: sql<number>`count(*)` })
-      .from(attempts)
-      .where(sql`${attempts.status} = 'finished' AND ${attempts.isPassed} = 1`)
-      .get()?.count || 0;
+    // 3. Fetch analytics & trends
+    scoreTrends = getScoreTrend(10);
+    subtopicStats = getSubtopicAnalytics();
+    topWeaknesses = subtopicStats.filter((s) => s.hasEnoughData).slice(0, 4);
+
+    // 4. Fetch total bank questions & batches
+    totalQuestionsCount =
+      db
+        .select({ count: sql<number>`count(*)` })
+        .from(questions)
+        .where(sql`${questions.deletedAt} IS NULL`)
+        .get()?.count || 0;
+
+    batches = getAllBatches();
+
+    // Calculate quick metrics
+    completedAttemptsCount =
+      db
+        .select({ count: sql<number>`count(*)` })
+        .from(attempts)
+        .where(eq(attempts.status, "finished"))
+        .get()?.count || 0;
+
+    passedAttemptsCount =
+      db
+        .select({ count: sql<number>`count(*)` })
+        .from(attempts)
+        .where(sql`${attempts.status} = 'finished' AND ${attempts.isPassed} = 1`)
+        .get()?.count || 0;
+  } catch (err) {
+    console.error("HomePage data fetching warning (fallback to safe defaults):", err);
+  }
 
   const passRate =
     completedAttemptsCount > 0 ? Math.round((passedAttemptsCount / completedAttemptsCount) * 100) : 0;
