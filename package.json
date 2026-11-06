@@ -1,0 +1,52 @@
+{
+  "name": "cpns-trial-cat-simulasi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web simulasi tes SKD CPNS mandiri CAT BKN local-first",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 -p 3000",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1 -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx db/migrate.ts",
+    "db:seed": "tsx db/seed.ts",
+    "db:reset": "tsx db/reset.ts",
+    "db:backup": "tsx scripts/cli-backup.ts",
+    "db:restore": "tsx scripts/cli-restore.ts",
+    "questions:verify": "tsx scripts/verify-questions.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.39.3",
+    "lucide-react": "^0.475.0",
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.9",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.20",
+    "drizzle-kit": "^0.30.4",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "^15.1.7",
+    "postcss": "^8.5.2",
+    "prettier": "^3.5.1",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
