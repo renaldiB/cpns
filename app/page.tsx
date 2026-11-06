@@ -212,9 +212,9 @@ export default async function HomePage() {
             </div>
 
             <div className="space-y-1">
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-                Simulasi Penuh SKD BKN
-              </h2>
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+                Simulasi Penuh SKD CPNS
+              </h3>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-on-surface-variant leading-relaxed">
                 Ujian CAT komprehensif 110 butir soal dengan lingkungan, alokasi waktu 100 menit, dan mekanisme scoring identik server resmi BKN.
               </p>
