@@ -14,9 +14,11 @@
 /build
 
 # Local data & database
-/data/app.db
-/data/app.db-wal
-/data/app.db-shm
+/data/*.db*
+/data/*.sqlite*
+*.sqlite
+*.sqlite3
+*.db
 /data/uploads/*
 !/data/uploads/.gitkeep
 /data/backups/*
@@ -24,10 +26,11 @@
 
 # Environment files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*.local
+.env.development
+.env.production
+.env.test
+!.env.example
 
 # Debug logs
 npm-debug.log*

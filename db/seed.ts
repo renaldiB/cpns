@@ -3,7 +3,7 @@ import path from "path";
 import { runMigrations } from "./migrate";
 import { db, sqliteDb } from "./index";
 import { examProfiles, questionBatches, questions, options, settings } from "./schema";
-import { BASELINE_EXAM_PROFILE } from "@/config/exam-profiles";
+import { BASELINE_EXAM_PROFILE, PRESET_EXAM_PROFILES } from "@/config/exam-profiles";
 import { eq } from "drizzle-orm";
 
 export function seedDatabase() {
@@ -14,39 +14,39 @@ export function seedDatabase() {
 
   const nowIso = new Date().toISOString();
 
-  // 2. Seed Baseline Exam Profile
-  const existingProfile = db
-    .select()
-    .from(examProfiles)
-    .where(eq(examProfiles.id, BASELINE_EXAM_PROFILE.id))
-    .get();
+  // 2. Seed All Preset Exam Profiles
+  for (const prof of PRESET_EXAM_PROFILES) {
+    const existingProfile = db
+      .select()
+      .from(examProfiles)
+      .where(eq(examProfiles.id, prof.id))
+      .get();
 
-  if (!existingProfile) {
-    console.log(`Menyimpan profil ujian baseline: ${BASELINE_EXAM_PROFILE.name}...`);
-    db.insert(examProfiles)
-      .values({
-        id: BASELINE_EXAM_PROFILE.id,
-        name: BASELINE_EXAM_PROFILE.name,
-        year: BASELINE_EXAM_PROFILE.year,
-        examType: BASELINE_EXAM_PROFILE.examType,
-        description: BASELINE_EXAM_PROFILE.description,
-        referenceStatus: BASELINE_EXAM_PROFILE.referenceStatus,
-        sourceTitle: BASELINE_EXAM_PROFILE.sourceTitle,
-        sourceUrl: BASELINE_EXAM_PROFILE.sourceUrl,
-        sourceDocumentNumber: BASELINE_EXAM_PROFILE.sourceDocumentNumber,
-        verifiedAt: BASELINE_EXAM_PROFILE.verifiedAt,
-        durationSeconds: BASELINE_EXAM_PROFILE.durationSeconds,
-        rulesJson: JSON.stringify(BASELINE_EXAM_PROFILE),
-        isDefault: true,
-        createdAt: nowIso,
-        updatedAt: nowIso,
-      })
-      .run();
-  } else {
-    console.log(`Profil ujian baseline '${BASELINE_EXAM_PROFILE.id}' sudah ada.`);
+    if (!existingProfile) {
+      console.log(`Menyimpan profil ujian: ${prof.name}...`);
+      db.insert(examProfiles)
+        .values({
+          id: prof.id,
+          name: prof.name,
+          year: prof.year,
+          examType: prof.examType,
+          description: prof.description,
+          referenceStatus: prof.referenceStatus,
+          sourceTitle: prof.sourceTitle,
+          sourceUrl: prof.sourceUrl,
+          sourceDocumentNumber: prof.sourceDocumentNumber,
+          verifiedAt: prof.verifiedAt,
+          durationSeconds: prof.durationSeconds,
+          rulesJson: JSON.stringify(prof),
+          isDefault: prof.isDefault,
+          createdAt: nowIso,
+          updatedAt: nowIso,
+        })
+        .run();
+    }
   }
 
-  // 3. Seed Default Question Batches (Batch 1 & Batch 2)
+  // 3. Seed Default Question Batches (Batches 1 to 8)
   const defaultBatches = [
     {
       id: "batch-1",
@@ -59,9 +59,57 @@ export function seedDatabase() {
     {
       id: "batch-2",
       batchNumber: 2,
-      name: "Batch 2: Pengayaan Latihan 2026",
-      description: "Paket latihan soal baru penalaran analitis, integritas, dan studi kasus pelayanan publik.",
+      name: "Batch 2: Prediksi & Pengayaan 2025/2026",
+      description: "Paket latihan penalaran analitis, integritas ASN, etika AI & layanan publik digital, bela negara siber.",
       targetYear: 2026,
+      isActive: true,
+    },
+    {
+      id: "batch-3",
+      batchNumber: 3,
+      name: "Batch 3: Standar CPNS 2021",
+      description: "Paket soal era awal 110 butir dan materi resmi Anti-Radikalisme (KepmenPANRB No. 1023/2021).",
+      targetYear: 2021,
+      isActive: true,
+    },
+    {
+      id: "batch-4",
+      batchNumber: 4,
+      name: "Batch 4: Sekolah Kedinasan (Dikdin)",
+      description: "Paket soal seleksi masuk IPDN, PKN STAN, Poltekip, STIS, STIN, dan Sekdin Kemenhub (KepmenPANRB 71/2024).",
+      targetYear: 2024,
+      isActive: true,
+    },
+    {
+      id: "batch-5",
+      batchNumber: 5,
+      name: "Batch 5: Arsip Historis CPNS 2019",
+      description: "Paket 100 butir soal durasi 90 menit format klasik PermenPANRB No. 24/2019 (PG TKP 126).",
+      targetYear: 2019,
+      isActive: true,
+    },
+    {
+      id: "batch-6",
+      batchNumber: 6,
+      name: "Batch 6: Tantangan Ekstrem CPNS 2018",
+      description: "Paket soal HOTS tingkat kesulitan tinggi standar PermenPANRB No. 37/2018 (PG ketat 75/80/143).",
+      targetYear: 2018,
+      isActive: true,
+    },
+    {
+      id: "batch-7",
+      batchNumber: 7,
+      name: "Batch 7: Seleksi PPPK 2024",
+      description: "Simulasi evaluasi kompetensi manajerial, sosial kultural, teknis, dan wawancara berbasis komputer.",
+      targetYear: 2024,
+      isActive: true,
+    },
+    {
+      id: "batch-8",
+      batchNumber: 8,
+      name: "Batch 8: Rekrutmen Bersama BUMN",
+      description: "Tes Kemampuan Dasar (TKD Verbal & Numerik) dan Core Values AKHLAK BUMN standar FHCI.",
+      targetYear: 2024,
       isActive: true,
     },
   ];

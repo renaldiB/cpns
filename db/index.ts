@@ -4,12 +4,25 @@ import * as schema from "./schema";
 import path from "path";
 import fs from "fs";
 
-const dbPath = process.env.DATABASE_URL || path.join(process.cwd(), "data", "app.db");
+const isServerless = !!(process.env.NETLIFY || process.env.AWS_LAMBDA_FUNCTION_NAME);
+const dbPath =
+  process.env.DATABASE_URL ||
+  (isServerless ? path.join("/tmp", "app.db") : path.join(process.cwd(), "data", "app.db"));
 
 // Ensure directory exists
 const dbDir = path.dirname(dbPath);
 if (!fs.existsSync(dbDir)) {
   fs.mkdirSync(dbDir, { recursive: true });
+}
+
+// In serverless, if /tmp/app.db doesn't exist but data/app.db exists in bundle, copy it
+if (isServerless && !fs.existsSync(dbPath)) {
+  const localDb = path.join(process.cwd(), "data", "app.db");
+  if (fs.existsSync(localDb)) {
+    try {
+      fs.copyFileSync(localDb, dbPath);
+    } catch (_) {}
+  }
 }
 
 // Single connection instance

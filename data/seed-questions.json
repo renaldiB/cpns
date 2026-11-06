@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T11:55:56.218Z",
-  "totalQuestions": 330,
+  "generatedAt": "2026-11-06T17:43:21.349Z",
+  "totalQuestions": 440,
   "counts": {
-    "TWK": 90,
-    "TIU": 105,
-    "TKP": 135
+    "TWK": 120,
+    "TIU": 140,
+    "TKP": 180
   },
   "questions": [
     {
@@ -12877,6 +12877,4516 @@
       "sourceReference": "Peraturan Menteri PANRB No. 321/2024",
       "reviewStatus": "verified",
       "reviewNote": "Terverifikasi pembobotan poin 1-5"
+    },
+    {
+      "externalId": "twk-b2-001",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "pancasila",
+      "stem": "Dalam konteks etika penyelenggaraan negara modern, aktualisasi nilai sila kedua Pancasila 'Kemanusiaan yang adil dan beradab' paling tepat diwujudkan oleh seorang ASN melalui...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mengutamakan pelayanan kepada kelompok masyarakat yang memiliki kedekatan kultural",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Memberikan perlakuan diskriminatif positif kepada pemohon layanan yang mampu membayar lebih",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Menjamin pelayanan publik yang nondiskriminatif, berempati, dan menghargai martabat setiap warga negara tanpa kecuali",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "Menyerahkan seluruh urusan kemanusiaan kepada lembaga swadaya masyarakat independen",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Membatasi akses layanan bagi kelompok marjinal demi efisiensi anggaran operasional instansi",
+          "points": 0
+        }
+      ],
+      "explanation": "Sila kedua menuntut perlakuan adil dan bermartabat bagi setiap manusia. ASN sebagai pelayan publik wajib memberikan layanan yang nondiskriminatif, inklusif, dan menjunjung tinggi harkat kemanusiaan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Tap MPR No. I/MPR/2003 & Nilai Dasar ASN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-002",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "pancasila",
+      "stem": "Sila keempat Pancasila menegaskan prinsip 'Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan'. Makna esensial dari kata 'hikmat kebijaksanaan' dalam pengambilan keputusan publik adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Keputusan mutlak ditentukan oleh suara mayoritas voting tanpa perlu mempertimbangkan aspirasi minoritas",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Pengambilan keputusan yang didasarkan pada akal sehat, hati nurani luhur, dan pertimbangan maslahat kebangsaan jangka panjang",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Keputusan harus selalu diserahkan kepada pimpinan instansi tanpa perlu mendengar masukan bawahan",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Menghindari segala bentuk dialog terbuka demi menjaga stabilitas dan kecepatan proses birokrasi",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Mengadopsi seluruh usulan kelompok penekan terkuat guna menghindari konflik sosial di masyarakat",
+          "points": 0
+        }
+      ],
+      "explanation": "Hikmat kebijaksanaan merefleksikan rasionalitas berbasis etika luhur, nurani, dan komitmen mengutamakan kepentingan persatuan dan keadilan sosial di atas kepentingan kelompok.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Filsafat Pancasila Prof. Notonagoro",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-003",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "pancasila",
+      "stem": "Pancasila berfungsi sebagai 'Leitstar Dinamis' bagi bangsa Indonesia. Istilah yang dipopulerkan oleh Ir. Soekarno ini mengandung pengertian bahwa Pancasila...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dapat diubah pasal-pasalnya sesuai kehendak rezim yang sedang memegang tampuk kekuasaan",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Merupakan bintang pemandu yang nilainya abadi namun penerapannya mampu merespons perkembangan zaman dan tantangan global",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Hanya berlaku dalam situasi krisis kenegaraan dan tidak relevan pada era transformasi digital",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Bersifat kaku dan tertutup dari segala bentuk interaksi dengan perkembangan ilmu pengetahuan",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Merupakan instrumen politik untuk membatasi kebebasan berpendapat seluruh elemen masyarakat",
+          "points": 0
+        }
+      ],
+      "explanation": "Sebagai Leitstar (bintang pemandu) dinamis, Pancasila tidak bersifat statis-dogmatis melainkan terbuka mengarahkan bangsa mengarungi perubahan zaman tanpa kehilangan jati diri.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pidato Ir. Soekarno 1 Juni 1945",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-004",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "uud-1945",
+      "stem": "Pasal 1 ayat (3) UUD 1945 hasil amandemen menegaskan bahwa 'Negara Indonesia adalah negara hukum'. Konsekuensi yuridis formal dari asas rechtsstaat ini dalam birokrasi pemerintahan adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Kebijakan pejabat publik memiliki derajat legalitas lebih tinggi dibandingkan peraturan perundang-undangan",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Setiap tindakan, wewenang, dan keputusan administrasi pemerintahan wajib memiliki dasar hukum yang sah (asas legalitas)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Aparat penegak hukum kebal terhadap pengawasan yudisial dan kode etik profesi",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Hukum hanya diberlakukan secara efektif terhadap warga negara sipil biasa",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Pemerintah dapat mengesampingkan putusan pengadilan berkekuatan hukum tetap demi target pembangunan",
+          "points": 0
+        }
+      ],
+      "explanation": "Prinsip negara hukum menempatkan supremasi hukum di atas segalanya, di mana setiap kewenangan badan dan pejabat tata usaha negara bersandar pada asas legalitas.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pasal 1 ayat (3) UUD 1945 & UU No. 30/2014",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-005",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "uud-1945",
+      "stem": "Berdasarkan ketentuan Pasal 23E UUD 1945, lembaga negara yang memiliki mandat konstitusional independen untuk memeriksa pengelolaan dan tanggung jawab keuangan negara adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Komisi Pemberantasan Korupsi (KPK)",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Badan Pemeriksa Keuangan (BPK)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Badan Pengawasan Keuangan dan Pembangunan (BPKP)",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Kementerian Keuangan Republik Indonesia",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Otoritas Jasa Keuangan (OJK)",
+          "points": 0
+        }
+      ],
+      "explanation": "Pasal 23E ayat (1) UUD 1945: 'Untuk memeriksa pengelolaan dan tanggung jawab tentang keuangan negara diadakan satu Badan Pemeriksa Keuangan yang bebas dan mandiri.'",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Pasal 23E UUD 1945",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-006",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "uud-1945",
+      "stem": "Mekanisme pengujian undang-undang terhadap Undang-Undang Dasar (judicial review) di Indonesia menurut Pasal 24C ayat (1) UUD 1945 merupakan wewenang dari...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mahkamah Agung",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Mahkamah Konstitusi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Dewan Perwakilan Rakyat bersama Presiden",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Komisi Yudisial",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Majelis Permusyawaratan Rakyat",
+          "points": 0
+        }
+      ],
+      "explanation": "Pasal 24C ayat (1) UUD 1945 mengatur bahwa Mahkamah Konstitusi berwenang mengadili pada tingkat pertama dan terakhir yang putusannya bersifat final untuk menguji undang-undang terhadap UUD.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pasal 24C ayat (1) UUD 1945",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-007",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "nkri",
+      "stem": "Deklarasi Djuanda yang dicetuskan pada tanggal 13 Desember 1957 memiliki arti yang sangat fundamental bagi keutuhan wilayah NKRI karena...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menetapkan batas landas kontinen Indonesia dengan negara tetangga sejauh 200 mil laut",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Menyatakan bahwa laut di antara dan di dalam kepulauan Indonesia adalah satu kesatuan wilayah kedaulatan mutlak NKRI (konsep negara kepulauan)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menggantikan hukum laut internasional UNCLOS 1982 dengan hukum maritim adat",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Menyerahkan pengelolaan selat-selat strategis kepada pengawasan bersama PBB",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Membatasi jalur pelayaran internasional secara sepihak tanpa izin lintas damai",
+          "points": 0
+        }
+      ],
+      "explanation": "Deklarasi Djuanda merombak ordonansi kolonial 1939 (lebar laut 3 mil dari garis pantai) menjadi konsep Wawasan Nusantara di mana laut antar-pulau adalah pemersatu, bukan pemisah.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Deklarasi Djuanda 13 Desember 1957 & UU No. 4/Prp/1960",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-008",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "nkri",
+      "stem": "Prinsip Otonomi Daerah seluas-luasnya yang dianut dalam Pasal 18 UUD 1945 bertujuan untuk mempercepat terwujudnya kesejahteraan masyarakat melalui...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pemberian hak kepada daerah untuk membentuk angkatan bersenjata sendiri",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Peningkatan pelayanan publik, pemberdayaan peran serta masyarakat, dan peningkatan daya saing daerah",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Pelepasan tanggung jawab pengawasan dari pemerintah pusat terhadap regulasi daerah",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Pemisahan sistem perpajakan nasional secara mutlak antara pusat dan daerah",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Pemberian hak veto kepada kepala daerah terhadap undang-undang nasional",
+          "points": 0
+        }
+      ],
+      "explanation": "Sesuai UU No. 23/2014 dan Pasal 18 UUD 1945, esensi otonomi daerah adalah desentralisasi kewenangan guna efektivitas pelayanan publik, pemberdayaan, dan pemerataan kesejahteraan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "UU No. 23 Tahun 2014 & Pasal 18 UUD 1945",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-009",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bhinneka-tunggal-ika",
+      "stem": "Prinsip toleransi aktif dalam semboyan Bhinneka Tunggal Ika berbeda dengan toleransi pasif. Bentuk konkret toleransi aktif di lingkungan kerja majemuk adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sekadar mendiamkan perbedaan rekan kerja tanpa pernah berinteraksi satu sama lain",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Secara sadar berkolaborasi, membuka ruang dialog inklusif, dan saling mendukung tanpa memandang latar belakang SARA",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menuntut agar kelompok minoritas meleburkan identitas aslinya ke dalam budaya mayoritas",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Membagi penugasan proyek kerja secara eksklusif berdasarkan kesamaan agama dan suku",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Menghindari segala bentuk diskusi publik mengenai isu keragaman sosial",
+          "points": 0
+        }
+      ],
+      "explanation": "Toleransi aktif melampaui sekadar membiarkan (pasif); ia mewujud dalam inisiatif kerja sama konstruktif, empati, dan pengakuan setara atas keberagaman.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Modul Nilai Harmonis Core Values ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-010",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "nasionalisme",
+      "stem": "Nasionalisme Indonesia adalah 'Nasionalisme Sipil Terbuka' (Civic Nationalism) dan bukan nasionalisme etnis sempit (Chauvinisme). Karakteristik utama nasionalisme Indonesia tersebut tercermin dari...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Klaim keunggulan ras atau golongan tertentu atas suku bangsa lainnya di tanah air",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Komitmen kebangsaan yang disatukan oleh kesamaan cita-cita hukum, keadilan, dan persamaan hak warga negara di hadapan konstitusi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Penutupan diri secara total terhadap kerja sama internasional dan pergaulan dunia",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Sentimen permusuhan terhadap segala bentuk produk budaya asing yang masuk",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Penetapan hak politik warga negara berdasarkan garis keturunan biologis leluhur",
+          "points": 0
+        }
+      ],
+      "explanation": "Nasionalisme Indonesia bersumber pada ikatan kewarganegaraan inklusif (civic) di bawah payung konstitusi, menolak primordialisme sempit dan chauvinisme.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Bung Karno: Nasionalisme, Islamisme, dan Marxisme",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-011",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "integritas",
+      "stem": "Seorang pejabat pengadaan barang dan jasa menerima tawaran voucer belanja hotel bintang lima dari pihak penyedia tender setelah proyek selesai ditandatangani. Tindakan berintegritas yang wajib dilakukan pejabat tersebut adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menerimanya karena proyek sudah selesai dan tidak memengaruhi proses penilaian tender",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Menolak pemberian tersebut secara santun dan melaporkannya kepada Unit Pengendalian Gratifikasi (UPG) / KPK",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menerimanya lalu membagikan voucer tersebut kepada seluruh staf kantor sebagai bentuk kebersamaan",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Menyimpan voucer tersebut diam-diam untuk digunakan saat dinas luar kota",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Menerima voucer namun meminta pihak ketiga menambahkan uang tunai tambahan",
+          "points": 0
+        }
+      ],
+      "explanation": "Pemberian fasilitas/hadiah yang berhubungan dengan jabatan termasuk gratifikasi ilegal menurut Pasal 12B UU No. 20/2001. Sikap integritas ASN adalah menolak dan melaporkannya.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "UU No. 20/2001 tentang Pemberantasan Tindak Pidana Korupsi",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-012",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "integritas",
+      "stem": "Nilai akuntabilitas dalam kerangka Core Values ASN 'Akuntabel' bermakna bahwa setiap ASN bertanggung jawab atas...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Keberhasilan program meskipun harus melanggar prosedur standar operasi (SOP)",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Pemanfaatan sumber daya dan kewenangan jabatan secara jujur, bertanggung jawab, cermat, disiplin, dan berintegritas tinggi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menyenangkan seluruh keinginan atasan tanpa memedulikan rambu regulasi yang berlaku",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Melindungi kesalahan rekan kerja sesama korps demi menjaga citra baik instansi",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Menghabiskan seluruh alokasi anggaran belanja tanpa mempertimbangkan efisiensi hasil",
+          "points": 0
+        }
+      ],
+      "explanation": "Panduan perilaku Akuntabel: melaksanakan tugas dengan jujur, bertanggung jawab, cermat, disiplin, berintegritas tinggi, serta tidak menyalahgunakan kewenangan jabatan.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "SE MenPANRB No. 20/2021 Core Values ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-013",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bela-negara",
+      "stem": "Di era transformasi digital, ancaman terhadap kedaulatan negara tidak hanya berbentuk agresi militer konvensional melainkan juga perang asimetris (cyber warfare) dan disinformasi terstruktur. Wujud kesiapsiagaan bela negara yang paling relevan bagi generasi muda adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Membatasi diri dari penggunaan internet dan kembali ke sistem komunikasi tradisional",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Mengembangkan literasi digital kritis, menjaga etika siber, serta aktif memproduksi konten narasi persatuan penangkal hoaks",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menyebarkan seluruh informasi viral di media sosial tanpa memverifikasi sumber faktualnya",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Melakukan serangan peretasan (hacking) secara acak ke server instansi asing",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Mengabaikan isu-isu keamanan siber nasional karena menganggapnya tugas eksklusif TNI",
+          "points": 0
+        }
+      ],
+      "explanation": "Bela negara non-militer di ranah digital diwujudkan melalui ketahanan siber, literasi informasi, filter kritis terhadap propaganda destruktif, dan penguatan persatuan bangsa.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "UU No. 23/2019 tentang Pengelolaan Sumber Daya Nasional untuk Pertahanan Negara",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-014",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bela-negara",
+      "stem": "Lima nilai dasar Bela Negara sebagaimana dirumuskan dalam ketentuan perundang-undangan nasional meliputi: Cinta Tanah Air, Sadar Berbangsa dan Bernegara, Setia pada Pancasila, Rela Berkorban, serta...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Kesiapan Mengikuti Wajib Militer di Luar Negeri",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Kemampuan Awal Bela Negara (Fisik dan Psikis)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Kepatuhan Mutlak Tanpa Syarat pada Kebijakan Birokrasi",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Penguasaan Senjata Tempur Modern",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Penolakan terhadap Perjanjian Kerja Sama Bilateral",
+          "points": 0
+        }
+      ],
+      "explanation": "Lima nilai dasar Bela Negara: 1. Cinta tanah air; 2. Sadar berbangsa & bernegara; 3. Setia pada Pancasila; 4. Rela berkorban demi bangsa & negara; 5. Memiliki kemampuan awal bela negara.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Pasal 7 ayat (3) UU No. 23 Tahun 2019",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-015",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bahasa-indonesia",
+      "stem": "Cermati kalimat berikut: 'Pemerintah daerah berupaya untuk mengoptimalkan daripada alokasi anggaran belanja modal guna meningkatkan kesejahteraan daripada masyarakat miskin.' Kalimat tersebut menjadi tidak efektif karena...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tidak memiliki subjek dan predikat yang jelas",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Penggunaan kata 'daripada' yang mubazir dan merusak fungsi preposisi komparatif",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Kata 'mengoptimalkan' berkedudukan sebagai konjungsi antarkalimat",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Penggunaan huruf kapital yang salah pada awal kalimat",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Kata 'kesejahteraan' tidak memiliki padanan kata baku dalam KBBI",
+          "points": 0
+        }
+      ],
+      "explanation": "Kata 'daripada' hanya berfungsi untuk perbandingan (komparasi). Penggunaannya untuk menunjukkan kepemilikan atau pelengkap adalah bentuk kerancuan bahasa yang tidak efektif.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pedoman Umum Ejaan Bahasa Indonesia (EYD V)",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-016",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bahasa-indonesia",
+      "stem": "Penulisan gabungan kata yang benar menurut kaidah Ejaan Bahasa Indonesia yang Disempurnakan (EYD Edisi V) terdapat pada kalimat...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Seluruh aparatur sipil negara wajib menandatangani surat pertanggung jawaban kinerja tahunan.",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Pemerintah pusat memberikan bea siswa kepada talenta riset nasional secara berkesinambungan.",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Kita harus senantiasa menyebarluaskan nilai-nilai keteladanan integritas di ruang publik.",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "Setiap pegawai dilarang keras ber lipat ganda dalam menduduki jabatan struktural.",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Kerja sama antar kementerian berjalan dengan sangat baik dan terpadu.",
+          "points": 0
+        }
+      ],
+      "explanation": "Kata gabung yang mendapat imbuhan awalan dan akhiran sekaligus (konfiks) ditulis serangkai: 'menyebarluaskan'. Gabungan kata lainnya ditulis: 'pertanggungjawaban', 'beasiswa', 'antarkementerian'.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kaidah Penulisan Kata Berimbuhan EYD V",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-017",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "pancasila",
+      "stem": "Sila kelima Pancasila, 'Keadilan sosial bagi seluruh rakyat Indonesia', menentang segala bentuk pemerasan dan gaya hidup bermewah-mewah. Nilai praksis yang sejalan dengan butir sila ini dalam etika birokrasi adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Membelanjakan anggaran dinas untuk fasilitas mewah guna menunjukkan prestise kantor",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Membiasakan pola hidup sederhana, menghargai hasil karya orang lain, dan tidak bergaya hidup hedonis",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Membatasi subsidi pangan bagi daerah miskin agar kas daerah surplus",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Mengutamakan proyek mercusuar daripada pembangunan fasilitas kesehatan dasar",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Memungut biaya tambahan di luar tarif resmi kepada warga yang membutuhkan proses cepat",
+          "points": 0
+        }
+      ],
+      "explanation": "Butir sila kelima mengajarkan sikap hemat, tidak bergaya hidup mewah (hedonis), tidak melakukan pemerasan, serta gemar melakukan kegiatan sosial untuk keadilan bersama.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Ketetapan MPR No. I/MPR/2003 Butir Sila Kelima",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-018",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "uud-1945",
+      "stem": "Pasal 27 ayat (2) UUD 1945 menyatakan bahwa 'Tiap-tiap warga negara berhak atas pekerjaan dan penghidupan yang layak bagi kemanusiaan'. Kewajiban negara untuk memenuhi hak konstitusional ini diimplementasikan melalui...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menjamin ketersediaan lapangan kerja, perlindungan upah layak, dan keselamatan kerja buruh",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Membatasi kebebasan berserikat bagi para tenaga kerja industri",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Menghapuskan program jaminan sosial kesehatan dan ketenagakerjaan",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Membiarkan mekanisme pasar bebas menentukan nasib pekerja tanpa intervensi regulasi",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Mewajibkan pekerja membiayai sendiri seluruh jaminan keselamatan operasional kerja",
+          "points": 0
+        }
+      ],
+      "explanation": "Pemenuhan hak atas pekerjaan dan penghidupan layak menuntut peran aktif negara dalam penyediaan lapangan kerja, regulasi upah minimum, dan jaminan sosial ketenagakerjaan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pasal 27 ayat (2) UUD 1945",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-019",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "nkri",
+      "stem": "Sistem pertahanan dan keamanan negara Indonesia menganut Sistem Pertahanan dan Keamanan Rakyat Semesta (Sishankamrata). Dalam sistem ini, posisi rakyat terlatih berfungsi sebagai...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Kekuatan utama penegak hukum militer",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Kekuatan pendukung di samping TNI dan Polri sebagai kekuatan utama",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Satu-satunya garda terdepan dalam perang perbatasan konvensional",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Pengganti fungsi kepolisian dalam menjaga ketertiban masyarakat umum",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Lembaga yudikatif yang mengadili kejahatan perang",
+          "points": 0
+        }
+      ],
+      "explanation": "Pasal 30 ayat (2) UUD 1945: Sishankamrata menempatkan TNI dan Polri sebagai kekuatan utama, dan rakyat sebagai kekuatan pendukung.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pasal 30 UUD 1945 & UU No. 3 Tahun 2002",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-020",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bhinneka-tunggal-ika",
+      "stem": "Konflik horizontal berbasis identitas primordial dapat mengancam sendi persatuan bangsa. Pendekatan resolusi konflik yang paling sesuai dengan kearifan lokal Bhinneka Tunggal Ika adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Penggunaan represi militer sepihak tanpa upaya dialog kultural",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Musyawarah mufakat, rekonsiliasi adat, serta penguatan rasa saling percaya antar-kelompok",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mengusir kelompok minoritas dari wilayah domisilinya demi ketenangan mayoritas",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Membiarkan konflik selesai dengan sendirinya melalui hukum rimba",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Menghapuskan seluruh upacara adat daerah yang dianggap memicu perbedaan",
+          "points": 0
+        }
+      ],
+      "explanation": "Penyelesaian konflik kultural dalam falsafah Bhinneka Tunggal Ika mengutamakan musyawarah, kearifan lokal, rekonsiliasi, dan keadilan restoratif.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kearifan Lokal Nusantara & Resolusi Konflik Sosial",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-021",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "nasionalisme",
+      "stem": "Salah satu bukti otentik tumbuhnya nasionalisme modern Indonesia yang menandai peralihan dari perjuangan kedaerahan menuju perjuangan persatuan nasional terorganisasi adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pemberontakan Petani Banten 1888",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Kelahiran organisasi pergerakan Boedi Oetomo pada 20 Mei 1908",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Perang Diponegoro (1825–1830)",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Perang Padri di Minangkabau (1821–1837)",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Perang Banjar melawan pemerintah kolonial (1859)",
+          "points": 0
+        }
+      ],
+      "explanation": "Boedi Oetomo menandai babak kebangkitan nasional: perjuangan tidak lagi mengandalkan kekuatan fisik senjata kedaerahan, melainkan organisasi modern berwawasan kebangsaan.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Sejarah Nasional Indonesia Jilid V",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-022",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "integritas",
+      "stem": "Konsep 'Conflict of Interest' (Benturan Kepentingan) dalam birokrasi pemerintahan terjadi ketika seorang pejabat publik...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memiliki perbedaan pendapat intelektual dengan pimpinan mengenai strategi teknis organisasi",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Mengambil keputusan kedinasan yang berpotensi menguntungkan kepentingan pribadi, keluarga, atau bisnis pribadinya",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mengikuti seminar pengembangan kompetensi mandiri di luar jam kerja kedinasan",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Menolak intervensi politik dari pihak luar yang melanggar ketentuan hukum",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Menghadiri rapat koordinasi lintas sektoral atas perintah resmi surat tugas",
+          "points": 0
+        }
+      ],
+      "explanation": "Benturan kepentingan adalah situasi di mana pejabat memiliki kepentingan pribadi yang berpotensi memengaruhi netralitas dan kualitas keputusan jabatannya.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "PermenPANRB No. 37/2012 Pedoman Umum Penanganan Benturan Kepentingan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-023",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bela-negara",
+      "stem": "Penerapan konsep ketahanan pangan lokal dan mencintai produk buatan dalam negeri (Gerakan Nasional Bangga Buatan Indonesia) merupakan manifestasi nilai bela negara dalam aspek...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ketahanan Militer Konvensional",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Cinta Tanah Air dan Ketahanan Ekonomi Nasional",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Kesiapsiagaan Darurat Sipil",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Eksploitasi Sumber Daya Tanpa Amdal",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Politik Isolasionisme Perdagangan Luar Negeri",
+          "points": 0
+        }
+      ],
+      "explanation": "Mencintai produk dalam negeri dan menguatkan kemandirian pangan merupakan bukti kecintaan pada tanah air dan pilar penting memperkokoh ketahanan ekonomi bangsa.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Nilai Dasar Bela Negara Ditjen Pothan Kemhan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-024",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bahasa-indonesia",
+      "stem": "Pilihlah kalimat yang menggunakan tanda baca koma (,) secara tepat sesuai kaidah EYD V:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Karena cuaca buruk penerbangan dibatalkan hari ini.",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Oleh karena itu, seluruh pimpinan unit kerja diminta menyerahkan laporan evaluasi kinerja tepat waktu.",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Ibu membeli beras, gula dan minyak di pasar tradisional.",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Dia mengatakan, bahwa besok akan menghadiri ujian simulasi CAT di kantor BKN.",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Meskipun sudah sore tetapi para pegawai tetap menyelesaikan rekapitulasi data.",
+          "points": 0
+        }
+      ],
+      "explanation": "Konjungsi antarkalimat seperti 'Oleh karena itu', 'Namun', 'Selain itu' wajib diikuti tanda koma. Pilihan lain salah (anak kalimat sebelum induk tanpa koma, deret tanpa Oxford comma, kata 'bahwa' didahului koma).",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kaidah Penggunaan Tanda Baca EYD V",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-025",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "pancasila",
+      "stem": "Hubungan timbal balik antara sila pertama 'Ketuhanan Yang Maha Esa' dengan sila kedua 'Kemanusiaan yang adil dan beradab' menegaskan bahwa...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ketaatan beragama seseorang harus diwujudkan dalam sikap welas asih dan penghormatan kepada sesama ciptaan Tuhan",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Agama hanya bersifat formalitas dan tidak boleh memengaruhi perilaku moral seseorang",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Hak asasi manusia lebih tinggi derajatnya daripada nilai-nilai ketuhanan yang diyakini",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Kewajiban negara memaksakan satu agama resmi bagi seluruh warga negara",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Setiap kelompok agama berhak menghakimi keyakinan orang lain di ruang publik",
+          "points": 0
+        }
+      ],
+      "explanation": "Sila pertama menjiwai sila kedua: penghambaan kepada Tuhan Yang Maha Esa teraktualisasi dalam perbuatan memuliakan kemanusiaan dan menjunjung tinggi harkat martabat sesama.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Filsafat Pancasila Kaelan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-026",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "uud-1945",
+      "stem": "Pasal 33 ayat (3) UUD 1945 menyatakan bahwa 'Bumi dan air dan kekayaan alam yang terkandung di dalamnya dikuasai oleh negara dan dipergunakan untuk sebesar-besar kemakmuran rakyat'. Kata 'dikuasai oleh negara' dimaknai oleh Mahkamah Konstitusi sebagai kewenangan untuk...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memiliki secara perdata mutlak layaknya perusahaan swasta perseorangan",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Mengadakan kebijakan, pengurusan, pengaturan, pengelolaan, dan pengawasan demi kemaslahatan publik",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menjual seluruh konsesi tambang kepada pihak asing tanpa kewajiban royalti",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Memungut pajak tanpa batasan legalitas undang-undang",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Menghapuskan hak-hak tanah ulayat masyarakat hukum adat secara sewenang-wenang",
+          "points": 0
+        }
+      ],
+      "explanation": "Putusan MK menegaskan 'penguasaan negara' mencakup lima fungsi: merumuskan kebijakan (beleid), melakukan pengaturan (regelendaad), pengurusan (bestuursdaad), pengelolaan (beheersdaad), dan pengawasan (toezichthoudensdaad).",
+      "difficulty": 3,
+      "sourceNote": "original",
+      "sourceReference": "Putusan Mahkamah Konstitusi Perkara No. 001-021-022/PUU-I/2003",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-027",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "nkri",
+      "stem": "Perjanjian Renville (1948) membawa dampak wilayah yang sangat merugikan bagi kedaulatan Republik Indonesia karena...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Belanda mengakui kedaulatan de facto RI atas seluruh wilayah bekas Hindia Belanda",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Diterapkannya Garis Status Quo Van Mook yang memotong wilayah kedaulatan RI dan memaksa mundurnya pasukan TNI dari kantong gerilya (Long March)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Indonesia langsung dibubarkan dan digantikan oleh negara boneka persemakmuran",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "PBB mencabut status pengakuan diplomasi internasional terhadap Indonesia",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Ibu kota RI dipindahkan secara permanen ke luar negeri",
+          "points": 0
+        }
+      ],
+      "explanation": "Garis Van Mook hasil Perjanjian Renville mengisolasi RI ke wilayah sempit di Yogyakarta dan memaksa Divisi Siliwangi hijrah meninggalkan Jawa Barat menuju Jawa Tengah.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Sejarah Diplomasi Kemerdekaan Indonesia",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-028",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bhinneka-tunggal-ika",
+      "stem": "Penerapan prinsip 'Etnosentrisme' yang berlebihan dalam interaksi sosial kemasyarakatan sangat berbahaya karena dapat memicu...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Peningkatan kualitas toleransi dan kerja sama antar-umat beragama",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Sikap meremehkan budaya lain, prasangka stereotip negatif, dan potensi disintegrasi bangsa",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Pertumbuhan ekonomi daerah yang adil dan merata",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Terbentuknya konsensus hukum nasional yang komprehensif",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Kemajuan ilmu pengetahuan dan teknologi di kawasan perbatasan",
+          "points": 0
+        }
+      ],
+      "explanation": "Etnosentrisme adalah kecenderungan memandang budaya sendiri sebagai tolak ukur superioritas dan merendahkan budaya lain, yang berpotensi menyulut konflik horizontal.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Sosiologi Politik Kebangsaan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-029",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "integritas",
+      "stem": "Whistleblowing System (WBS) dalam tata kelola instansi pemerintah dirancang dengan tujuan utama untuk...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menyebarluaskan rahasia pribadi pegawai ke media sosial tanpa klarifikasi",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Menyediakan saluran pelaporan aman dan rahasia bagi pegawai/masyarakat untuk melaporkan dugaan pelanggaran hukum dan etika tanpa rasa takut intimidasi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menghukum bawahan yang mengkritisi gaya kepemimpinan atasan secara tertulis",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Memotong alokasi tunjangan kinerja bagi pelapor korupsi",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Menghindari proses penegakan hukum tindak pidana korupsi oleh lembaga berwenang",
+          "points": 0
+        }
+      ],
+      "explanation": "WBS adalah mekanisme pelaporan pelanggaran terpercaya yang menjamin kerahasiaan identitas dan perlindungan saksi/pelapor guna menegakkan tata kelola bebas KKN.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Panduan Penyelenggaraan WBS Komisi Pemberantasan Korupsi (KPK)",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "twk-b2-030",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TWK",
+      "subtopic": "bahasa-indonesia",
+      "stem": "Bacalah paragraf berikut: 'Transformasi digital birokrasi bukan sekadar mendigitalisasi dokumen kertas menjadi dokumen elektronik. Lebih dari itu, transformasi digital menuntut perubahan kultur kerja aparatur, peningkatan transparansi, dan efisiensi rantai layanan publik.' Ide pokok paragraf tersebut adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bahaya penggunaan dokumen kertas dalam pelayanan administrasi kantor",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Hakikat komprehensif transformasi digital birokrasi yang melampaui sekadar digitalisasi dokumen",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Peralihan seluruh anggaran aparatur untuk pembelian perangkat komputer modern",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Penghapusan seluruh peran tenaga manusia dalam layanan administrasi publik",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Kewajiban masyarakat mempelajari seluruh bahasa pemrograman komputer",
+          "points": 0
+        }
+      ],
+      "explanation": "Ide pokok tersurat pada kalimat pertama dan dikembangkan pada kalimat berikutnya: hakikat transformasi digital adalah perubahan menyeluruh pada kultur, transparansi, dan layanan publik.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kaidah Penentuan Gagasan Pokok Bahasa Indonesia",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-001",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analogi",
+      "stem": "MATA UANG : TRANSAKSI = IDENTITAS : ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Registrasi",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Komunikasi",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Kependudukan",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Keluarga",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Foto",
+          "points": 0
+        }
+      ],
+      "explanation": "Fungsi operasional: Mata uang digunakan sebagai sarana transaksi, sebagaimana identitas digunakan sebagai sarana registrasi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Standar BKN Silogisme & Analogi Verbal",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-002",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analogi",
+      "stem": "AMNESIA : INGATAN = ANEMIA : ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Darah",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Jantung",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Kelelahan",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Oksigen",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Tekanan",
+          "points": 0
+        }
+      ],
+      "explanation": "Kondisi defisiensi: Amnesia adalah kondisi kekurangan/kehilangan ingatan, sedangkan anemia adalah kondisi kekurangan sel darah merah / hemoglobin darah.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Standar BKN Analogi Hubungan Kausal",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-003",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analogi",
+      "stem": "INSENTIF : MOTIVASI = PUPUK : ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tanaman",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Pertumbuhan",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Petani",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Lahan",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Hama",
+          "points": 0
+        }
+      ],
+      "explanation": "Faktor stimulan: Insentif memacu motivasi, sebagaimana pupuk memacu pertumbuhan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Standar BKN Analogi Hubungan Stimulus",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-004",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analogi",
+      "stem": "ARBITRER : SENGKETA = WASIT : ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Olahraga",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Pelanggaran",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Pertandingan",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "Stadion",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Skor",
+          "points": 0
+        }
+      ],
+      "explanation": "Pihak penengah/pengadil: Arbitrer memimpin penyelesaian sengketa, sebagaimana wasit memimpin jalannya pertandingan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Standar BKN Analogi Asosiatif",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-005",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analogi",
+      "stem": "EPIDEMI : PENYAKIT = INFLASI : ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bank",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Harga",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Pasar",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Pajak",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Devisa",
+          "points": 0
+        }
+      ],
+      "explanation": "Objek lonjakan masif: Epidemi merupakan lonjakan penyebaran penyakit, sedangkan inflasi merupakan lonjakan kenaikan harga barang.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Standar BKN Analogi Fenomena",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-006",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-silogisme",
+      "stem": "Semua aparatur sipil negara yang berprestasi memperoleh piagam penghargaan.\nBeberapa pegawai di Badan Kepegawaian tidak memperoleh piagam penghargaan.\nKesimpulan yang paling tepat adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Semua pegawai di Badan Kepegawaian adalah aparatur berprestasi",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Beberapa pegawai di Badan Kepegawaian bukan aparatur sipil negara yang berprestasi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Tidak ada pegawai di Badan Kepegawaian yang berprestasi",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Semua aparatur sipil negara bekerja di Badan Kepegawaian",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Semua pegawai yang tidak berprestasi tidak bekerja di Badan Kepegawaian",
+          "points": 0
+        }
+      ],
+      "explanation": "Premis universal afirmatif + Partikular negatif menghasilkan partikular negatif: Sebagian pegawai di Badan Kepegawaian bukan aparatur yang berprestasi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Logika Formal Deduktif BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-007",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-silogisme",
+      "stem": "Jika inovasi layanan publik disetujui, alokasi anggaran infrastruktur ditingkatkan.\nJika alokasi anggaran infrastruktur ditingkatkan, indeks kepuasan masyarakat naik.\nSaat ini, indeks kepuasan masyarakat tidak naik.\nKesimpulan yang sah adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Inovasi layanan publik tidak disetujui",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Inovasi layanan publik tetap dilaksanakan tanpa anggaran",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Anggaran infrastruktur dialihkan ke sektor lain",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Indeks kepuasan masyarakat akan naik tahun depan",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Inovasi layanan publik disetujui sebagian",
+          "points": 0
+        }
+      ],
+      "explanation": "Silogisme hipotesis + Modus Tollens: p -> q, q -> r (maka p -> r). Diketahui ~r, maka kesimpulan sah adalah ~p (Inovasi layanan publik tidak disetujui).",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Silogisme Kondisional Modus Tollens",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-008",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-silogisme",
+      "stem": "Semua peserta yang lulus seleksi administrasi memiliki kualifikasi pendidikan linier.\nSebagian peserta yang memiliki kualifikasi pendidikan linier memiliki sertifikasi keahlian profesi.\nKesimpulan yang tepat adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Semua peserta yang lulus seleksi administrasi memiliki sertifikasi keahlian profesi",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Sebagian peserta yang lulus seleksi administrasi mungkin memiliki sertifikasi keahlian profesi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Tidak ada peserta lulus administrasi yang memiliki sertifikasi keahlian",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Semua pemilik sertifikasi keahlian pasti lulus seleksi administrasi",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Hanya yang bersertifikasi keahlian yang memiliki kualifikasi linier",
+          "points": 0
+        }
+      ],
+      "explanation": "Irisan himpunan (Sebagian A adalah B, dan Sebagian B adalah C): Hubungan antara A dan C bersifat mungkin/sebagian.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Silogisme Himpunan Euler",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-009",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-silogisme",
+      "stem": "Setiap laporan berkala harus ditandatangani oleh pejabat eselon.\nDokumen X adalah laporan berkala yang belum ditandatangani oleh pejabat eselon.\nKesimpulan yang paling tepat adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dokumen X bukan merupakan laporan berkala yang sah/lengkap",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Dokumen X otomatis batal demi hukum secara permanen",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Pejabat eselon menolak menandatangani Dokumen X",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Dokumen X telah memenuhi seluruh prosedur administrasi",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Semua dokumen kantor harus ditandatangani hari ini",
+          "points": 0
+        }
+      ],
+      "explanation": "Karena syarat menjadi laporan berkala yang valid adalah tanda tangan pejabat eselon, maka dokumen X yang belum ditandatangani belum sah sebagai laporan berkala yang lengkap.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Logika Deduktif Formal",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-010",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-silogisme",
+      "stem": "Tidak ada koruptor yang bermoral luhur.\nBeberapa politisi adalah koruptor.\nKesimpulan yang sah adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Semua politisi tidak bermoral luhur",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Beberapa politisi tidak bermoral luhur",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Semua koruptor adalah politisi",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Beberapa koruptor bermoral luhur",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Tidak ada politisi yang koruptor",
+          "points": 0
+        }
+      ],
+      "explanation": "Universal negatif + Partikular afirmatif -> Partikular negatif: Beberapa politisi bukan orang yang bermoral luhur (tidak bermoral luhur).",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Silogisme Kategorik Klasik BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-011",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analitis",
+      "stem": "Enam orang calon auditor (A, B, C, D, E, F) duduk berjajar menghadap meja sidang.\n- A duduk tepat di sebelah kiri B.\n- C duduk di antara D dan E.\n- F duduk di ujung paling kanan.\n- D duduk tepat di sebelah kanan B.\nSiapakah yang duduk di ujung paling kiri?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "B",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "C",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "D",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "E",
+          "points": 0
+        }
+      ],
+      "explanation": "Analisis posisi dari kiri ke kanan: A - B - D - C - E - F. Maka yang duduk di ujung paling kiri adalah A.",
+      "difficulty": 3,
+      "sourceNote": "original",
+      "sourceReference": "Penalaran Urutan Posisi Linier BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-012",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analitis",
+      "stem": "Lima proyek prioritas (P, Q, R, S, T) dijadwalkan selesai secara berurutan:\n- Proyek Q selesai sebelum proyek P.\n- Proyek R selesai tepat setelah proyek T.\n- Proyek S selesai sebelum proyek Q.\n- Proyek P selesai sebelum proyek T.\nProyek manakah yang selesai paling akhir?",
+      "options": [
+        {
+          "label": "A",
+          "text": "P",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Q",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "R",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "S",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "T",
+          "points": 0
+        }
+      ],
+      "explanation": "Urutan penyelesaian dari yang pertama hingga akhir: S -> Q -> P -> T -> R. Proyek yang selesai paling akhir adalah R.",
+      "difficulty": 3,
+      "sourceNote": "original",
+      "sourceReference": "Penalaran Kronologis BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-013",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analitis",
+      "stem": "Dalam suatu uji kompetensi:\n- Nilai Dian lebih tinggi dari nilai Budi.\n- Nilai Citra lebih rendah dari nilai Budi.\n- Nilai Eko lebih tinggi dari nilai Dian.\n- Nilai Fani sama dengan nilai Budi.\nSiapakah yang memiliki nilai terendah?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dian",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Budi",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Citra",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "Eko",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Fani",
+          "points": 0
+        }
+      ],
+      "explanation": "Urutan nilai dari tertinggi ke terendah: Eko > Dian > Budi = Fani > Citra. Nilai terendah adalah Citra.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Perbandingan Tingkat Nilai BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-014",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analitis",
+      "stem": "Sebuah tim riset beranggotakan 4 orang harus dipilih dari 3 analis (A1, A2, A3) dan 3 penata (P1, P2, P3) dengan ketentuan:\n- Jika A1 dipilih, P2 tidak boleh dipilih.\n- A2 dan P3 harus dipilih bersamaan.\n- Minimal harus ada 2 analis dalam tim.\nJika P2 dipilih, siapakah anggota tim yang pasti terpilih?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A1, A2, P1, P3",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "A2, A3, P2, P3",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "A1, A3, P2, P1",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "A2, P1, P2, P3",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "A1, A2, P2, P3",
+          "points": 0
+        }
+      ],
+      "explanation": "Jika P2 dipilih, A1 gugur. Maka analis yang tersisa adalah A2 dan A3 (minimal 2 analis terpenuhi). Karena A2 dipilih, P3 wajib dipilih. Maka timnya: A2, A3, P2, P3.",
+      "difficulty": 3,
+      "sourceNote": "original",
+      "sourceReference": "Logika Kombinatorial Tim BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-015",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "verbal-analitis",
+      "stem": "Empat kantor cabang (W, X, Y, Z) terletak di sepanjang jalan protokol:\n- Jarak kantor W ke X adalah 12 km.\n- Jarak kantor X ke Y adalah 5 km.\n- Kantor Y terletak tepat di antara W dan X.\nBerapakah jarak antara kantor W dan kantor Y?",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 km",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "7 km",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "12 km",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "17 km",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "8 km",
+          "points": 0
+        }
+      ],
+      "explanation": "Karena Y terletak di antara W dan X, maka W - Y - X adalah garis lurus. Jarak W ke X = Jarak (W ke Y) + Jarak (Y ke X). 12 km = W ke Y + 5 km. Maka W ke Y = 12 - 5 = 7 km.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Penalaran Spasial Jarak BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-016",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-hitungan",
+      "stem": "Hasil dari (0,375 / 0,125) + (1/4 x 16) - √144 adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "-5",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "-7",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "5",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "7",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "0",
+          "points": 0
+        }
+      ],
+      "explanation": "0,375 / 0,125 = 3. 1/4 x 16 = 4. √144 = 12. Maka: 3 + 4 - 12 = 7 - 12 = -5.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Aritmetika Pecahan & Akar BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-017",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-hitungan",
+      "stem": "Jika 45% dari suatu bilangan x adalah 135, maka nilai dari 2/3 dari x adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "150",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "180",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "200",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "250",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "300",
+          "points": 0
+        }
+      ],
+      "explanation": "0,45x = 135 -> x = 135 / 0,45 = 300. Nilai 2/3 dari x = 2/3 x 300 = 200.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Persentase dan Proporsi BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-018",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-hitungan",
+      "stem": "Nilai dari (999)^2 - (1)^2 adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "998.000",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "998.001",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "999.000",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "997.999",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "1.000.000",
+          "points": 0
+        }
+      ],
+      "explanation": "Gunakan rumus aljabar a^2 - b^2 = (a - b)(a + b). (999 - 1)(999 + 1) = 998 x 1.000 = 998.000.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Trik Aljabar Faktorisasi BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-019",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-hitungan",
+      "stem": "Sebuah instansi memiliki 120 pegawai. Sebanyak 60% adalah wanita. Jika 25% dari pegawai wanita dan 50% dari pegawai pria menyukai tugas lapangan, berapakah total pegawai yang menyukai tugas lapangan?",
+      "options": [
+        {
+          "label": "A",
+          "text": "36",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "42",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "48",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "54",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "60",
+          "points": 0
+        }
+      ],
+      "explanation": "Wanita = 60% x 120 = 72 orang. Pria = 120 - 72 = 48 orang. Wanita suka lapangan = 25% x 72 = 18 orang. Pria suka lapangan = 50% x 48 = 24 orang. Total = 18 + 24 = 42 orang.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Soal Cerita Aritmetika Sosial BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-020",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-hitungan",
+      "stem": "Seorang pegawai menempuh perjalanan dinas sejauh 180 km dengan kecepatan rata-rata 60 km/jam. Di perjalanan ia beristirahat selama 30 menit. Jika ia berangkat pukul 07.15, pukul berapa ia tiba di tujuan?",
+      "options": [
+        {
+          "label": "A",
+          "text": "10.15",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "10.45",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "11.00",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "11.15",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "11.45",
+          "points": 0
+        }
+      ],
+      "explanation": "Waktu tempuh bergerak = 180 / 60 = 3 jam. Waktu istirahat = 30 menit. Total waktu = 3 jam 30 menit. Waktu tiba = 07.15 + 03.30 = 10.45.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Kecepatan Jarak Waktu BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-021",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-deret",
+      "stem": "Tentukan angka berikutnya dalam deret: 3, 7, 15, 31, 63, ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "125",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "127",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "129",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "131",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "135",
+          "points": 0
+        }
+      ],
+      "explanation": "Pola: dikali 2 ditambah 1 (2n + 1), atau selisihnya +4, +8, +16, +32, +64. 63 + 64 = 127.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Deret Pola Eksponensial BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-022",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-deret",
+      "stem": "Tentukan dua angka berikutnya: 4, 9, 16, 25, 36, ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "47, 62",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "49, 64",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "49, 66",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "51, 64",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "48, 64",
+          "points": 0
+        }
+      ],
+      "explanation": "Pola bilangan kuadrat: 2^2, 3^2, 4^2, 5^2, 6^2, 7^2 (49), 8^2 (64).",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Deret Bilangan Kuadrat BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-023",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-deret",
+      "stem": "Tentukan angka berikutnya: 2, 3, 5, 8, 13, 21, ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "31",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "34",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "35",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "37",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "40",
+          "points": 0
+        }
+      ],
+      "explanation": "Deret Fibonacci: setiap suku adalah penjumlahan dari dua suku sebelumnya. 13 + 21 = 34.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Deret Fibonacci BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-024",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-deret",
+      "stem": "Tentukan dua angka berikutnya dari deret bertingkat: 100, 95, 85, 70, 50, ..., ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "25, -5",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "25, 0",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "30, 5",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "20, -10",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "25, 5",
+          "points": 0
+        }
+      ],
+      "explanation": "Pola selisih: -5, -10, -15, -20, lalu -25 (50 - 25 = 25), lalu -30 (25 - 30 = -5).",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Deret Selisih Bertingkat BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-025",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-deret",
+      "stem": "Tentukan huruf berikutnya dalam deret: A, C, F, J, O, ...",
+      "options": [
+        {
+          "label": "A",
+          "text": "T",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "U",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "V",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "W",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "X",
+          "points": 0
+        }
+      ],
+      "explanation": "Pola urutan abjad: A (1) +2 -> C (3) +3 -> F (6) +4 -> J (10) +5 -> O (15) +6 -> U (21).",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Deret Huruf Bertingkat BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-026",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-perbandingan",
+      "stem": "Jika x = 1/16 dan y = 0,0625, maka hubungan kuantitatif yang benar antara x dan y adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "x > y",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "x < y",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "x = y",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "2x = 3y",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Hubungan x dan y tidak dapat ditentukan",
+          "points": 0
+        }
+      ],
+      "explanation": "1/16 = 0,0625. Karena nilai desimalnya persis sama, maka x = y.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Perbandingan Desimal Pecahan BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-027",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-perbandingan",
+      "stem": "Suatu pekerjaan dapat diselesaikan oleh 12 orang pekerja dalam waktu 20 hari. Jika pekerjaan tersebut ingin diselesaikan dalam waktu 15 hari, berapa tambahan pekerja yang diperlukan?",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 orang",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "4 orang",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "6 orang",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "8 orang",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "16 orang",
+          "points": 0
+        }
+      ],
+      "explanation": "Perbandingan berbalik nilai: 12 x 20 = n x 15 -> 240 = 15n -> n = 16 orang total. Tambahan pekerja = 16 - 12 = 4 orang.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Perbandingan Berbalik Nilai Pekerja BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-028",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-perbandingan",
+      "stem": "Jika a = 3b dan b = 2c, di mana c adalah bilangan bulat positif, manakah pernyataan berikut yang pasti benar?",
+      "options": [
+        {
+          "label": "A",
+          "text": "a < b",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "a = 6c",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "b = 6a",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "a + b = 4c",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "c > a",
+          "points": 0
+        }
+      ],
+      "explanation": "Substitusi: a = 3(2c) = 6c. Karena c positif, maka pernyataan a = 6c pasti benar.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Substitusi Aljabar Perbandingan BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-029",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-perbandingan",
+      "stem": "Sebuah mobil membutuhkan 8 liter bensin untuk menempuh jarak 96 km. Jika mobil tersebut memiliki persediaan bensin 15 liter, berapa jarak yang dapat ditempuh?",
+      "options": [
+        {
+          "label": "A",
+          "text": "160 km",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "175 km",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "180 km",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "190 km",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "200 km",
+          "points": 0
+        }
+      ],
+      "explanation": "Perbandingan senilai: Konsumsi bensin per km = 96 / 8 = 12 km/liter. Jarak dengan 15 liter = 15 x 12 = 180 km.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Perbandingan Senilai BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-030",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "numerik-perbandingan",
+      "stem": "Jika x adalah keliling persegi dengan luas 64 cm^2, dan y adalah keliling lingkaran dengan luas 64/π cm^2, maka...",
+      "options": [
+        {
+          "label": "A",
+          "text": "x > y",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "x < y",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "x = y",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "x = 2y",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Hubungan x dan y tidak dapat ditentukan",
+          "points": 0
+        }
+      ],
+      "explanation": "Persegi: sisi = 8, keliling x = 4 x 8 = 32 cm. Lingkaran: π r^2 = 64/π -> r = 8/√π. Keliling y = 2 π r = 16√π ≈ 16 x 1,77 = 28,3 cm. Maka x > y.",
+      "difficulty": 3,
+      "sourceNote": "original",
+      "sourceReference": "Geometri Perbandingan Kuantitatif BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-031",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "figural",
+      "stem": "Suatu pola figural mengalami transformasi rotasi searah jarum jam sebesar 90 derajat disertai pembalikan warna bidang (hitam menjadi putih, putih menjadi hitam). Jika segitiga hitam menghadap ke atas dirotasikan dengan aturan tersebut, maka hasilnya adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Segitiga putih menghadap ke kanan",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Segitiga hitam menghadap ke kanan",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Segitiga putih menghadap ke bawah",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Segitiga hitam menghadap ke kiri",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Segitiga putih menghadap ke atas",
+          "points": 0
+        }
+      ],
+      "explanation": "Rotasi 90 derajat searah jarum jam memutar orientasi dari atas ke kanan. Pembalikan warna mengubah warna hitam menjadi putih.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Analogi Figural Rotasi & Inversi BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-032",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "figural",
+      "stem": "Deret bangun datar memiliki jumlah sisi yang bertambah satu secara berkala: Segitiga (3), Persegi (4), Segilima (5). Bangun berikutnya dalam serial tersebut adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Segitiga sama sisi",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Segienam (heksagon)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Lingkaran",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Trapesium",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Jajar genjang",
+          "points": 0
+        }
+      ],
+      "explanation": "Pola serial jumlah sisi: 3, 4, 5, maka bangun selanjutnya harus memiliki 6 sisi (segienam / heksagon).",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Serial Figural Geometri BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-033",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "figural",
+      "stem": "Di antara pilihan kelompok bangun berikut, manakah yang memiliki karakteristik simetri lipat yang berbeda dari yang lainnya?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Persegi (4 simetri lipat)",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Persegi Panjang (2 simetri lipat)",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Segitiga Sama Sisi (3 simetri lipat)",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Jajar Genjang (0 simetri lipat)",
+          "points": 5
+        },
+        {
+          "label": "E",
+          "text": "Belah Ketupat (2 simetri lipat)",
+          "points": 0
+        }
+      ],
+      "explanation": "Jajar genjang adalah satu-satunya bangun datar dalam pilihan yang tidak memiliki simetri lipat sama sekali (0 sumbu simetri).",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Ketidaksamaan Figural Simetri BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-034",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "figural",
+      "stem": "Sebuah jarum penunjuk dalam lingkaran berputar 45 derajat berlawanan arah jarum jam pada setiap langkah. Jika posisi awal menunjukkan pukul 12.00 (arah utara), maka setelah 3 langkah jarum akan menunjuk ke arah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Barat Laut",
+          "points": 0
+        },
+        {
+          "label": "B",
+          "text": "Barat Daya",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Selatan",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Tenggara",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Timur Laut",
+          "points": 0
+        }
+      ],
+      "explanation": "Langkah 1 (45° CCW) = Barat Laut. Langkah 2 (90° CCW) = Barat. Langkah 3 (135° CCW) = Barat Daya.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Serial Figural Arah Mata Angin BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tiu-b2-035",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TIU",
+      "subtopic": "figural",
+      "stem": "Dua lingkaran konsentris di mana lingkaran dalam berwarna hitam diubah menjadi dua persegi konsentris di mana persegi dalam berwarna hitam. Hubungan analogi ini merefleksikan prinsip...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Perubahan bentuk luar dan dalam dengan mempertahankan relasi posisi konsentris dan warna elemen internal",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Penghapusan elemen pusat secara permanen",
+          "points": 0
+        },
+        {
+          "label": "C",
+          "text": "Pembalikan ukuran bangun luar menjadi lebih kecil dari bangun dalam",
+          "points": 0
+        },
+        {
+          "label": "D",
+          "text": "Rotasi 180 derajat tanpa perubahan bentuk",
+          "points": 0
+        },
+        {
+          "label": "E",
+          "text": "Pemisahan dua objek menjadi berdampingan secara horizontal",
+          "points": 0
+        }
+      ],
+      "explanation": "Analogi bentuk konsentris: transformasi geometri kurva (lingkaran) menjadi poligon (persegi) dengan mempertahankan struktur kedudukan dan arsir warna.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Prinsip Analogi Spasial BKN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-001",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Seorang warga lansia datang ke loket pelayanan Anda lima belas menit menjelang jam istirahat siang dengan membawa berkas yang belum tertata rapi. Sikap Anda adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Meminta warga tersebut kembali lagi setelah jam istirahat selesai",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Menolak melayani karena jam operasional loket segera ditutup",
+          "points": 1
+        },
+        {
+          "label": "C",
+          "text": "Menyambut ramah, membantu merapikan berkas, dan menuntaskan permohonan layanannya sebelum istirahat",
+          "points": 5
+        },
+        {
+          "label": "D",
+          "text": "Melayani dengan tergesa-gesa agar jam istirahat Anda tidak terpotong",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Meminta bantuan rekan kerja yang sedang senggang untuk mengambil alih pelayanan",
+          "points": 4
+        }
+      ],
+      "explanation": "Pelayanan berorientasi prima mengutamakan empati, proaktif membantu kelompok rentan/lansia, dan menuntaskan tugas dengan tulus tanpa mengeluh.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Standar Pelayanan Publik Ramah Kelompok Rentan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-002",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Sistem aplikasi pelayanan perizinan online mengalami gangguan teknis (server down) saat antrean pemohon di kantor cukup padat. Tindakan Anda adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mengumumkan secara terbuka permohonan maaf, mencatat berkas secara manual sementara, dan segera berkoordinasi dengan tim IT",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Menyuruh seluruh pemohon pulang dan mencoba lagi esok hari",
+          "points": 2
+        },
+        {
+          "label": "C",
+          "text": "Diam saja menunggu server kembali normal dengan sendirinya",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menyalahkan tim IT di depan para pemohon perizinan",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Memberikan nomor kontak pemohon untuk dihubungi begitu sistem pulih kembali",
+          "points": 4
+        }
+      ],
+      "explanation": "Respons cepat, transparan meminta maaf, memberikan solusi darurat (manual/kontak), dan proaktif menanggulangi kendala.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Manajemen Krisis Layanan Publik",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-003",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Seorang pengguna layanan menyampaikan komplain bernada emosional karena merasa proses penerbitan sertifikatnya terlambat dari standar waktu SOP. Anda akan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Membalas dengan nada tinggi karena keterlambatan bukan kesalahan pribadi Anda",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Mendengarkan keluhan dengan tenang, meminta maaf atas ketidaknyamanan, mengecek status berkas, dan memberi kepastian waktu penyelesaian",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Meminta petugas keamanan mengusir orang tersebut dari ruangan",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Menghindari pemohon dan masuk ke ruang staf bagian dalam",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menjelaskan kendala birokrasi yang rumit agar pemohon memaklumi",
+          "points": 4
+        }
+      ],
+      "explanation": "Komunikasi asertif, empati, pengendalian emosi, dan orientasi pada penyelesaian masalah konkret tanpa defensif.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Penanganan Pengaduan Pelayanan Publik",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-004",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Instansi Anda meluncurkan survei kepuasan masyarakat (IKM). Hasil survei menunjukkan kepuasan terhadap kejelasan informasi alur layanan masih rendah. Respons Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mengabaikan hasil survei karena menganggap pemohon layanan malas membaca brosur",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mengusulkan pembuatan infografis digital, panduan video ringkas, dan penataan ulang alur petunjuk arah yang mudah dipahami",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menambah jumlah papan pengumuman bertuliskan teks panjang",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Meminta pimpinan menurunkan target nilai survei kepuasan masyarakat",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Menugaskan staf khusus untuk menjawab setiap pertanyaan secara lisan",
+          "points": 4
+        }
+      ],
+      "explanation": "Perbaikan berkelanjutan (continuous improvement), kreatif memanfaatkan media visual/digital untuk mempermudah pemahaman publik.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "PermenPANRB No. 14 Tahun 2017 tentang Pedoman Survei Kepuasan Masyarakat",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-005",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Seorang kerabat dekat Anda meminta bantuan agar berkas perizinan usahanya diproses lebih cepat tanpa melalui antrean resmi. Sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Membantunya diam-diam karena rasa sungkan sebagai keluarga",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Menolak tegas dengan santun, menjelaskan aturan antrean yang berlaku sama untuk semua, dan membantunya memahami alur resmi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Meminta imbalan uang pelicin atas bantuan percepatan tersebut",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Menyerahkan berkasnya kepada rekan kerja lain agar Anda tidak terlibat langsung",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menolak dengan kasar sehingga menimbulkan perselisihan keluarga",
+          "points": 4
+        }
+      ],
+      "explanation": "Integritas pelayanan publik: menolak perlakuan istimewa/nepotisme secara santun, profesional, dan menegakkan asas persamaan di hadapan hukum.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Integritas dan Anti Korupsi Kolusi Nepotisme",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-006",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Untuk meningkatkan kualitas layanan bagi penyandang disabilitas di kantor Anda, inisiatif apa yang paling mendesak untuk diusulkan?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menyediakan jalur landai (ramp), toilet aksesibel, loket prioritas rendah, dan formulir berhuruf braille / panduan audio",
+          "points": 5
+        },
+        {
+          "label": "B",
+          "text": "Meminta penyandang disabilitas datang didampingi keluarga yang sehat",
+          "points": 1
+        },
+        {
+          "label": "C",
+          "text": "Menyediakan kursi roda cadangan namun menyimpannya di gudang terkunci",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Membatasi pelayanan bagi kelompok difabel hanya pada hari tertentu",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Memberi pelatihan bahasa isyarat dasar bagi seluruh petugas loket garis depan",
+          "points": 4
+        }
+      ],
+      "explanation": "Fasilitas sarana prasarana fisik dan aksesibilitas ramah disabilitas yang komprehensif merupakan kewajiban standar pelayanan inklusif.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "UU No. 8 Tahun 2016 tentang Penyandang Disabilitas",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-007",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Anda melihat ada pemohon layanan yang tampak kebingungan di depan papan alur loket sementara petugas informasi sedang tidak di tempat. Anda sedang menuju ruang rapat, tindakan Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pura-pura tidak melihat dan bergegas menuju ruang rapat",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Menyapa ramah, menanyakan keperluannya secara singkat, mengarahkannya ke loket yang tepat, lalu melanjutkan langkah ke rapat",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menyuruhnya menunggu petugas informasi kembali",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Menemaninya mengantre hingga urusannya selesai meskipun Anda terlambat rapat",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menitipkan pemohon tersebut kepada satpam yang berjaga di pintu masuk",
+          "points": 4
+        }
+      ],
+      "explanation": "Keseimbangan tanggung jawab: proaktif memberi solusi ringkas dan tepat sasaran tanpa mengabaikan komitmen kedinasan lainnya.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Karakter Pelayan Publik Responsif",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-008",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "pelayanan-publik",
+      "stem": "Masyarakat pedesaan di wilayah kerja Anda mengalami kendala literasi digital untuk mengakses layanan kependudukan daring. Solusi terbaik yang Anda tawarkan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menolak layanan manual dan mewajibkan warga belajar menggunakan smartphone sendiri",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mengadakan program jemput bola 'Layanan Keliling' sekaligus pendampingan digitalisasi bagi perangkat desa dan warga",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menghapuskan sistem layanan online dan kembali ke sistem kertas konvensional",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menyuruh warga meminta bantuan calo di warung internet",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Membuka posko bantuan khusus di kantor camat pada jam kerja",
+          "points": 4
+        }
+      ],
+      "explanation": "Inovasi jemput bola (outreach) menjembatani kesenjangan digital (digital divide) dengan tetap mengedepankan hak masyarakat atas pelayanan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Inovasi Pelayanan Publik KemenPANRB",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-009",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Anda ditunjuk sebagai koordinator tim lintas instansi yang terdiri atas anggota dengan latar belakang generasi, budaya, dan keahlian yang sangat heterogen. Langkah awal Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menetapkan aturan kerja kaku tanpa meminta masukan dari anggota tim",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Mengadakan pertemuan awal untuk menyamakan visi, membangun kesepahaman cara kerja, dan memetakan keahlian unik setiap anggota",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Bekerja sendiri untuk menghindari potensi konflik perbedaan pendapat",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Membuat kelompok kecil terpisah berdasarkan kesamaan usia para anggota",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menyerahkan koordinasi kepada anggota yang paling senior",
+          "points": 4
+        }
+      ],
+      "explanation": "Kolaborasi efektif dimulai dengan penyamaan tujuan bersama, komunikasi terbuka, dan apresiasi terhadap kekuatan keragaman anggota.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Core Values Kolaboratif ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-010",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Dalam rapat penyusunan program kerja bersama lembaga mitra, terjadi kebuntuan (deadlock) karena perbedaan prioritas kepentingan. Tindakan Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memaksakan pandangan instansi Anda dan mengancam membatalkan kerja sama",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Mencari titik temu (win-win solution) dengan memfokuskan kembali pada manfaat bersama bagi kemaslahatan masyarakat",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Meninggalkan ruangan rapat sebagai bentuk protes",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Mengikuti seluruh kemauan mitra tanpa memedulikan kepentingan instansi sendiri",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menunda rapat tanpa batas waktu yang jelas",
+          "points": 4
+        }
+      ],
+      "explanation": "Keterampilan negosiasi kolaboratif mengutamakan solusi integratif (win-win) yang bersandar pada kepentingan bersama yang lebih besar.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Negosiasi dan Resolusi Konflik Kemitraan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-011",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Rekan kerja satu tim Anda mengalami kesulitan menyelesaikan tugas analisis data karena belum menguasai perangkat lunak baru. Sementara tugas Anda sendiri sudah selesai, Anda akan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Segera pulang kantor karena kewajiban pribadi Anda sudah tuntas",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Menawarkan bantuan untuk membimbingnya memahami perangkat lunak tersebut agar tugas tim selesai tepat waktu",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mengerjakan seluruh tugasnya tanpa mengajarkannya agar cepat selesai",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Melaporkan ketidakmampuan rekan kerja tersebut kepada atasan agar ditegur",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Menyemangatinya dengan kata-kata manis tanpa memberi bantuan teknis",
+          "points": 4
+        }
+      ],
+      "explanation": "Solidaritas tim dan transfer pengetahuan (knowledge sharing) memperkuat kapabilitas kolektif organisasi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Dinamika Kerja Tim ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-012",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Bagaimana cara Anda memelihara relasi profesional dengan mitra kerja dari sektor swasta atau perguruan tinggi setelah proyek bersama selesai?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memutus seluruh kontak komunikasi karena kerja sama proyek telah berakhir",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Menjaga komunikasi berkala, saling berbagi wawasan riset/inovasi, dan terbuka untuk kolaborasi strategis di masa mendatang",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Hanya menghubungi mereka jika instansi Anda sedang membutuhkan bantuan dana sponsor",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Meminta hadiah kenang-kenangan mewah sebagai tanda perpisahan",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Menyimpan kontak mereka tanpa pernah melakukan interaksi apa pun",
+          "points": 4
+        }
+      ],
+      "explanation": "Membangun jejaring jangka panjang (networking) berbasis kemanfaatan timbal balik, integritas, dan pertukaran gagasan konstruktif.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Manajemen Hubungan Pemangku Kepentingan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-013",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Sebuah program prioritas instansi Anda memerlukan dukungan data dari kementerian lain yang terkenal lambat dalam merespons surat dinas formal. Strategi Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menyerah dan membatalkan program prioritas tersebut",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mengirim surat resmi diikuti pendekatan komunikasi personal koordinatif antarnarahubung teknis untuk mempercepat pertukaran data",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menulis status kemarahan di media sosial menyindir kementerian tersebut",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Menggunakan data perkiraan asal-asalan tanpa verifikasi",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menunggu balasan surat secara pasif hingga beberapa bulan ke depan",
+          "points": 4
+        }
+      ],
+      "explanation": "Kolaborasi birokrasi agile menggabungkan jalur formal dengan komunikasi interpersonal yang santun guna memecah silo antar-lembaga.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Koordinasi Inter-Institusional Birokrasi",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-014",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Ketika anggota tim Anda melakukan kesalahan yang menyebabkan presentasi di hadapan pimpinan instansi kurang memuaskan, sebagai ketua tim Anda akan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menyalahkan anggota tersebut secara terbuka di hadapan pimpinan",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mengambil tanggung jawab sebagai ketua tim, meminta maaf, dan bersama tim segera melakukan perbaikan dokumen secara menyeluruh",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mencoret anggota tersebut dari keanggotaan tim pada penugasan berikutnya",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menyalahkan faktor teknis proyektor yang buruk",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Membiarkan situasi berlalu tanpa evaluasi",
+          "points": 4
+        }
+      ],
+      "explanation": "Kepemimpinan bertanggung jawab melindungi tim, mengambil akuntabilitas hasil kolektif, dan memotivasi perbaikan sistematis.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kepemimpinan Kolaboratif dan Akuntabilitas Tim",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-015",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Instansi Anda mengadakan forum pertukaran ide dengan organisasi pemuda dan komunitas lokal. Sikap yang paling tepat Anda tunjukkan adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memposisikan diri lebih pintar dan menggurui para pemuda",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mendengarkan aspirasi mereka dengan terbuka, mengapresiasi perspektif baru, dan mengeksplorasi potensi kemitraan strategis",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Hadir sekadar mengisi daftar presensi kehadiran",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menolak seluruh usulan yang tidak sejalan dengan kebiasaan lama kantor",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Hanya mencatat masukan tanpa berniat menindaklanjutinya",
+          "points": 4
+        }
+      ],
+      "explanation": "Keterbukaan terhadap kemitraan masyarakat sipil dan komunitas generasi muda menghasilkan kebijakan yang lebih relevan dan partisipatif.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Partisipasi Publik dalam Pembangunan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-016",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "jejaring-kerja",
+      "stem": "Ada rekan kerja baru pindahan dari instansi daerah yang tampak canggung dan belum memahami alur kerja di kantor pusat Anda. Anda akan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menunggu sampai ia sendiri yang memberanikan diri bertanya",
+          "points": 4
+        },
+        {
+          "label": "B",
+          "text": "Mengajaknya berkenalan, memperkenalkannya dengan rekan lain, dan siap mendampinginya beradaptasi dengan alur kerja baru",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menghindarinya karena khawatir membebani pekerjaan Anda",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Menyindir gaya kerjanya yang masih terbiasa dengan pola daerah",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Menyerahkan proses adaptasinya sepenuhnya kepada bagian kepegawaian",
+          "points": 3
+        }
+      ],
+      "explanation": "Inklusivitas tempat kerja, empati persaudaraan korps, dan proaktif membantu rekan kerja baru beradaptasi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Budaya Kerja Harmonis ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-017",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "sosial-budaya",
+      "stem": "Anda ditugaskan memimpin program pengentasan kemiskinan di daerah terpencil yang masih memegang teguh hukum dan tradisi adat lokal. Sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memaksakan program nasional tanpa memedulikan nilai adat setempat",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Melakukan sowan/silaturahmi ke tokoh adat, menghormati kearifan lokal, dan mengintegrasikan program dengan nilai budaya mereka",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menolak penugasan tersebut karena merasa tidak cocok dengan budaya pedalaman",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Menyerahkan dana bantuan kepada pihak ketiga tanpa melakukan pengawasan",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menuntut masyarakat adat mengubah kebiasaan hidup mereka terlebih dahulu",
+          "points": 4
+        }
+      ],
+      "explanation": "Sensitivitas budaya (cultural intelligence) menghormati kearifan lokal sebagai modal sosial keberhasilan program pembangunan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kearifan Lokal dalam Kebijakan Sosial",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-018",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "sosial-budaya",
+      "stem": "Di ruang kerja Anda terdapat rekan dari berbagai latar belakang keyakinan agama. Saat rekan yang berbeda keyakinan merayakan hari besar agamanya, Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pura-pura tidak peduli dan menjaga jarak fisik",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Menghormati, memberikan ucapan selamat yang wajar sesuai batas toleransi, dan bersedia menggantikan jadwal piket kerja jika diperlukan",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Memperdebatkan ajaran agamanya di ruang kantor",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Menuntut agar kantor tidak memberikan hari libur keagamaan tersebut",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Menyampaikan ucapan dengan terpaksa karena takut dinilai buruk oleh atasan",
+          "points": 4
+        }
+      ],
+      "explanation": "Toleransi substantif diwujudkan dalam penghormatan tulus, solidaritas kerja (membantu piket), dan merawat kerukunan di tempat kerja.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Nilai Harmonis & Moderasi Beragama di Tempat Kerja",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-019",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "sosial-budaya",
+      "stem": "Seorang warga yang berasal dari suku minoritas merasa cemas dan kurang percaya diri saat mengurus dokumen kependudukan di kantor Anda. Sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Membiarkannya mengurus sendiri agar mandiri",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Menyambutnya dengan ramah dan santun, berkomunikasi dengan bahasa yang menenangkan, serta membantunya dengan sabar hingga tuntas",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menertawakan logat bicaranya bersama rekan kerja",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Memintanya membawa penerjemah sebelum dilayani",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Melayaninya sambil menunjukkan raut wajah lelah",
+          "points": 4
+        }
+      ],
+      "explanation": "Perilaku inklusif menghilangkan rasa cemas warga kelompok rentan/minoritas dengan kehangatan dan pelayanan tanpa prasangka.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Komunikasi Lintas Budaya Antar-Etnis",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-020",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "sosial-budaya",
+      "stem": "Dalam makan siang bersama tim kantor, ada rekan kerja yang memiliki pantangan makanan karena ajaran agamanya. Sikap Anda saat memilih tempat makan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memaksakan memilih restoran favorit mayoritas tanpa memedulikan rekan tersebut",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Memilih restoran yang menyediakan menu yang halal/aman dan dapat dinikmati oleh seluruh anggota tim dengan nyaman",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menyuruh rekan tersebut membawa bekal sendiri dari rumah",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Membatalkan makan siang bersama agar tidak repot",
+          "points": 4
+        },
+        {
+          "label": "E",
+          "text": "Mengejek pantangan makanan rekan tersebut",
+          "points": 1
+        }
+      ],
+      "explanation": "Tenggang rasa dan saling menghargai kenyamanan setiap anggota tim dalam interaksi sosial informal.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Kearifan Pergaulan Majemuk Nusantara",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-021",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "sosial-budaya",
+      "stem": "Bagaimana Anda memandang rekan kerja muda (Gen Z) yang memiliki preferensi kerja fleksibel, gemar teknologi baru, dan berbeda gaya komunikasi dengan pegawai senior?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menganggap mereka manja dan menuntut mereka tunduk mutlak pada gaya kerja lama",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Memandang keragaman generasi sebagai peluang sinergi, memadukan ketelitian pegawai senior dengan kelincahan digital pegawai muda",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Memisahkan ruang kerja pegawai muda agar tidak mengganggu pegawai senior",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Membiarkan konflik generasi memuncak dengan sendirinya",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Mengikuti seluruh gaya pegawai muda tanpa mempertimbangkan etika birokrasi",
+          "points": 4
+        }
+      ],
+      "explanation": "Manajemen sinergi lintas generasi (intergenerational synergy) mengubah perbedaan perspektif menjadi kekuatan inovatif organisasi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kolaborasi Lintas Generasi di Lingkungan ASN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-022",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "sosial-budaya",
+      "stem": "Saat bertugas di daerah baru, Anda diundang menghadiri upacara adat penyambutan tamu kehormatan. Tindakan terbaik Anda adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menolak hadir karena takut melanggar kebiasaan pribadi Anda",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Hadir dengan antusias, mempelajari tata krama adat setempat, dan berpartisipasi dengan penuh rasa takzim dan hormat",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Hadir namun sibuk bermain ponsel selama upacara berlangsung",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Menertawakan tarian adat di depan umum",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Mengirim perwakilan staf bawahan untuk menggantikan Anda",
+          "points": 4
+        }
+      ],
+      "explanation": "Apresiasi terhadap tradisi lokal mempererat hubungan sosial kultural dan mempermudah penerimaan pejabat di wilayah baru.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Etika Keprotokolan dan Kearifan Adat",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-023",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "sosial-budaya",
+      "stem": "Terjadi perdebatan hangat di grup percakapan internal kantor mengenai isu pemilu dan perbedaan pilihan calon. Sebagai ASN, sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ikut berdebat dan mengampanyekan calon jagoan Anda dengan agresif",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mengingatkan dengan santun tentang netralitas ASN dan mengajak seluruh rekan fokus pada tugas pelayanan publik",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Memanas-manasi suasana dengan membagikan berita provokatif yang belum terverifikasi",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Keluar dari grup kantor tanpa pamit",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Mendiamkan perdebatan meskipun mengganggu keharmonisan tim",
+          "points": 4
+        }
+      ],
+      "explanation": "Netralitas ASN adalah amanat undang-undang; ASN wajib menjadi perekat bangsa dan mencegah ruang kerja terkontaminasi polarisasi politik.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "UU No. 20 Tahun 2023 tentang Aparatur Sipil Negara (Netralitas ASN)",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-024",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Instansi Anda mulai mengimplementasikan kecerdasan buatan (AI) untuk membantu draf analisis laporan berkala. Sikap Anda terhadap inovasi ini...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menolak menggunakan teknologi tersebut karena takut posisi pekerjaan Anda terancam",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mempelajari cara kerja alat AI tersebut, memanfaatkannya untuk mempercepat analisis, dan tetap memvalidasi akurasi faktualnya secara teliti",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menyerahkan seluruh penulisan laporan 100% pada AI tanpa pernah memeriksa hasilnya lagi",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menyebarkan kabar bohong bahwa sistem AI akan merusak server kantor",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Hanya menggunakan alat tersebut jika diperintahkan langsung oleh pimpinan tertinggi",
+          "points": 4
+        }
+      ],
+      "explanation": "Adaptif terhadap kemajuan teknologi (AI literacy) dengan tetap memegang prinsip akuntabilitas intelektual dan pengawasan manusia (human-in-the-loop).",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pemanfaatan AI Bertanggung Jawab di Sektor Publik",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-025",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Anda menerima pesan surel mencurigakan yang mengatasnamakan bagian keuangan dan meminta Anda mengunduh lampiran file zip untuk verifikasi data gaji. Tindakan Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Langsung membuka dan menjalankan lampiran file tersebut",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Tidak membuka lampiran, mengonfirmasi keaslian email ke bagian IT / Keuangan, dan melaporkannya sebagai dugaan upaya phishing",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Meneruskan (forward) email tersebut ke seluruh kontak di kantor untuk bertanya",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Membalas email tersebut dengan memaki pengirimnya",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Menghapus email tanpa melaporkan ke tim keamanan siber",
+          "points": 4
+        }
+      ],
+      "explanation": "Kewaspadaan keamanan siber (cybersecurity awareness) mencegah kebocoran data dan infeksi malware pada infrastruktur instansi.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Standar Kesadaran Keamanan Informasi BSSN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-026",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Pimpinan meminta laporan data rekapitulasi darurat dalam waktu 1 jam sementara Anda sedang bertugas di luar kantor dan hanya membawa gawai ponsel pintar. Solusi Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menolak karena sedang tidak berada di depan komputer kerja kantor",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mengakses penyimpanan cloud resmi instansi via ponsel, mengolah data esensial, dan mengirimkan laporan tepat waktu dengan format rapi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Meminta rekan lain membuatkan laporan tanpa peduli rekan tersebut sedang sibuk",
+          "points": 4
+        },
+        {
+          "label": "D",
+          "text": "Menunda pembuatan laporan sampai Anda kembali ke kantor besok pagi",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Mengirimkan data mentah yang belum diolah sama sekali ke pimpinan",
+          "points": 2
+        }
+      ],
+      "explanation": "Ketangkasan digital (digital agility) memanfaatkan perangkat mobile secara produktif dan aman untuk menuntaskan urgensi kedinasan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pola Kerja Fleksibel dan Digital Mobile ASN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-027",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Dalam penanganan data sensitif pemohon layanan kependudukan, langkah perlindungan privasi apa yang wajib dipatuhi oleh seorang pegawai?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mengunggah data pribadi warga ke forum publik media sosial untuk bahan diskusi",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Menjaga kerahasiaan NIK dan data pribadi, menerapkan hak akses terbatas, dan tidak menyebarkannya kepada pihak yang tidak berhak",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menjual basis data kependudukan kepada perusahaan telemarketing",
+          "points": 1
+        },
+        {
+          "label": "D",
+          "text": "Menyimpan kata sandi akses database di kertas catatan yang ditempel di layar komputer",
+          "points": 4
+        },
+        {
+          "label": "E",
+          "text": "Membagi akun login database kepada siapa pun yang meminta tolong",
+          "points": 2
+        }
+      ],
+      "explanation": "Kepatuhan terhadap UU Perlindungan Data Pribadi (UU PDP): ASN wajib menjaga kerahasiaan dan integritas data warga negara yang dikelolanya.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-028",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Instansi Anda menerapkan sistem tanda tangan elektronik (TTE) tersertifikasi untuk mempercepat pengesahan surat dinas. Sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menolak menggunakan TTE dan tetap menuntut tanda tangan basah di atas meterai",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Mengadopsi TTE secara penuh, menjaga keamanan passphrase pribadi, dan memanfaatkan percepatan birokrasi tanpa kertas (paperless)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Memberikan passphrase TTE pribadi kepada staf lain agar mereka yang menandatangani",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Mengabaikan sistem baru dan membiarkan surat menumpuk",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Menggunakan TTE hanya untuk surat-surat tidak penting",
+          "points": 4
+        }
+      ],
+      "explanation": "Mendukung Sistem Pemerintahan Berbasis Elektronik (SPBE) dengan menjaga kerahasiaan otentikasi digital pribadi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Perpres No. 95 Tahun 2018 tentang SPBE",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-029",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Ketika menemukan celah keamanan (bug) pada aplikasi internal kantor yang memungkinkan orang luar melihat data pegawai, tindakan Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Memanfaatkan celah tersebut untuk mengunduh data rahasia kantor",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Segera mendokumentasikan temuan dan melaporkannya secara tertutup dan bertanggung jawab kepada tim pengembang IT instansi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menyebarluaskan celah keamanan tersebut di media sosial agar viral",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Mendiamkannya karena menganggap itu bukan tugas pokok fungsi Anda",
+          "points": 4
+        },
+        {
+          "label": "E",
+          "text": "Menjual informasi celah tersebut kepada pihak peretas",
+          "points": 1
+        }
+      ],
+      "explanation": "Etika pengungkapan kerentanan (responsible disclosure) secara internal demi keamanan sistem dan perlindungan aset instansi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Etika Profesi Tata Kelola TI Pemerintah",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-030",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Bagaimana cara Anda menyikapi perkembangan teknologi automasi dan digitalisasi yang bergerak begitu cepat di sektor publik?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bersikap pasif menunggu instruksi pelatihan resmi dari Badan Kepegawaian",
+          "points": 4
+        },
+        {
+          "label": "B",
+          "text": "Secara mandiri terus belajar (lifelong learning), memperbarui keterampilan digital, dan mencari peluang inovasi layanan",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mengeluh karena beban kerja mempelajari aplikasi baru bertambah",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Menolak segala bentuk inovasi berbasis perangkat lunak",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Membayar orang lain untuk mengerjakan tugas digital Anda",
+          "points": 3
+        }
+      ],
+      "explanation": "Nilai Adaptif: terus berinovasi dan antusias dalam menggerakkan ataupun menghadapi perubahan teknologi.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Core Values Adaptif ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-031",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "tik",
+      "stem": "Pimpinan meminta Anda membuat visualisasi data capaian kinerja instansi untuk bahan paparan menteri. Cara terbaik menyajikannya adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menyalin tabel angka rumit berukuran kecil ke dalam slide presentasi",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Mengolahnya menjadi dasbor grafis interaktif yang ringkas, komunikatif, dan berbasis data akurat (data-driven insight)",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Membuat karangan narasi panjang tanpa bukti data kuantitatif",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Memanipulasi angka agar capaian instansi terlihat melampaui target secara palsu",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Menyerahkan pembuatan paparan kepada bawahan tanpa memberikan arahan konsep",
+          "points": 4
+        }
+      ],
+      "explanation": "Kompetensi literasi data dan storytelling visual: menyederhanakan kompleksitas data menjadi wawasan strategis yang akurat dan mudah dipahami pengambil kebijakan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Komunikasi Kebijakan Berbasis Data",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-032",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Anda mendapatkan penugasan mendadak dari atasan untuk menyelesaikan telaah kebijakan prioritas yang batas waktunya bertepatan dengan rencana libur akhir pekan Anda. Sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menolak tugas tersebut secara kasar karena jam kerja resmi sudah berakhir",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Menyesuaikan jadwal pribadi, menyelesaikan tugas prioritas tersebut dengan dedikasi penuh dan standar mutu terbaik",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mengerjakannya secara asal-asalan yang penting selesai",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menghilang dan tidak membalas panggilan telepon pimpinan",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Meminta rekan kerja lain menggantikan tugas Anda dengan imbalan uang",
+          "points": 4
+        }
+      ],
+      "explanation": "Dedikasi dan loyalitas profesional menuntut komitmen menuntaskan tugas negara yang mendesak dengan kualitas optimal.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Core Values Loyal & Kompeten ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-033",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Ketika mendapati ada selisih perhitungan anggaran dalam laporan keuangan yang dibuat oleh atasan langsung Anda, tindakan profesional Anda adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mendiamkannya karena takut dimusuhi atau dihukum oleh atasan",
+          "points": 4
+        },
+        {
+          "label": "B",
+          "text": "Menyampaikan temuan selisih tersebut secara santun dan privat kepada atasan dengan menyertakan data verifikasi perbaikan",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Membocorkan kesalahan atasan tersebut kepada seluruh pegawai kantor",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Mengubah data secara diam-diam tanpa sepengetahuan atasan",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Menandatangani laporan palsu tersebut demi cari aman",
+          "points": 1
+        }
+      ],
+      "explanation": "Integritas profesional: berani menyampaikan kebenaran secara konstruktif dan santun dengan berbasis data valid demi mencegah kerugian negara.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Etika Profesi Pengawasan Keuangan",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-034",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Bagaimana cara Anda menjaga konsistensi kinerja di saat suasana kantor sedang mengalami pergantian kepemimpinan dan restrukturisasi organisasi?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bekerja malas-malasan menunggu situasi politik kantor stabil",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Tetap fokus pada pencapaian target kinerja, beradaptasi cepat dengan visi pemimpin baru, dan menjaga profesionalitas pelayanan",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mendekati pimpinan baru dengan menjilat agar mendapat jabatan empuk",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menyebarkan keresahan dan rumor negatif di kalangan rekan kerja",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Meminta mutasi keluar instansi karena enggan beradaptasi",
+          "points": 4
+        }
+      ],
+      "explanation": "Profesionalitas ASN berorientasi pada institusi dan kepentingan publik, bukan pada loyalitas buta terhadap figur personal.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Ketahanan Mental dan Agilitas ASN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-035",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Anda mendapatkan kesempatan beasiswa studi lanjut dari instansi namun bidang studinya menuntut kerja keras dan komitmen riset yang berat. Respons Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menolak karena lebih memilih kenyamanan rutinitas kerja harian saat ini",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Menyambut peluang tersebut dengan tekad belajar tinggi untuk meningkatkan kapasitas diri demi kontribusi optimal bagi instansi",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menerimanya hanya agar bisa lepas dari kejenuhan tugas kantor",
+          "points": 4
+        },
+        {
+          "label": "D",
+          "text": "Menerima beasiswa lalu berniat pindah ke sektor swasta setelah lulus",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Menjual kesempatan beasiswa tersebut kepada orang lain",
+          "points": 1
+        }
+      ],
+      "explanation": "Nilai Kompeten: terus belajar dan mengembangkan kapabilitas diri guna menunjang kemajuan bangsa dan instansi.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Core Values Kompeten ASN BerAKHLAK",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-036",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Ketika Anda diminta menjadi saksi ahli atau pemeriksa dalam kasus pelanggaran disiplin yang melibatkan sahabat karib Anda sendiri, sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Membela sahabat Anda dengan memutarbalikkan fakta bukti di lapangan",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Menjalankan tugas secara objektif, netral, dan jujur berdasarkan bukti fakta regulasi tanpa membiarkan hubungan pribadi memengaruhi penilaian",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mengundurkan diri dari dinas karena merasa bersalah pada sahabat",
+          "points": 4
+        },
+        {
+          "label": "D",
+          "text": "Menjelek-jelekkan sahabat Anda agar dinilai tegas oleh pimpinan",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Membocorkan rahasia pemeriksaan kepada sahabat Anda",
+          "points": 1
+        }
+      ],
+      "explanation": "Netralitas dan objektivitas profesional: memisahkan kepentingan emosional pribadi dari kewajiban menegakkan kode etik dan aturan kedinasan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Kode Etik dan Kode Perilaku ASN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-037",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Anda mengetahui bahwa sebuah draf peraturan yang sedang disusun mengandung klausul ambigu yang berpotensi dimanfaatkan oleh mafia tanah di masa depan. Anda akan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Membiarkannya karena yang menyusun draf adalah tim lain",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Memberikan catatan kritis konstruktif dalam rapat harmonisasi regulasi serta mengusulkan rumusan pasal yang ketat dan kedap celah hukum",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Menyimpan catatan tersebut untuk kepentingan pribadi Anda nanti",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menolak menghadiri rapat harmonisasi peraturan",
+          "points": 4
+        },
+        {
+          "label": "E",
+          "text": "Menyetujui klausul tersebut tanpa membaca secara rinci",
+          "points": 1
+        }
+      ],
+      "explanation": "Kecermatan hukum dan tanggung jawab etis dalam penyusunan produk perundang-undangan demi melindungi kepentingan umum.",
+      "difficulty": 3,
+      "sourceNote": "original",
+      "sourceReference": "Prinsip Pembentukan Peraturan yang Baik (Good Legislation)",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-038",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Bagaimana sikap Anda terhadap budaya 'Jam Karet' (datang terlambat) yang masih dinormalisasi oleh sebagian oknum pegawai di lingkungan kantor?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ikut-ikutan datang terlambat agar tidak merasa rugi",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Tetap konsisten hadir tepat waktu sebagai bentuk integritas diri dan memberi keteladanan positif bagi lingkungan kerja",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Memarahi seluruh rekan kerja yang terlambat dengan kata-kata kasar",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Meminta bagian absensi memanipulasi jam kedatangan Anda",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Pulang lebih awal jika datang lebih awal",
+          "points": 4
+        }
+      ],
+      "explanation": "Keteladanan integritas (leading by example): teguh memegang disiplin waktu meski lingkungan sekitar belum sepenuhnya ideal.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "PP No. 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-039",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "profesionalisme",
+      "stem": "Ketika sebuah program kerja yang Anda rancang dengan sungguh-sungguh ditolak oleh pimpinan karena keterbatasan alokasi dana APBN, respons Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Merajuk dan mogok kerja selama seminggu",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Mengevaluasi secara objektif, merancang alternatif efisiensi berbiaya rendah (low-cost innovation), dan mencari skema kolaborasi lintas unit",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Memfitnah pimpinan bahwa pimpinan korupsi anggaran",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Membuang seluruh dokumen riset program tersebut",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Memaksakan program tersebut berjalan dengan utang pribadi",
+          "points": 4
+        }
+      ],
+      "explanation": "Resiliensi profesional dan orientasi solusi cerdas (frugal innovation) menghadapi batasan sumber daya anggaran pemerintah.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Efisiensi dan Efektivitas Anggaran Publik",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-040",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "anti-radikalisme",
+      "stem": "Anda menemukan salah satu rekan kerja di kantor kerap membagikan konten yang mengajak membubarkan Pancasila dan menggantinya dengan sistem ideologi ekstrem di media sosial pribadinya. Sikap Anda...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mendukung dan membagikan ulang konten tersebut",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Mengajaknya berdialog persuasif mengingatkan sumpah janji setia ASN, serta melaporkannya secara berjenjang kepada pimpinan/satgas pengawasan internal",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mendiamkannya karena itu hak kebebasan berekspresi di akun pribadi",
+          "points": 3
+        },
+        {
+          "label": "D",
+          "text": "Menghakimi secara fisik di ruang rapat",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Menjauhi rekan tersebut tanpa melakukan upaya pencegahan penyebaran paham",
+          "points": 4
+        }
+      ],
+      "explanation": "Komitmen kebangsaan ASN: setia pada Pancasila dan UUD 1945, proaktif mencegah penyebaran paham intoleran/radikal melalui dialog dan mekanisme pengawasan resmi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "SKB 11 Menteri/Lembaga tentang Penanganan Radikalisme ASN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-041",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "anti-radikalisme",
+      "stem": "Di lingkungan tempat tinggal Anda, ada kelompok eksklusif yang melarang warganya bergaul dan bertegur sapa dengan tetangga yang berbeda keyakinan agama. Peran Anda sebagai figur ASN adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ikut bergabung dengan kelompok eksklusif tersebut",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Bersama pengurus RT/RW dan tokoh masyarakat mempromosikan moderasi beragama, kegiatan gotong royong bersama, dan merajut kembali kerukunan warga",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Pindah rumah ke perumahan mewah agar terhindar dari masalah",
+          "points": 4
+        },
+        {
+          "label": "D",
+          "text": "Melakukan penyerangan terhadap rumah anggota kelompok tersebut",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Menutup mata dan telinga dari dinamika lingkungan",
+          "points": 3
+        }
+      ],
+      "explanation": "ASN berperan sebagai perekat dan pemersatu bangsa baik di lingkungan kantor maupun di ruang sosial kemasyarakatan.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Peran Sosial ASN Perekat Bangsa",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-042",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "anti-radikalisme",
+      "stem": "Bagaimana Anda membedakan antara sikap kritis yang konstruktif terhadap kebijakan pemerintah dengan ujaran kebencian/hasutan subversif yang mengancam kedaulatan NKRI?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Semua kritik terhadap pemerintah adalah bentuk radikalisme berbahaya",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Kritik konstruktif berbasis data, argumen solutif, dan menghormati konstitusi; sedangkan hasutan subversif menyerang SARA, merendahkan martabat, dan ingin merongrong dasar negara",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Tidak ada perbedaan di antara keduanya",
+          "points": 4
+        },
+        {
+          "label": "D",
+          "text": "Hasutan subversif boleh dibiarkan demi demokrasi liberal mutlak",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Kritik hanya boleh disampaikan jika diberi imbalan uang",
+          "points": 1
+        }
+      ],
+      "explanation": "Kematangan literasi kebangsaan: menghargai kebebasan berpendapat berbasis kajian ilmiah dan membedakannya dari propaganda destruktif pemecah belah bangsa.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pendidikan Karakter Kebangsaan Lemhannas",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-043",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "anti-radikalisme",
+      "stem": "Anak buah Anda mengusulkan untuk mengundang seorang penceramah dalam acara peringatan hari besar di kantor, namun penceramah tersebut terindikasi rekam jejak sering menebar kebencian antar-umat beragama. Anda akan...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Menyetujui saja karena tidak ingin mengecewakan anak buah",
+          "points": 2
+        },
+        {
+          "label": "B",
+          "text": "Menolak usulan tersebut dengan bijak, menjelaskan kriteria penceramah yang menyejukkan, dan merekomendasikan tokoh yang menjunjung tinggi toleransi dan persatuan",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Membatalkan seluruh rangkaian acara peringatan hari besar tersebut",
+          "points": 4
+        },
+        {
+          "label": "D",
+          "text": "Membiarkan acara berjalan dan ikut menyebarkan ceramahnya",
+          "points": 1
+        },
+        {
+          "label": "E",
+          "text": "Menyerahkan keputusan kepada undian suara terbanyak staf kantor",
+          "points": 3
+        }
+      ],
+      "explanation": "Tanggung jawab pimpinan memastikan lingkungan kerja birokrasi bebas dari narasi perpecahan dan intoleransi.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Pedoman Penyelenggaraan Pembinaan Mental ASN",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-044",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "anti-radikalisme",
+      "stem": "Ketika mendapati sekelompok pemuda di lingkungan Anda mulai terpapar narasi bahwa kekerasan atas nama agama dibenarkan untuk mencapai tujuan politik, langkah preventif Anda adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mendukung aksi kekerasan tersebut",
+          "points": 1
+        },
+        {
+          "label": "B",
+          "text": "Bekerja sama dengan pemuka agama moderat, babinsa, dan bhabinkamtibmas untuk mengadakan dialog wawasan kebangsaan dan pendampingan psikososial",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Membeli senjata api untuk bersiap berperang dengan mereka",
+          "points": 2
+        },
+        {
+          "label": "D",
+          "text": "Mengabaikan situasi karena bukan urusan keluarga Anda",
+          "points": 3
+        },
+        {
+          "label": "E",
+          "text": "Mengunggah foto para pemuda tersebut ke media sosial tanpa pendampingan",
+          "points": 4
+        }
+      ],
+      "explanation": "Pencegahan dini (early warning system) melalui kolaborasi pentahelix (tokoh agama, aparat keamanan, dan masyarakat) untuk deradikalisasi persuasif.",
+      "difficulty": 2,
+      "sourceNote": "original",
+      "sourceReference": "Rencana Aksi Nasional Pencegahan Ekstremisme (RAN PE)",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
+    },
+    {
+      "externalId": "tkp-b2-045",
+      "batchId": "batch-2",
+      "batchNumber": 2,
+      "category": "TKP",
+      "subtopic": "anti-radikalisme",
+      "stem": "Makna hakiki moderasi beragama dalam kerangka ideologi Pancasila adalah...",
+      "options": [
+        {
+          "label": "A",
+          "text": "Mencampuradukkan seluruh ritual ibadah agama menjadi satu aliran baru",
+          "points": 3
+        },
+        {
+          "label": "B",
+          "text": "Sikap beragama yang adil dan berimbang (wasathiyah), teguh pada keyakinan iman pribadi sambil tetap menghargai dan melindungi hak kebebasan beragama orang lain",
+          "points": 5
+        },
+        {
+          "label": "C",
+          "text": "Mengurangi kadar keimanan agar diakui sebagai orang modern",
+          "points": 4
+        },
+        {
+          "label": "D",
+          "text": "Menghapuskan pendidikan agama di institusi pendidikan publik",
+          "points": 2
+        },
+        {
+          "label": "E",
+          "text": "Membiarkan paham ekstrem berkembang biak tanpa kontrol hukum",
+          "points": 1
+        }
+      ],
+      "explanation": "Moderasi beragama bukanlah kompromi doktrin ibadah, melainkan cara beragama yang tidak ekstrem kanan (radikal/intoleran) maupun ekstrem kiri (anti-agama), menjunjung kemanusiaan dan kebangsaan.",
+      "difficulty": 1,
+      "sourceNote": "original",
+      "sourceReference": "Buku Saku Moderasi Beragama Kementerian Agama RI",
+      "reviewStatus": "verified",
+      "reviewNote": "Standar BKN 2024/2026"
     }
   ]
 }

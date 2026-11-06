@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="cat-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#cat-grad)" />
+  <circle cx="25" cy="7" r="2.5" fill="#F59E0B" />
+  <text x="16" y="19" fill="#FFFFFF" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="11" text-anchor="middle" letter-spacing="-0.5">CAT</text>
+  <path d="M8 24h16" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round" />
+</svg>
