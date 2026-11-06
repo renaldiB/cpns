@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from "vitest";
+import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import { runMigrations } from "@/db/migrate";
 import { seedDatabase } from "@/db/seed";
 import {
@@ -8,7 +8,7 @@ import {
   finalizeAttempt,
   getAttemptDetail,
 } from "@/lib/exam/lifecycle";
-import { db } from "@/db";
+import { db, sqliteDb } from "@/db";
 import { attempts } from "@/db/schema";
 import { eq } from "drizzle-orm";
 
@@ -114,5 +114,13 @@ describe("Exam Lifecycle Integration Tests", () => {
     expect(detail.attempt.deadlineAt).toBeNull();
     expect(detail.questions.length).toBe(10);
     expect(detail.questions.every((q) => q.category === "TIU")).toBe(true);
+  });
+
+  afterAll(() => {
+    // Clean up test attempts so database is 100% fresh
+    sqliteDb.exec(`
+      DELETE FROM attempt_questions;
+      DELETE FROM attempts;
+    `);
   });
 });

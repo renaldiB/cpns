@@ -133,9 +133,10 @@ export function seedDatabase() {
     }
   }
 
-  // Ensure any existing questions have batch assigned
+  // Clear any leftover dummy attempt data so the app starts 100% fresh
   sqliteDb.exec(`
-    UPDATE questions SET batch_id = 'batch-1', batch_number = 1 WHERE batch_id IS NULL OR batch_number IS NULL;
+    DELETE FROM attempt_questions;
+    DELETE FROM attempts;
   `);
 
   // 4. Seed Default Settings
@@ -171,6 +172,16 @@ export function seedDatabase() {
   const seedTransaction = sqliteDb.transaction(() => {
     for (const q of rawQuestions) {
       if (q.externalId && existingSet.has(q.externalId)) {
+        // Synchronize batch assignment and subtopics for existing questions
+        db.update(questions)
+          .set({
+            batchId: q.batchId || "batch-1",
+            batchNumber: q.batchNumber || 1,
+            subtopic: q.subtopic,
+            updatedAt: nowIso,
+          })
+          .where(eq(questions.externalId, q.externalId))
+          .run();
         skippedCount++;
         continue;
       }
